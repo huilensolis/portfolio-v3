@@ -1,6 +1,9 @@
 // import { getBlogPosts } from 'app/blog/utils'
 
-export const baseUrl = "https://huilensolis.vercel.app";
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://huilensolis.vercel.app"
+    : "http://localhost:3000";
 
 export default async function sitemap() {
   // let blogs = getBlogPosts().map((post) => ({

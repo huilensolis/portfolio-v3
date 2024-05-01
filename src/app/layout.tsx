@@ -1,7 +1,7 @@
 import "./global.css";
 import type { Metadata } from "next";
 import { GeistMono } from "geist/font/mono";
-// import { Navbar } from './components/nav'
+import { NavBar } from "@/components/feature/nav-bar";
 import { Analytics } from "@vercel/analytics/react";
 // import Footer from './components/footer'
 import { baseUrl } from "@/app/sitemap";
@@ -53,7 +53,7 @@ export default function RootLayout({
     >
       <body className="antialiased max-w-5xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          {/* <Navbar /> */}
+          <NavBar />
           {children}
           {/* <Footer /> */}
           <Analytics />
