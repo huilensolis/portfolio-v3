@@ -21,7 +21,7 @@ export function LogOutBtn() {
     setLoading(false);
   }
   return (
-    <Button loading={loading} onClick={logOut}>
+    <Button loading={loading} onClick={logOut} variant="secondary">
       log out
     </Button>
   );
