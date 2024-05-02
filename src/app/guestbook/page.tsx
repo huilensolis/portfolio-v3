@@ -20,36 +20,41 @@ export default async function GuestbookPage() {
 
   return (
     <div className="flex flex-col gap-2">
-      {user ? (
-        <div>
-          <div className="flex items-center gap-2">
-            {user.user_metadata.user_name ?? user.email}
-            <LogOutBtn />
+      <h1 className="text-3xl font-semibold text-orange-600">Guestbook</h1>
+      <div className="mb-5">
+        {user ? (
+          <div>
+            <div className="flex items-center gap-2">
+              {user.user_metadata.user_name ?? user.email}
+              <LogOutBtn />
+            </div>
+            {!userComment && (
+              <form action={newComment} className="flex gap-2 items-end">
+                <fieldset className="flex flex-col">
+                  <label htmlFor="comment">New Comment</label>
+                  <TextInput
+                    className="md:w-[600px] w-full"
+                    id="comment"
+                    name="comment"
+                  />
+                </fieldset>
+                <CreateCommentBtn />
+              </form>
+            )}
           </div>
-          {!userComment && (
-            <form action={newComment} className="flex gap-2 items-end">
-              <fieldset className="flex flex-col">
-                <label htmlFor="comment">New Comment</label>
-                <TextInput
-                  className="md:w-[600px] w-full"
-                  id="comment"
-                  name="comment"
-                />
-              </fieldset>
-              <CreateCommentBtn />
-            </form>
-          )}
-        </div>
-      ) : (
-        <SignInWithGithubBtn redirectAfterSignIn={"/guestbook"} />
-      )}
+        ) : (
+          <div className="flex items-center gap-2">
+            <p>Comment on the Guestbook</p>
+            <SignInWithGithubBtn redirectAfterSignIn={"/guestbook"} />
+          </div>
+        )}
+      </div>
       <ul className="flex flex-col gap-2">
         {comments &&
           comments?.length > 0 &&
           comments.map((comment) => (
             <li key={comment.id} className="flex gap-2 items-center">
-              <UserCard userId={comment.user_id} />
-              {comment.text}
+              <UserCard userId={comment.user_id} /> - &quot;{comment.text}&quot;
               {comment.user_id === user?.id && (
                 <form action={deleteComment}>
                   <input

@@ -1,6 +1,7 @@
 "use client";
 
 import { baseUrl } from "@/app/sitemap";
+import { Github } from "@/components/icons/github";
 import { Button } from "@/components/ui/button/button.component";
 import { createClient } from "@/utils/supabase/client";
 import { useState } from "react";
@@ -33,8 +34,9 @@ export function SignInWithGithubBtn({
     }
   }
   return (
-    <Button onClick={signIn} loading={loading}>
+    <Button className="fill-neutral-300" onClick={signIn} loading={loading}>
       log in
+      <Github />
     </Button>
   );
 }

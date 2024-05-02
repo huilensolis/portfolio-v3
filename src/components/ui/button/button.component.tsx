@@ -5,7 +5,7 @@ import { Loader } from "lucide-react";
 import { ReactNode, forwardRef } from "react";
 
 const buttonVariants = cva(
-  "flex items-center w-max justify-center focus:outline-none",
+  "flex items-center w-max items-center justify-center focus:outline-none gap-2",
   {
     variants: {
       variant: {
