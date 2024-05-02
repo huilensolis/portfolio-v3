@@ -13,7 +13,11 @@ export async function UserCard({ userId }: { userId: string }) {
 
   return (
     <article className="flex gap-1 items-center justify-centr">
-      <img src={user.avatar_url} className="h-8 w-8 rounded-full" />
+      <img
+        src={user.avatar_url || ""}
+        className="h-8 w-8 rounded-full"
+        alt={user.full_name || user.username || " "}
+      />
       <span className="font-semibold">{user.full_name ?? ""}</span>
     </article>
   );

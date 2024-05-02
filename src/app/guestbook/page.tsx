@@ -53,8 +53,11 @@ export default async function GuestbookPage() {
         {comments &&
           comments?.length > 0 &&
           comments.map((comment) => (
-            <li key={comment.id} className="flex gap-2 items-center">
-              <UserCard userId={comment.user_id} /> - &quot;{comment.text}&quot;
+            <li key={comment.id} className="flex gap-4 items-center">
+              <div className="flex gap-4 items-center">
+                <UserCard userId={comment.user_id} />
+                <p className="flex-1">&quot;{comment.text}&quot;</p>
+              </div>
               {comment.user_id === user?.id && (
                 <form action={deleteComment}>
                   <input

@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button/button.component";
 import { createClient } from "@/utils/supabase/client";
+import { DoorOpen } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -21,8 +22,9 @@ export function LogOutBtn() {
     setLoading(false);
   }
   return (
-    <Button loading={loading} onClick={logOut} variant="secondary">
+    <Button loading={loading} onClick={logOut}>
       log out
+      <DoorOpen className="h-6 w-6" />
     </Button>
   );
 }
