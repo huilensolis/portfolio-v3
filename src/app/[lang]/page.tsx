@@ -8,8 +8,41 @@ import { ReactComponent as CordobaShape } from "../../../public/cordoba-province
 import { DateTime } from "luxon";
 import { SingleDot } from "@/components/ui/single-dot";
 import { TIME_ZONE } from "@/utils/consts";
+import { React } from "@/components/icons/react";
+import { Nextjs } from "@/components/icons/nextjs";
+import { Typescript } from "@/components/icons/typescript";
+import { Javascript } from "@/components/icons/javascript";
+import { Tailwind } from "@/components/icons/tailwind";
+import { CSS } from "@/components/icons/css";
+import { Nodejs } from "@/components/icons/nodejs";
+import { Express } from "@/components/icons/express";
+import { PostgreSQL } from "@/components/icons/postgresql";
+import { Drizzle } from "@/components/icons/drizzle";
+import { Sequelize } from "@/components/icons/sequelize";
+import { Bun } from "@/components/icons/bun";
+import { Elysia } from "@/components/icons/elysia";
+import { Git } from "@/components/icons/git";
+import { Buntest } from "@/components/icons/buntest";
 
 export const dynamic = "force-static";
+
+const icons = {
+  React,
+  Nextjs,
+  Typescript,
+  Javascript,
+  Tailwind,
+  CSS,
+  Nodejs,
+  Express,
+  PostgreSQL,
+  Drizzle,
+  Sequelize,
+  Bun,
+  Buntest,
+  Elysia,
+  Git,
+};
 
 export default async function HomePage({
   params: { lang },
@@ -24,14 +57,16 @@ export default async function HomePage({
     <div className="flex flex-col gap-12">
       <section className="flex flex-col gap-6">
         <h1 className="text-3xl font-semibold text-orange-600">Huilén Solís</h1>
-        <p className="text-neutral-500 text-pretty">{dictionary.biography}</p>
+        <p className="text-neutral-500 text-pretty xl:w-8/12">
+          {dictionary.biography}
+        </p>
       </section>
       <section className="xl:grid flex flex-col gap-6 grid-cols-3 grid-rows-2 text-sm">
         <Box className="col-span-1 row-span-2 flex flex-col gap-4">
           <h1 className="text-neutral-400 text-md">
             {dictionary.education.title}
           </h1>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-2">
             {dictionary.education.items.map((item, i) => (
               <li key={i}>
                 <article className="flex gap-2">
@@ -49,7 +84,7 @@ export default async function HomePage({
           <h1 className="text-neutral-400 text-md">
             {dictionary.projects.title}
           </h1>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-2">
             {dictionary.projects.items.map((project, i) => (
               <li key={i}>
                 <article className="flex gap-2">
@@ -68,23 +103,27 @@ export default async function HomePage({
           </ul>
         </Box>
         <Box className="col-span-1 row-span-2 flex flex-col justify-between gap-4">
-          <section className="flex flex-col gap-4">
+          <section className="flex flex-col gap-2">
             <h1 className="text-neutral-400 text-md">
               {dictionary.tech_stack.title}
             </h1>
             <h2>{dictionary.tech_stack.role}</h2>
           </section>
-          <ul className="flex flex-wrap gap-1">
-            {dictionary.tech_stack.items.map((tech, i) => (
-              <li key={i}>
-                <article className="py-1.5 px-3 rounded-full border border-neutral-800">
-                  <span>{tech}</span>
-                </article>
-              </li>
-            ))}
+          <ul className="flex flex-wrap gap-2">
+            {dictionary.tech_stack.items.map((tech, i) => {
+              const Icon = icons[tech as keyof typeof icons];
+              return (
+                <li key={i}>
+                  <article className="flex items-center justify-center gap-2 py-1.5 px-3 rounded-full border border-neutral-800 text-neutral-400">
+                    {Icon && <Icon className="fill-neutral-400 w-4" />}
+                    <span>{tech}</span>
+                  </article>
+                </li>
+              );
+            })}
           </ul>
         </Box>
-        <Box className="col-span-1 row-span-2">
+        <Box className="col-span-1 row-span-2 flex flex-col gap-4">
           <h1 className="text-neutral-400 text-md">{dictionary.misc.title}</h1>
           <ul className="flex flex-col gap-2">
             {dictionary.misc.items.map((miscItem, i) => (
@@ -92,27 +131,25 @@ export default async function HomePage({
             ))}
           </ul>
         </Box>
-        <Box className="col-span-1 row-span-2 flex gap-2">
+        <Box className="col-span-1 row-span-2 flex gap-4">
           <h1 className="text-neutral-400 text-md">
             {dictionary.localization.title}
           </h1>
           <section className="flex gap-2 justify-between">
             <div className="flex flex-col gap-2">
-              <div className="py-5 flex flex-col gap-4">
-                <div className="flex items-center gap-2 font-bold">
-                  <span>{dictionary.localization.time_zone}</span>
-                  <SingleDot />
-                  <span>GTM-3</span>
-                </div>
-                <span>
-                  {date.setLocale(lang).toLocaleString({
-                    month: "short",
-                    weekday: "short",
-                    day: "2-digit",
-                  })}
-                </span>
-                <ClockLocal />
+              <div className="flex items-center gap-2 font-bold">
+                <span>{dictionary.localization.time_zone}</span>
+                <SingleDot />
+                <span>GTM-3</span>
               </div>
+              <span>
+                {date.setLocale(lang).toLocaleString({
+                  month: "short",
+                  weekday: "short",
+                  day: "2-digit",
+                })}
+              </span>
+              <ClockLocal />
             </div>
             <div className="relative">
               <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" />

@@ -46,7 +46,7 @@
       "Typescript",
       "Javascript",
       "Tailwind",
-      "CSS",
+      "Css",
       "Nodejs",
       "Express",
       "PostgreSQL",
@@ -64,6 +64,6 @@
   },
   "misc": {
     "title": "Tools",
-    "items": ["Arch Linux", "Oh My Zsh", "Nvim", "Hyprland"]
+    "items": ["Arch linux", "Oh My Zsh", "Nvim", "Hyprland"]
   }
 }
