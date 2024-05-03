@@ -8,7 +8,7 @@ export function NavBar() {
       <div>
         <Link href="/">
           <h1 className="font-bold text-xl">
-            Huilén Solís <span className="text-orange-600">v3</span>
+            HS <span className="text-orange-600">v3</span>
           </h1>
         </Link>
       </div>
