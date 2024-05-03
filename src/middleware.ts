@@ -1,8 +1,44 @@
-import { type NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { updateSession } from "@/utils/supabase/middleware";
+import { SUPPORTED_LANGS } from "./utils/consts";
+import { headers } from "next/headers";
 
 export async function middleware(request: NextRequest) {
-  return await updateSession(request);
+  await updateSession(request);
+
+  const { pathname } = request.nextUrl;
+
+  const defaultLangUrl = request.nextUrl.clone();
+  defaultLangUrl.pathname = `/${SUPPORTED_LANGS[0]}${pathname}`;
+
+  const hasPathNameLang = SUPPORTED_LANGS.some((lang) =>
+    pathname.startsWith(`/${lang}`),
+  );
+
+  if (!hasPathNameLang) {
+    const acceptedLangs = headers().get("Accept-Language");
+
+    if (!acceptedLangs) {
+      return NextResponse.redirect(defaultLangUrl);
+    }
+
+    const acceptedLanguageIsOnLangList = acceptedLangs
+      .split(",")
+      .find((headersLang) =>
+        SUPPORTED_LANGS.find((supportedLang) => supportedLang === headersLang),
+      );
+
+    if (!acceptedLanguageIsOnLangList)
+      return NextResponse.redirect(defaultLangUrl);
+
+    const urlWithAcceptedLang = request.nextUrl.clone();
+    urlWithAcceptedLang.pathname = `/${acceptedLanguageIsOnLangList}${pathname}`;
+
+    return NextResponse.redirect(urlWithAcceptedLang);
+  }
+
+  // if the path contains a lang, we proceed
+  return;
 }
 
 export const config = {

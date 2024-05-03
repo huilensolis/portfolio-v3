@@ -1,8 +1,14 @@
 import { Box } from "@/components/ui/box/box.component";
 import { Dot } from "@/components/ui/dot";
 import { DotWithChildren } from "@/components/ui/dot-with-children";
+import { getDictionary } from "@/utils/dictionaries";
 
-export default function HomePage() {
+export default function HomePage({
+  params: { lang },
+}: {
+  params: { lang: "en" | "es" };
+}) {
+  const dictionary = getDictionary(lang);
   return (
     <div className="flex flex-col gap-12">
       <section className="flex flex-col gap-6">
