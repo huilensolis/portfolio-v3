@@ -1,8 +1,13 @@
+import { SUPPORTED_LANGS } from "@/utils/consts";
 import { Route } from "next";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-export function NavBar() {
+export function NavBar({
+  currentLang,
+}: {
+  currentLang: (typeof SUPPORTED_LANGS)[number];
+}) {
   return (
     <nav className="flex gap-8 items-center">
       <div>
@@ -13,10 +18,10 @@ export function NavBar() {
         </Link>
       </div>
       <div className="flex gap-4">
-        <NavLink href="/guestbook">Guestbook</NavLink>
-        <NavLink href="/guestbook">Journey</NavLink>
-        <NavLink href="/guestbook">Workspace</NavLink>
-        <NavLink href="/guestbook">Blogs</NavLink>
+        <NavLink href={`/${currentLang}/guestbook`}>Guestbook</NavLink>
+        <NavLink href={`/${currentLang}/guestbook`}>Journey</NavLink>
+        <NavLink href={`/${currentLang}/guestbook`}>Workspace</NavLink>
+        <NavLink href={`/${currentLang}/guestbook`}>Blogs</NavLink>
       </div>
     </nav>
   );
