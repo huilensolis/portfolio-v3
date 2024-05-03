@@ -3,8 +3,7 @@
 import { DateTime } from "luxon";
 import { useEffect, useState } from "react";
 import NossrComponent from "../nossr/nossr.component";
-
-const TIME_ZONE = "Argetina/Buenos_Aires";
+import { TIME_ZONE } from "@/utils/consts";
 
 export function ClockLocal() {
   const [date, setDate] = useState(() => {
@@ -28,7 +27,7 @@ export function ClockLocal() {
 
   return (
     <NossrComponent>
-      <span>
+      <span className="text-lg">
         {date.hour}:{date.minute}:{date.second}
       </span>
     </NossrComponent>

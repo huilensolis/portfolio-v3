@@ -4,6 +4,11 @@ import { Dot } from "@/components/ui/dot";
 import { DotWithChildren } from "@/components/ui/dot-with-children";
 import { getDictionary } from "@/utils/dictionaries";
 
+import { ReactComponent as CordobaShape } from "../../../public/cordoba-province-shape.svg";
+import { DateTime } from "luxon";
+import { SingleDot } from "@/components/ui/single-dot";
+import { TIME_ZONE } from "@/utils/consts";
+
 export const dynamic = "force-static";
 
 export default async function HomePage({
@@ -13,22 +18,26 @@ export default async function HomePage({
 }) {
   const dictionary = await getDictionary(lang);
 
+  const date = DateTime.now();
+  date.setZone(TIME_ZONE);
   return (
     <div className="flex flex-col gap-12">
       <section className="flex flex-col gap-6">
         <h1 className="text-3xl font-semibold text-orange-600">Huilén Solís</h1>
         <p className="text-neutral-500 text-pretty">{dictionary.biography}</p>
       </section>
-      <section className="md:grid gap-6 grid-cols-3 grid-rows-2">
+      <section className="xl:grid flex flex-col gap-6 grid-cols-3 grid-rows-2 text-sm">
         <Box className="col-span-1 row-span-2 flex flex-col gap-4">
-          <h1 className="text-neutral-400">{dictionary.education.title}</h1>
+          <h1 className="text-neutral-400 text-md">
+            {dictionary.education.title}
+          </h1>
           <ul className="flex flex-col gap-4">
             {dictionary.education.items.map((item, i) => (
               <li key={i}>
                 <article className="flex gap-2">
                   <Dot />
                   <section>
-                    <h1 className="font-bold text-lg">{item.title}</h1>
+                    <h1 className="font-bold text-md">{item.title}</h1>
                     <span className="text-neutral-400">{item.description}</span>
                   </section>
                 </article>
@@ -37,13 +46,15 @@ export default async function HomePage({
           </ul>
         </Box>
         <Box className="col-span-1 row-span-4 flex flex-col gap-4">
-          <h1 className="text-neutral-400">{dictionary.projects.title}</h1>
+          <h1 className="text-neutral-400 text-md">
+            {dictionary.projects.title}
+          </h1>
           <ul className="flex flex-col gap-4">
             {dictionary.projects.items.map((project, i) => (
               <li key={i}>
                 <article className="flex gap-2">
                   <DotWithChildren>
-                    <span className="text-sm">{i + 1}</span>
+                    <span>{i + 1}</span>
                   </DotWithChildren>
                   <section>
                     <h1 className="font-bold">{project.title}</h1>
@@ -58,7 +69,9 @@ export default async function HomePage({
         </Box>
         <Box className="col-span-1 row-span-2 flex flex-col justify-between gap-4">
           <section className="flex flex-col gap-4">
-            <h1 className="text-neutral-400">{dictionary.tech_stack.title}</h1>
+            <h1 className="text-neutral-400 text-md">
+              {dictionary.tech_stack.title}
+            </h1>
             <h2>{dictionary.tech_stack.role}</h2>
           </section>
           <ul className="flex flex-wrap gap-1">
@@ -72,18 +85,39 @@ export default async function HomePage({
           </ul>
         </Box>
         <Box className="col-span-1 row-span-2">
-          <h1>{dictionary.misc.title}</h1>
+          <h1 className="text-neutral-400 text-md">{dictionary.misc.title}</h1>
           <ul className="flex flex-col gap-2">
             {dictionary.misc.items.map((miscItem, i) => (
               <li key={i}>{miscItem}</li>
             ))}
           </ul>
         </Box>
-        <Box className="col-span-1 row-span-2">
-          <h1>{dictionary.localization.title}</h1>
-          <section className="flex flex-col gap-2">
-            <span>{dictionary.localization.time_zone}</span>
-            <ClockLocal />
+        <Box className="col-span-1 row-span-2 flex gap-2">
+          <h1 className="text-neutral-400 text-md">
+            {dictionary.localization.title}
+          </h1>
+          <section className="flex gap-2 justify-between">
+            <div className="flex flex-col gap-2">
+              <div className="py-5 flex flex-col gap-4">
+                <div className="flex items-center gap-2 font-bold">
+                  <span>{dictionary.localization.time_zone}</span>
+                  <SingleDot />
+                  <span>GTM-3</span>
+                </div>
+                <span>
+                  {date.setLocale(lang).toLocaleString({
+                    month: "short",
+                    weekday: "short",
+                    day: "2-digit",
+                  })}
+                </span>
+                <ClockLocal />
+              </div>
+            </div>
+            <div className="relative">
+              <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" />
+              <CordobaShape className="absolute top-0 left-0 w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-500 [stroke-dasharray:_300,_1000] [stroke-dashoffset:_10000] animate-dash" />
+            </div>
           </section>
         </Box>
       </section>
