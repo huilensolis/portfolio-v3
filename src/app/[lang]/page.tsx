@@ -4,6 +4,8 @@ import { Dot } from "@/components/ui/dot";
 import { DotWithChildren } from "@/components/ui/dot-with-children";
 import { getDictionary } from "@/utils/dictionaries";
 
+export const dynamic = "force-static";
+
 export default async function HomePage({
   params: { lang },
 }: {
