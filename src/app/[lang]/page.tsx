@@ -153,7 +153,7 @@ export default async function HomePage({
             </div>
             <div className="relative">
               <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" />
-              <CordobaShape className="absolute top-0 left-0 w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-500 [stroke-dasharray:_300,_1000] [stroke-dashoffset:_10000] animate-dash" />
+              <CordobaShape className="absolute top-0 left-0 w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-orange-600 [stroke-dasharray:_300,_1000] [stroke-dashoffset:_10000] animate-dash" />
             </div>
           </section>
         </Box>

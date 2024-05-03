@@ -19,9 +19,9 @@ export function NavBar({
       </div>
       <div className="flex gap-4">
         <NavLink href={`/${currentLang}/guestbook`}>Guestbook</NavLink>
-        <NavLink href={`/${currentLang}/guestbook`}>Journey</NavLink>
-        <NavLink href={`/${currentLang}/guestbook`}>Workspace</NavLink>
-        <NavLink href={`/${currentLang}/guestbook`}>Blogs</NavLink>
+        {/* <NavLink href={`/${currentLang}/guestbook`}>Journey</NavLink> */}
+        {/* <NavLink href={`/${currentLang}/guestbook`}>Workspace</NavLink> */}
+        {/* <NavLink href={`/${currentLang}/guestbook`}>Blogs</NavLink> */}
       </div>
     </nav>
   );
