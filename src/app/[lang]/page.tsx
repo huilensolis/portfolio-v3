@@ -1,3 +1,4 @@
+import { ClockLocal } from "@/components/feature/clock-local";
 import { Box } from "@/components/ui/box/box.component";
 import { Dot } from "@/components/ui/dot";
 import { DotWithChildren } from "@/components/ui/dot-with-children";
@@ -9,6 +10,7 @@ export default async function HomePage({
   params: { lang: "en" | "es" };
 }) {
   const dictionary = await getDictionary(lang);
+
   return (
     <div className="flex flex-col gap-12">
       <section className="flex flex-col gap-6">
@@ -77,7 +79,10 @@ export default async function HomePage({
         </Box>
         <Box className="col-span-1 row-span-2">
           <h1>{dictionary.localization.title}</h1>
-          <section></section>
+          <section className="flex flex-col gap-2">
+            <span>{dictionary.localization.time_zone}</span>
+            <ClockLocal />
+          </section>
         </Box>
       </section>
     </div>
