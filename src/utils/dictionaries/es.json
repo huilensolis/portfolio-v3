@@ -1,8 +1,76 @@
 {
-  "projects": [
-    {
-      "title": "Pictura",
-      "description": "Red Social de imagenes"
-    }
-  ]
+  "biography": "Desarrollador Full-Stack, esta es una descripción en la que pensaré en el futuro, pero por ahora llenaré el espacio con algo de texto para ver cómo se ve el diseño.",
+  "education": {
+    "title": "Educación",
+    "items": [
+      {
+        "title": "Academia X",
+        "description": "Bootcamp de Desarrollo Full Stack"
+      },
+      { "title": "Platzi", "description": "Cursos de desarrollo Frontend" },
+      {
+        "title": "Clases privadas de inglés",
+        "description": "Nivel C1 Avanzado"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "items": [
+      {
+        "title": "Pictura",
+        "description": "Red social de imágenes"
+      },
+      {
+        "title": "Memoir",
+        "description": "Aplicación de diario diario"
+      },
+      {
+        "title": "Interestellar",
+        "description": "Tablero Kanban para colaboración"
+      },
+      {
+        "title": "Un proyecto",
+        "description": "Descripción"
+      },
+      {
+        "title": "Un proyecto",
+        "description": "Descripción"
+      },
+      {
+        "title": "Un proyecto",
+        "description": "Descripción"
+      }
+    ]
+  },
+  "tech_stack": {
+    "title": "Tecnologías",
+    "role": "Desarrollador Full Stack",
+    "items": [
+      "React",
+      "Next.js",
+      "Typescript",
+      "Javascript",
+      "Tailwind CSS",
+      "CSS",
+      "Node JS",
+      "Express",
+      "MySQL",
+      "Drizzle ORM",
+      "Sequelize ORM",
+      "Bun",
+      "Elysia",
+      "Typebox",
+      "Bun test",
+      "Git"
+    ]
+  },
+  "localization": {
+    "title": "Localización y Zona horaria",
+    "time_zone": "GTM-3"
+  },
+  "misc": {
+    "title": "Herramientas",
+    "items": ["Arch Linux", "Oh My Zsh", "Nvim", "Hyprland"]
+  }
 }
