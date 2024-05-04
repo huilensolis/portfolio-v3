@@ -3,9 +3,21 @@
   "education": {
     "title": "Education",
     "items": [
-      { "title": "X Academy", "description": "Full Stack bootcamp" },
-      { "title": "Platzi", "description": "Frontend development courses" },
-      { "title": "English private lessons", "description": "c1 Advanced" }
+      {
+        "title": "X Academy",
+        "description": "Full Stack bootcamp",
+        "href": "https://drive.google.com/file/d/16rDcl0lApDdaiQhGEHTSBRYYeKEWqmWt/view"
+      },
+      {
+        "title": "Platzi",
+        "description": "Frontend development courses",
+        "href": "https://platzi.com/p/Huilen/"
+      },
+      {
+        "title": "English private lessons",
+        "description": "c1 Advanced",
+        "href": "https://cert.efset.org/z2Phe6"
+      }
     ]
   },
   "projects": {

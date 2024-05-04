@@ -23,7 +23,7 @@ import { Bun } from "@/components/icons/bun";
 import { Elysia } from "@/components/icons/elysia";
 import { Git } from "@/components/icons/git";
 import { Buntest } from "@/components/icons/buntest";
-import { FolderGit, Globe } from "lucide-react";
+import { ArrowUpRight, FolderGit, Globe, MoveUpRight } from "lucide-react";
 import Link from "next/link";
 
 export const dynamic = "force-static";
@@ -74,7 +74,16 @@ export default async function HomePage({
                 <article className="flex gap-2">
                   <Dot />
                   <section>
-                    <h1 className="font-bold text-base">{item.title}</h1>
+                    <Link
+                      href={item.href}
+                      target="_blank"
+                      className="flex items-center duration-150 transition-all group"
+                    >
+                      <h1 className="font-bold text-base group-hover:text-orange-600 group-hover:underline decoration-orange-600 duration-150 transition-all">
+                        {item.title}
+                      </h1>
+                      <ArrowUpRight className="w-5 h-5 group-hover:text-orange-600  group-hover:scale-125 duration-150 transition-all" />
+                    </Link>
                     <span className="text-neutral-400">{item.description}</span>
                   </section>
                 </article>

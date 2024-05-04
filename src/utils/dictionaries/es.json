@@ -5,12 +5,18 @@
     "items": [
       {
         "title": "Academia X",
-        "description": "Bootcamp de Desarrollo Full Stack"
+        "description": "Bootcamp de Desarrollo Full Stack",
+        "href": "https://drive.google.com/file/d/16rDcl0lApDdaiQhGEHTSBRYYeKEWqmWt/view"
       },
-      { "title": "Platzi", "description": "Cursos de desarrollo Frontend" },
+      {
+        "title": "Platzi",
+        "description": "Cursos de desarrollo Frontend",
+        "href": "https://platzi.com/p/Huilen/"
+      },
       {
         "title": "Clases privadas de inglés",
-        "description": "Nivel C1 Avanzado"
+        "description": "Nivel C1 Avanzado",
+        "href": "https://cert.efset.org/z2Phe6"
       }
     ]
   },
