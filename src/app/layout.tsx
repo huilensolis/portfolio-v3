@@ -49,8 +49,8 @@ export default function RootLayout({
         GeistMono.className,
       )}
     >
-      <body className="antialiased max-w-7xl xl:px-0 px-5 lg:mx-auto">
-        <main className="flex-auto min-w-0 py-5 flex flex-col md:px-0">
+      <body className="antialiased min-h-screen xl:px-0 px-5 flex justify-center">
+        <main className="max-w-7xl w-full min-w-0 py-5 flex flex-col">
           {children}
           <Analytics />
         </main>

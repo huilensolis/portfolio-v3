@@ -11,8 +11,8 @@ export default function Layout({
 }) {
   return (
     <div className="flex flex-col">
-      <div className="fixed top-0 left-0 w-screen flex items-center justify-center pt-10">
-        <header className="flex justify-between bg-neutral-950/70 backdrop-blur-sm xl:px-0 px-5 w-full xl:max-w-7xl">
+      <div className="fixed top-0 left-0 w-screen flex items-center justify-center bg-neutral-950/70 backdrop-blur-sm ">
+        <header className="flex justify-between py-10 xl:px-0 px-5 w-full xl:max-w-7xl xl:pr-2.5">
           <NavBar currentLang={lang} />
           <section className="flex gap-2">
             <LangSwitcher currentLang={lang} />
