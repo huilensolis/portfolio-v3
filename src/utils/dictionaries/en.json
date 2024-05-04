@@ -13,27 +13,34 @@
     "items": [
       {
         "title": "Pictura",
-        "description": "Images social network"
+        "description": "Images social network, with images feed, user profiles, email log in, images posting, images collections, bookmarks, etc",
+        "stack": ["React", "Nextjs", "Tailwindcss", "Typescript", "PostgreSQL"],
+        "repository": "https://github.com/Huilensolis/Pictura",
+        "deploy": "https://pictura-px.vercel.app/"
       },
       {
         "title": "Memoir",
-        "description": "Daily journaling app"
+        "description": "Document editor for writing and saving journal entries and reflections, with auth, document CRUD, etc",
+        "stack": [
+          "React",
+          "Nextjs",
+          "Tailwindcss",
+          "Typescript",
+          "Bun",
+          "Elysia",
+          "PostgreSQL",
+          "Drizzle",
+          "Buntest"
+        ],
+        "repository": "https://github.com/Huilensolis/memoir",
+        "deploy": "https://memoir-oak.vercel.app/"
       },
       {
         "title": "Interestellar",
-        "description": "Kanban board for collaboration"
-      },
-      {
-        "title": "A project",
-        "description": "Description"
-      },
-      {
-        "title": "A project",
-        "description": "Description"
-      },
-      {
-        "title": "A project",
-        "description": "Description"
+        "description": "Kanban board for collaboration",
+        "stack": [],
+        "repository": "https://github.com/Huilensolis/memoir",
+        "deploy": "https://memoir-oak.vercel.app/"
       }
     ]
   },

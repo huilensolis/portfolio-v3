@@ -19,27 +19,34 @@
     "items": [
       {
         "title": "Pictura",
-        "description": "Red social de imágenes"
+        "description": "Red social de imágenes",
+        "stack": ["React", "Nextjs", "Tailwindcss", "Typescript", "PostgreSQL"],
+        "repository": "https://github.com/Huilensolis/Pictura",
+        "deploy": "https://pictura-px.vercel.app/"
       },
       {
         "title": "Memoir",
-        "description": "Aplicación de diario diario"
+        "description": "Aplicación de diario diario",
+        "stack": [
+          "React",
+          "Nextjs",
+          "Tailwindcss",
+          "Typescript",
+          "Bun",
+          "Elysia",
+          "PostgreSQL",
+          "Drizzle",
+          "Buntest"
+        ],
+        "repository": "https://github.com/Huilensolis/memoir",
+        "deploy": "https://memoir-oak.vercel.app/"
       },
       {
         "title": "Interestellar",
-        "description": "Tablero Kanban para colaboración"
-      },
-      {
-        "title": "Un proyecto",
-        "description": "Descripción"
-      },
-      {
-        "title": "Un proyecto",
-        "description": "Descripción"
-      },
-      {
-        "title": "Un proyecto",
-        "description": "Descripción"
+        "description": "Tablero Kanban para colaboración",
+        "stack": [],
+        "repository": "https://github.com/Huilensolis/memoir",
+        "deploy": "https://memoir-oak.vercel.app/"
       }
     ]
   },
