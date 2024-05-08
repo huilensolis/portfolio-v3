@@ -82,7 +82,7 @@
     "time_zone": "Argentina/Buenos_Aires"
   },
   "misc": {
-    "title": "Herramientas",
+    "title": "Workspace",
     "items": ["Arch Linux", "Oh My Zsh", "Nvim", "Hyprland"]
   }
 }

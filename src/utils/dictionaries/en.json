@@ -82,7 +82,7 @@
     "time_zone": "Cordoba, Argentina"
   },
   "misc": {
-    "title": "Tools",
+    "title": "Workspace",
     "items": ["Arch Linux", "Oh My Zsh", "Nvim", "Hyprland"]
   }
 }
