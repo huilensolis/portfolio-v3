@@ -79,7 +79,8 @@
   },
   "localization": {
     "title": "Localization & Time zone",
-    "time_zone": "Cordoba, Argentina"
+    "time_zone": "Cordoba, Argentina",
+    "your_time_zone": "your time zone"
   },
   "misc": {
     "title": "Workspace",

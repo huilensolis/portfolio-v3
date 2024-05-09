@@ -13,7 +13,6 @@ const config: Config = {
           "100%": { strokeDashoffset: "0" },
         },
       },
-
       animation: {
         dash: "dash 200s forwards infinite",
       },

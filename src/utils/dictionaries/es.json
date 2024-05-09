@@ -79,7 +79,8 @@
   },
   "localization": {
     "title": "Localización y Zona horaria",
-    "time_zone": "Argentina/Buenos_Aires"
+    "time_zone": "Argentina/Buenos_Aires",
+    "your_time_zone": "tu zone horaria"
   },
   "misc": {
     "title": "Workspace",

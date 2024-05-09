@@ -12,7 +12,6 @@ import { React } from "@/components/icons/react";
 import { ArrowUpRight, FolderGit, Globe } from "lucide-react";
 import Link from "next/link";
 import { TimeRange } from "@/components/feature/time-range/time-range.component";
-import { Suspense } from "react";
 
 export const dynamic = "force-static";
 
@@ -28,13 +27,15 @@ export default async function HomePage({
   return (
     <div className="flex flex-col gap-12">
       <section className="flex flex-col gap-6">
-        <h1 className="text-3xl font-semibold text-orange-600">Huilén Solís</h1>
+        <h1 className="text-3xl font-semibold text-neutral-200">
+          Huilén Solís
+        </h1>
         <p className="text-neutral-500 text-pretty xl:w-8/12">
           {dictionary.biography}
         </p>
       </section>
       <section className="xl:grid flex flex-col gap-6 grid-cols-3 grid-rows-2 text-sm">
-        <Box className="col-span-1 row-span-2 flex flex-col gap-4">
+        <Box className="col-span-1 row-span-2 flex flex-col gap-2">
           <h1 className="text-neutral-400 text-base">
             {dictionary.education.title}
           </h1>
@@ -54,14 +55,16 @@ export default async function HomePage({
                       </h1>
                       <ArrowUpRight className="w-5 h-5 group-hover:text-orange-600  group-hover:scale-125 duration-150 transition-all" />
                     </Link>
-                    <span className="text-neutral-400">{item.description}</span>
+                    <span className="text-base text-neutral-400">
+                      {item.description}
+                    </span>
                   </section>
                 </article>
               </li>
             ))}
           </ul>
         </Box>
-        <Box className="col-span-1 row-span-4 flex flex-col gap-4">
+        <Box className="col-span-1 row-span-4 flex flex-col gap-2">
           <h1 className="text-neutral-400 text-base">
             {dictionary.projects.title}
           </h1>
@@ -127,9 +130,9 @@ export default async function HomePage({
             ))}
           </ul>
         </Box>
-        <Box className="col-span-1 row-span-2 flex flex-col justify-between gap-4">
+        <Box className="col-span-1 row-span-2 flex flex-col justify-between gap-2">
           <section className="flex flex-col gap-2">
-            <h1 className="text-neutral-400 text-base">
+            <h1 className="text-neutral-400 text-base font-bold">
               {dictionary.tech_stack.title}
             </h1>
             <h2 className="text-base">{dictionary.tech_stack.role}</h2>
@@ -152,7 +155,9 @@ export default async function HomePage({
           </h1>
           <ul className="flex flex-col gap-2">
             {dictionary.misc.items.map((miscItem, i) => (
-              <li key={i}>{miscItem}</li>
+              <li key={i} className="text-base font-bold">
+                {miscItem}
+              </li>
             ))}
           </ul>
         </Box>
@@ -162,10 +167,8 @@ export default async function HomePage({
           </h1>
           <section className="flex gap-2 justify-between">
             <div className=" w-full flex flex-col gap-2">
-              <div className="flex items-center gap-2 font-bold">
-                <h2 className="text-base">
-                  {dictionary.localization.time_zone}
-                </h2>
+              <div className="flex items-center gap-2 text-base font-bold">
+                <h2>{dictionary.localization.time_zone}</h2>
                 <SingleDot />
                 <span>GTM-3</span>
               </div>
@@ -176,10 +179,10 @@ export default async function HomePage({
                   day: "2-digit",
                 })}
               </span>
-              <Suspense fallback={<div>loadin</div>}>
-                <ClockLocal />
-              </Suspense>
-              <TimeRange />
+              <ClockLocal />
+              <TimeRange
+                your_time_zone_text={dictionary.localization.your_time_zone}
+              />
             </div>
             {/* <div className="relative"> */}
             {/*   <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" /> */}
