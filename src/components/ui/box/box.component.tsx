@@ -10,7 +10,7 @@ export function Box({ children, className, ...props }: TProps) {
     <article
       {...props}
       className={cn(
-        "flex flex-col gap-2 p-5 rounded-2xl bg-[#121212] border border-neutral-700/40",
+        "flex flex-col gap-2 p-5 rounded-xl bg-[#121212] border border-neutral-700/40",
         className,
       )}
     >

@@ -1,5 +1,4 @@
 import { ClockLocal } from "@/components/feature/clock-local";
-import { Box } from "@/components/ui/box/box.component";
 import { Dot } from "@/components/ui/dot";
 import { DotWithChildren } from "@/components/ui/dot-with-children";
 import { getDictionary } from "@/utils/dictionaries";
@@ -25,171 +24,110 @@ export default async function HomePage({
   const date = DateTime.now();
   date.setZone(TIME_ZONE);
   return (
-    <div className="flex flex-col gap-12">
-      <section className="flex flex-col gap-6">
-        <h1 className="text-3xl font-semibold text-neutral-200">
-          Huilén Solís
-        </h1>
-        <p className="text-neutral-500 text-pretty xl:w-8/12">
+    <div className="flex flex-col prose-li:list-none prose-ul:p-0">
+      <section className="flex flex-col">
+        <h1>Huilén Solís 👋</h1>
+        <p>
+          {dictionary.biography}
           {dictionary.biography}
         </p>
       </section>
-      <section className="xl:grid flex flex-col gap-6 grid-cols-3 grid-rows-2 text-sm">
-        <Box className="col-span-1 row-span-2 flex flex-col gap-2">
-          <h1 className="text-neutral-400 text-base">
-            {dictionary.education.title}
-          </h1>
-          <ul className="flex flex-col gap-2">
+      <section className="flex flex-col">
+        <div>
+          <h2>{dictionary.education.title}</h2>
+          <ul className="flex flex-col list-none">
             {dictionary.education.items.map((item, i) => (
               <li key={i}>
-                <article className="flex gap-2">
-                  <Dot />
-                  <section>
+                <article className="flex flex-col">
+                  <section className="flex flex-col">
                     <Link
                       href={item.href}
                       target="_blank"
-                      className="flex items-center duration-150 transition-all group"
+                      className="flex items-center duration-150 transition-all group no-underline"
                     >
-                      <h1 className="font-bold text-base group-hover:text-orange-600 group-hover:underline decoration-orange-600 duration-150 transition-all">
-                        {item.title}
-                      </h1>
-                      <ArrowUpRight className="w-5 h-5 group-hover:text-orange-600  group-hover:scale-125 duration-150 transition-all" />
+                      <h4>{item.title}</h4>
+                      <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
                     </Link>
-                    <span className="text-base text-neutral-400">
-                      {item.description}
-                    </span>
                   </section>
+                  <p>{item.description}</p>
                 </article>
               </li>
             ))}
           </ul>
-        </Box>
-        <Box className="col-span-1 row-span-4 flex flex-col gap-2">
-          <h1 className="text-neutral-400 text-base">
-            {dictionary.projects.title}
-          </h1>
-          <ul className="flex flex-col gap-4">
+        </div>
+        <div>
+          <h2>{dictionary.projects.title}</h2>
+          <ul className="flex flex-col">
             {dictionary.projects.items.map((project, i) => (
               <li key={i}>
-                <article className="flex gap-2">
-                  <div className="pt-1">
-                    <DotWithChildren>
-                      <span>{i + 1}</span>
-                    </DotWithChildren>
-                  </div>
-                  <section className="flex flex-col gap-2 flex-1">
+                <article className="flex">
+                  <section className="flex flex-col flex-1">
                     <section>
                       <div className="flex items-center justify-between">
                         <Link
                           href={project.deploy}
                           target="_blank"
-                          className="hover:text-orange-600 hover:scale-105 duration-150 transition-all"
+                          className="no-underline"
                         >
-                          <h1 className="font-bold text-base underline decoration-orange-600">
-                            {project.title}
-                          </h1>
+                          <h3>{project.title}</h3>
                         </Link>
                         <div className="flex gap-2">
                           <Link
                             href={project.repository}
                             target="_blank"
-                            className="hover:text-orange-600 hover:scale-105 duration-150 transition-all"
+                            className="group duration-150 transition-all hover:text-neutral-50 flex items-center justify-center no-underline"
                           >
-                            <FolderGit className="h-5 w-5" />
+                            code
+                            <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
                           </Link>
                           <Link
                             href={project.deploy}
                             target="_blank"
-                            className="hover:text-orange-600 hover:scale-105 duration-150 transition-all"
+                            className="group duration-150 transition-all hover:text-neutral-50 flex items-center justify-center no-underline"
                           >
-                            <Globe className="h-5 w-5" />
+                            live
+                            <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
                           </Link>
                         </div>
                       </div>
                     </section>
-                    <div className="flex flex-col gap-1">
-                      <span className="text-neutral-400 text-pretty">
-                        {project.description}
-                      </span>
-                      <ul className="flex flex-wrap gap-1">
-                        {project.stack.length > 0 &&
-                          project.stack.map((tech, i) => {
-                            return (
-                              <li key={i}>
-                                <article className="flex items-center justify-center gap-2 py-1 px-2 rounded-full border border-neutral-800 text-neutral-400">
-                                  <span>{tech}</span>
-                                </article>
-                              </li>
-                            );
-                          })}
-                      </ul>
+                    <div className="flex flex-col">
+                      <p>{project.description}</p>
+                      <p>
+                        {project.stack.length > 0 && project.stack.join(", ")}
+                      </p>
                     </div>
                   </section>
                 </article>
               </li>
             ))}
           </ul>
-        </Box>
-        <Box className="col-span-1 row-span-2 flex flex-col justify-between gap-2">
-          <section className="flex flex-col gap-2">
-            <h1 className="text-neutral-400 text-base font-bold">
-              {dictionary.tech_stack.title}
-            </h1>
-            <h2 className="text-base">{dictionary.tech_stack.role}</h2>
-          </section>
-          <ul className="flex flex-wrap gap-2">
-            {dictionary.tech_stack.items.map((tech, i) => {
-              return (
-                <li key={i}>
-                  <article className="flex items-center justify-center gap-2 py-1 px-2 rounded-full border border-neutral-800 text-neutral-400">
-                    <span>{tech}</span>
-                  </article>
-                </li>
-              );
-            })}
-          </ul>
-        </Box>
-        <Box className="col-span-1 row-span-2 flex flex-col gap-4">
-          <h1 className="text-neutral-400 text-base">
-            {dictionary.misc.title}
-          </h1>
-          <ul className="flex flex-col gap-2">
-            {dictionary.misc.items.map((miscItem, i) => (
-              <li key={i} className="text-base font-bold">
-                {miscItem}
-              </li>
-            ))}
-          </ul>
-        </Box>
-        <Box className="col-span-1 row-span-2 flex gap-4">
-          <h1 className="text-neutral-400 text-base">
-            {dictionary.localization.title}
-          </h1>
-          <section className="flex gap-2 justify-between">
-            <div className=" w-full flex flex-col gap-2">
-              <div className="flex items-center gap-2 text-base font-bold">
-                <h2>{dictionary.localization.time_zone}</h2>
-                <SingleDot />
-                <span>GTM-3</span>
+        </div>
+        <div>
+          <h2>{dictionary.localization.title}</h2>
+          <section className="flex justify-between">
+            <div className=" w-full flex flex-col">
+              <div className="flex gap-2 items-center">
+                <h3>{dictionary.localization.time_zone}</h3>-<h3>GTM-3</h3>
               </div>
-              <span>
+              <p>
                 {date.setLocale(lang).toLocaleString({
                   month: "short",
                   weekday: "short",
                   day: "2-digit",
                 })}
-              </span>
+              </p>
               <ClockLocal />
               <TimeRange
                 your_time_zone_text={dictionary.localization.your_time_zone}
               />
             </div>
-            {/* <div className="relative"> */}
-            {/*   <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" /> */}
-            {/*   <CordobaShape className="absolute top-0 left-0 w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-orange-600 [stroke-dasharray:_300,_1000] [stroke-dashoffset:_10000] animate-dash" /> */}
-            {/* </div> */}
+            <div className="relative">
+              <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" />
+              <CordobaShape className="absolute top-0 left-0 w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-orange-600 [stroke-dasharray:_300,_1000] [stroke-dashoffset:_10000] animate-dash" />
+            </div>
           </section>
-        </Box>
+        </div>
       </section>
     </div>
   );

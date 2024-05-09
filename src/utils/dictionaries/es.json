@@ -26,7 +26,13 @@
       {
         "title": "Pictura",
         "description": "Red social de imágenes",
-        "stack": ["React", "Nextjs", "Tailwindcss", "Typescript", "PostgreSQL"],
+        "stack": [
+          "React",
+          "Next js",
+          "Tailwind CSS",
+          "Typescript",
+          "PostgreSQL"
+        ],
         "repository": "https://github.com/Huilensolis/Pictura",
         "deploy": "https://pictura-px.vercel.app/"
       },
@@ -35,14 +41,15 @@
         "description": "Aplicación de diario diario",
         "stack": [
           "React",
-          "Nextjs",
-          "Tailwindcss",
+          "Next js",
+          "Tailwind CSS",
           "Typescript",
           "Bun",
           "Elysia",
           "PostgreSQL",
           "Drizzle",
-          "Buntest"
+          "Buntest",
+          "Turborepo"
         ],
         "repository": "https://github.com/Huilensolis/memoir",
         "deploy": "https://memoir-oak.vercel.app/"
@@ -61,20 +68,20 @@
     "role": "Desarrollador Full Stack",
     "items": [
       "React",
-      "Nextjs",
+      "Next js",
       "Typescript",
       "Javascript",
-      "Tailwind",
+      "Tailwind CSS",
       "CSS",
-      "Nodejs",
       "Express",
       "PostgreSQL",
       "Drizzle",
       "Sequelize",
       "Bun",
       "Elysia",
-      "Buntest",
-      "Git"
+      "Bun test",
+      "Git",
+      "Turborepo"
     ]
   },
   "localization": {

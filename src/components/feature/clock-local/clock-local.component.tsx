@@ -25,8 +25,8 @@ export function ClockLocal() {
   }, []);
 
   return (
-    <span className="text-lg" suppressHydrationWarning>
+    <strong suppressHydrationWarning>
       {date.hour}:{date.minute}:{date.second}
-    </span>
+    </strong>
   );
 }

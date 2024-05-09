@@ -15,7 +15,7 @@
       },
       {
         "title": "English private lessons",
-        "description": "c1 Advanced",
+        "description": "C1 Advanced",
         "href": "https://cert.efset.org/z2Phe6"
       }
     ]
@@ -26,7 +26,13 @@
       {
         "title": "Pictura",
         "description": "Images social network, with images feed, user profiles, email log in, images posting, images collections, bookmarks, etc",
-        "stack": ["React", "Nextjs", "Tailwindcss", "Typescript", "PostgreSQL"],
+        "stack": [
+          "React",
+          "Next js",
+          "Tailwind CSS",
+          "Typescript",
+          "PostgreSQL"
+        ],
         "repository": "https://github.com/Huilensolis/Pictura",
         "deploy": "https://pictura-px.vercel.app/"
       },
@@ -35,14 +41,15 @@
         "description": "Document editor for writing and saving journal entries and reflections, with auth, document CRUD, etc",
         "stack": [
           "React",
-          "Nextjs",
-          "Tailwindcss",
+          "Next js",
+          "Tailwind CSS",
           "Typescript",
           "Bun",
           "Elysia",
           "PostgreSQL",
           "Drizzle",
-          "Buntest"
+          "Buntest",
+          "Turborepo"
         ],
         "repository": "https://github.com/Huilensolis/memoir",
         "deploy": "https://memoir-oak.vercel.app/"
@@ -61,20 +68,20 @@
     "role": "Full Stack Developer",
     "items": [
       "React",
-      "Nextjs",
+      "Next js",
       "Typescript",
       "Javascript",
-      "Tailwind",
+      "Tailwind CSS",
       "CSS",
-      "Nodejs",
       "Express",
       "PostgreSQL",
       "Drizzle",
       "Sequelize",
       "Bun",
       "Elysia",
-      "Buntest",
-      "Git"
+      "Bun test",
+      "Git",
+      "Turborepo"
     ]
   },
   "localization": {

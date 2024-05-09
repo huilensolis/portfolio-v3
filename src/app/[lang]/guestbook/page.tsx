@@ -49,11 +49,14 @@ export default async function GuestbookPage() {
           </div>
         )}
       </div>
-      <ul className="flex flex-col gap-2">
+      <ul className="w-full flex flex-col gap-2 pl-0">
         {comments &&
           comments?.length > 0 &&
           comments.map((comment) => (
-            <li key={comment.id} className="flex gap-4 items-center">
+            <li
+              key={comment.id}
+              className="flex gap-4 items-center prose-li:pl-0"
+            >
               <div className="flex gap-4 items-center">
                 <UserCard userId={comment.user_id} />
                 <p className="flex-1">&quot;{comment.text}&quot;</p>

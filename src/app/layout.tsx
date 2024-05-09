@@ -1,6 +1,6 @@
 import "./global.css";
 import type { Metadata } from "next";
-import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 import { baseUrl } from "@/app/sitemap";
 
@@ -45,12 +45,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        "text-black bg-white font-medium dark:text-neutral-300 dark:bg-[#0D0D0D]",
-        GeistMono.className,
+        "dark:bg-[#111010] prose prose-neutral dark:prose-invert prose-headings:text-neutral-200 prose-p:text-neutral-300/70 prose-p:text-pretty prose-headings:text-balance prose-p:my-1 prose-a:text-neutral-400 font-medium prose-h1:my-4 prose-headings:font-medium prose-h3:my-0 prose-h4:my-0 prose-h5:my-0 prose-h2:mb-2 prose-h2:mt-4 tracking-tighter max-w-none prose-strong:text-neutral-200 prose-strong:font-medium",
+        GeistSans.className,
       )}
     >
       <body className="antialiased min-h-screen xl:px-0 px-5 flex justify-center">
-        <main className="max-w-7xl w-full min-w-0 py-5 flex flex-col">
+        <main className="max-w-2xl w-full min-w-0 py-5 flex flex-col">
           {children}
           <Analytics />
         </main>

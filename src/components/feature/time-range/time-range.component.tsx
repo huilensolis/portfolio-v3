@@ -1,6 +1,6 @@
 "use client";
 
-import { SUPPORTED_LANGS, TIME_ZONE } from "@/utils/consts";
+import { TIME_ZONE } from "@/utils/consts";
 import { DateTime } from "luxon";
 import { useEffect, useState } from "react";
 
@@ -18,7 +18,7 @@ export function TimeRange({
   }, []);
 
   return (
-    <div className="relative my-10">
+    <div className="relative my-10 not-prose">
       <ul className="grid pb-2 grid-cols-[repeat(7,_minmax(0,_1.25rem))] items-start gap-5 relative">
         {["00", "04", "08", "12", "16", "20", "24"].map((time, i) => (
           <li
