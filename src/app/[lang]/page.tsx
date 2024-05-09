@@ -25,6 +25,8 @@ import { Git } from "@/components/icons/git";
 import { Buntest } from "@/components/icons/buntest";
 import { ArrowUpRight, FolderGit, Globe, MoveUpRight } from "lucide-react";
 import Link from "next/link";
+import { TimeRange } from "@/components/feature/time-range/time-range.component";
+import { Suspense } from "react";
 
 export const dynamic = "force-static";
 
@@ -208,7 +210,10 @@ export default async function HomePage({
                   day: "2-digit",
                 })}
               </span>
-              <ClockLocal />
+              <Suspense fallback={<div>loadin</div>}>
+                <ClockLocal />
+              </Suspense>
+              <TimeRange />
             </div>
             {/* <div className="relative"> */}
             {/*   <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" /> */}
