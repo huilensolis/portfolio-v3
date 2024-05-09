@@ -193,7 +193,7 @@ export default async function HomePage({
             {dictionary.localization.title}
           </h1>
           <section className="flex gap-2 justify-between">
-            <div className="flex flex-col gap-2">
+            <div className=" w-full flex flex-col gap-2">
               <div className="flex items-center gap-2 font-bold">
                 <h2 className="text-base">
                   {dictionary.localization.time_zone}
@@ -210,10 +210,10 @@ export default async function HomePage({
               </span>
               <ClockLocal />
             </div>
-            <div className="relative">
-              <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" />
-              <CordobaShape className="absolute top-0 left-0 w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-orange-600 [stroke-dasharray:_300,_1000] [stroke-dashoffset:_10000] animate-dash" />
-            </div>
+            {/* <div className="relative"> */}
+            {/*   <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" /> */}
+            {/*   <CordobaShape className="absolute top-0 left-0 w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-orange-600 [stroke-dasharray:_300,_1000] [stroke-dashoffset:_10000] animate-dash" /> */}
+            {/* </div> */}
           </section>
         </Box>
       </section>
