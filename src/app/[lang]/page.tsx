@@ -14,39 +14,12 @@ import { Typescript } from "@/components/icons/typescript";
 import { Javascript } from "@/components/icons/javascript";
 import { Tailwind } from "@/components/icons/tailwind";
 import { CSS } from "@/components/icons/css";
-import { Nodejs } from "@/components/icons/nodejs";
-import { Express } from "@/components/icons/express";
-import { PostgreSQL } from "@/components/icons/postgresql";
-import { Drizzle } from "@/components/icons/drizzle";
-import { Sequelize } from "@/components/icons/sequelize";
-import { Bun } from "@/components/icons/bun";
-import { Elysia } from "@/components/icons/elysia";
-import { Git } from "@/components/icons/git";
-import { Buntest } from "@/components/icons/buntest";
-import { ArrowUpRight, FolderGit, Globe, MoveUpRight } from "lucide-react";
+import { ArrowUpRight, FolderGit, Globe } from "lucide-react";
 import Link from "next/link";
 import { TimeRange } from "@/components/feature/time-range/time-range.component";
 import { Suspense } from "react";
 
 export const dynamic = "force-static";
-
-const icons = {
-  React,
-  Nextjs,
-  Typescript,
-  Javascript,
-  Tailwind,
-  CSS,
-  Nodejs,
-  Express,
-  PostgreSQL,
-  Drizzle,
-  Sequelize,
-  Bun,
-  Buntest,
-  Elysia,
-  Git,
-};
 
 export default async function HomePage({
   params: { lang },
@@ -168,11 +141,9 @@ export default async function HomePage({
           </section>
           <ul className="flex flex-wrap gap-2">
             {dictionary.tech_stack.items.map((tech, i) => {
-              const Icon = icons[tech as keyof typeof icons];
               return (
                 <li key={i}>
-                  <article className="flex items-center justify-center gap-2 py-1.5 px-3 rounded-full border border-neutral-800 text-neutral-400">
-                    {Icon && <Icon className="fill-neutral-400 w-4" />}
+                  <article className="flex items-center justify-center gap-2 py-1 px-2 rounded-full border border-neutral-800 text-neutral-400">
                     <span>{tech}</span>
                   </article>
                 </li>
