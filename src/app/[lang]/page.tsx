@@ -1,7 +1,6 @@
 import { ClockLocal } from "@/components/feature/clock-local";
 import { getDictionary } from "@/utils/dictionaries";
 
-import { ReactComponent as CordobaShape } from "../../../public/cordoba-province-shape.svg";
 import { DateTime } from "luxon";
 import { TIME_ZONE } from "@/utils/consts";
 import { React } from "@/components/icons/react";
@@ -119,10 +118,7 @@ export default async function HomePage({
                 your_time_zone_text={dictionary.localization.your_time_zone}
               />
             </div>
-            <div className="relative">
-              <CordobaShape className="w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-neutral-700 [stroke-dasharray:_1,_0]" />
-              <CordobaShape className="absolute top-0 left-0 w-24 fill-transparent stroke-[8] [stroke-linejoin:_round;] stroke-orange-600 [stroke-dasharray:_300,_1000] [stroke-dashoffset:_10000] animate-dash" />
-            </div>
+            <div className=""></div>
           </section>
         </div>
       </section>
