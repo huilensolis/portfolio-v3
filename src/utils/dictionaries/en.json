@@ -1,22 +1,25 @@
 {
-  "biography": "I'm a Full Stack Developer with a focus on Frontend. Back in 2022 I started learning frontend at Platzi, on 2023 joined X Academy, where professionals who work at Santex teach Full Stack Development. I'm currently building open source projects on github with the community. On my free time, you can find me reading history books, training taekwondo or configuring my workspace on Arch Linux.",
+  "biography": "Back in 2022 I started learning frontend at Platzi, on 2023 joined X Academy, where professionals who work at Santex teach Full Stack Development. I'm currently building open source projects on github with the community. On my free time, you can find me reading history books, training taekwondo or configuring my workspace on Arch Linux.",
   "education": {
     "title": "Education",
     "items": [
       {
         "title": "X Academy",
         "description": "Full Stack bootcamp",
-        "href": "https://drive.google.com/file/d/16rDcl0lApDdaiQhGEHTSBRYYeKEWqmWt/view"
+        "href": "https://drive.google.com/file/d/16rDcl0lApDdaiQhGEHTSBRYYeKEWqmWt/view",
+        "time_span": { "start": "02/2023", "end": "10/2023" }
       },
       {
         "title": "Platzi",
         "description": "Frontend development courses",
-        "href": "https://platzi.com/p/Huilen/"
+        "href": "https://platzi.com/p/Huilen/",
+        "time_span": { "start": "09/2022", "end": "07/2023" }
       },
       {
         "title": "English private lessons",
         "description": "C1 Advanced",
-        "href": "https://cert.efset.org/z2Phe6"
+        "href": "https://cert.efset.org/z2Phe6",
+        "time_span": { "start": "02/2019", "end": "present" }
       }
     ]
   },

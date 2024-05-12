@@ -23,6 +23,7 @@ export default async function HomePage({
     <div className="flex flex-col prose-li:list-none prose-ul:p-0">
       <section className="flex flex-col">
         <h1 className="mb-0">Huilén Solís 👋</h1>
+        <strong>Full stack developer</strong>
         <p>{dictionary.biography}</p>
       </section>
       <section className="flex flex-col">
@@ -42,6 +43,10 @@ export default async function HomePage({
                       <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
                     </Link>
                   </section>
+                  <div className="text-sm">
+                    <span>{item.time_span.start}</span> -{" "}
+                    <span>{item.time_span.end}</span>
+                  </div>
                   <p>{item.description}</p>
                 </article>
               </li>
