@@ -49,7 +49,7 @@ export default function RootLayout({
         GeistSans.className,
       )}
     >
-      <body className="antialiased min-h-screen xl:px-0 px-5 flex justify-center">
+      <body className="antialiased min-h-screen overflow-x-hidden xl:px-0 px-5 flex justify-center">
         <main className="max-w-2xl w-full min-w-0 py-5 flex flex-col">
           {children}
           <Analytics />

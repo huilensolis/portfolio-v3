@@ -96,8 +96,24 @@
     "time_zone": "Cordoba, Argentina",
     "your_time_zone": "your time zone"
   },
-  "misc": {
-    "title": "Workspace",
-    "items": ["Arch Linux", "Oh My Zsh", "Nvim", "Hyprland"]
+  "contact": {
+    "title": "Contact",
+    "links": [
+      {
+        "title": "LinkedIn",
+        "href": "https://www.linkedin.com/in/huilensolis/",
+        "at": "@solishuilen"
+      },
+      {
+        "title": "Github",
+        "href": "https://www.github.com/huilensolis",
+        "at": "@solishuilen"
+      },
+      {
+        "title": "Gmail",
+        "href": "https://mailto:huilensolis@skiff.com",
+        "at": "huilensolis@skiff.com"
+      }
+    ]
   }
 }

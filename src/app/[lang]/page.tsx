@@ -103,26 +103,47 @@ export default async function HomePage({
             ))}
           </ul>
         </div>
-        <div>
-          <h2>{dictionary.localization.title}</h2>
-          <section className="flex justify-between">
-            <div className=" w-full flex flex-col">
-              <div className="flex gap-2 items-center">
-                <h3>{dictionary.localization.time_zone}</h3>-<h3>GTM-3</h3>
+        <div className="flex md:flex-row flex-col">
+          <section className="md:mr-20">
+            <h2>{dictionary.localization.title}</h2>
+            <section className="flex justify-between">
+              <div className=" w-full flex flex-col">
+                <div className="flex gap-2 items-center">
+                  <h3>{dictionary.localization.time_zone}</h3>-<h3>GTM-3</h3>
+                </div>
+                <p>
+                  {date.setLocale(lang).toLocaleString({
+                    month: "short",
+                    weekday: "short",
+                    day: "2-digit",
+                  })}
+                </p>
+                <ClockLocal />
+                <TimeRange
+                  your_time_zone_text={dictionary.localization.your_time_zone}
+                />
               </div>
-              <p>
-                {date.setLocale(lang).toLocaleString({
-                  month: "short",
-                  weekday: "short",
-                  day: "2-digit",
-                })}
-              </p>
-              <ClockLocal />
-              <TimeRange
-                your_time_zone_text={dictionary.localization.your_time_zone}
-              />
-            </div>
-            <div className=""></div>
+              <div className=""></div>
+            </section>
+          </section>
+          <section className="w-full h-full flex-1">
+            <h2>{dictionary.contact.title}</h2>
+            <ul className="flex flex-col gap-4">
+              {dictionary.contact.links.map((contact, i) => (
+                <strong key={i}>
+                  <Link
+                    key={i}
+                    href={contact.href}
+                    className="group flex items-center no-underline"
+                  >
+                    <span className="group-hover:text-neutral-50 transition-all duration-150">
+                      {contact.title} - {contact.at}
+                    </span>
+                    <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
+                  </Link>
+                </strong>
+              ))}
+            </ul>
           </section>
         </div>
       </section>
