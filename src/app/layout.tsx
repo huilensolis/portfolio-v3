@@ -45,12 +45,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        "dark:bg-[#111010] prose prose-neutral dark:prose-invert prose-p:text-[#d4d4d4] prose-p:text-pretty prose-p:tracking-tight prose-headings:text-balance prose-p:my-1 prose-a:tracking-tight prose-a:text-neutral-400 prose-headings:font-medium prose-headings:text-white prose-headings:tracking-tighter prose-h1:my-4 prose-h1:text-2xl prose-h2:text-xl prose-h3:my-0 prose-h3:text-lg prose-h4:my-0 prose-h5:my-0 prose-h2:mb-2 prose-h2:mt-4 max-w-none prose-strong:text-neutral-200 prose-strong:font-medium",
+        "dark:bg-black prose prose-neutral dark:prose-invert prose-p:text-[#ffffffa3] prose-p:text-pretty prose-p:tracking-tight prose-headings:text-balance prose-p:my-1 prose-a:tracking-tight prose-a:text-[#ffffffa3] prose-headings:font-medium prose-headings:text-white prose-headings:tracking-tighter prose-h1:my-4 prose-h1:text-2xl prose-h2:text-xl prose-h3:my-0 prose-h3:text-lg prose-h4:my-0 prose-h5:my-0 prose-h2:mb-2 prose-h2:mt-4 max-w-none prose-strong:text-neutral-200 prose-strong:font-medium",
         GeistSans.className,
       )}
     >
       <body className="antialiased min-h-screen overflow-x-hidden xl:px-0 px-5 flex justify-center">
-        <main className="max-w-2xl w-full min-w-0 py-5 flex flex-col">
+        <main className="max-w-lg w-full min-w-0 py-5 flex flex-col">
           {children}
           <Analytics />
         </main>

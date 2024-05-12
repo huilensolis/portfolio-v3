@@ -103,50 +103,47 @@ export default async function HomePage({
             ))}
           </ul>
         </div>
-        <div className="flex md:flex-row flex-col">
-          <section className="md:mr-20">
-            <h2>{dictionary.localization.title}</h2>
-            <section className="flex justify-between">
-              <div className=" w-full flex flex-col">
-                <div className="flex gap-2 items-center">
-                  <h3>{dictionary.localization.time_zone}</h3>-<h3>GTM-3</h3>
-                </div>
-                <p>
-                  {date.setLocale(lang).toLocaleString({
-                    month: "short",
-                    weekday: "short",
-                    day: "2-digit",
-                  })}
-                </p>
-                <ClockLocal />
-                <TimeRange
-                  your_time_zone_text={dictionary.localization.your_time_zone}
-                />
+        <section className="w-full">
+          <h2>{dictionary.localization.title}</h2>
+          <section className="flex justify-between">
+            <div className=" w-full flex flex-col">
+              <div className="flex gap-2 items-center">
+                <h3>{dictionary.localization.time_zone}</h3>-<h3>GTM-3</h3>
               </div>
-              <div className=""></div>
-            </section>
+              <p>
+                {date.setLocale(lang).toLocaleString({
+                  month: "short",
+                  weekday: "short",
+                  day: "2-digit",
+                })}
+              </p>
+              <ClockLocal />
+              <TimeRange
+                your_time_zone_text={dictionary.localization.your_time_zone}
+              />
+            </div>
           </section>
-          <section className="w-full h-full flex-1">
-            <h2>{dictionary.contact.title}</h2>
-            <ul className="flex flex-col gap-4">
-              {dictionary.contact.links.map((contact, i) => (
-                <strong key={i}>
-                  <Link
-                    key={i}
-                    href={contact.href}
-                    className="grid grid-cols-2 justify-start w-full no-underline"
-                  >
-                    {contact.title}:
-                    <span className="flex items-center justify-start hover:text-neutral-50 transition-all duration-150 hover:underline">
-                      {contact.at}
-                      <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
-                    </span>
-                  </Link>
-                </strong>
-              ))}
-            </ul>
-          </section>
-        </div>
+        </section>
+        <section className="w-full h-full flex-1">
+          <h2>{dictionary.contact.title}</h2>
+          <ul className="flex flex-col gap-4">
+            {dictionary.contact.links.map((contact, i) => (
+              <strong key={i}>
+                <Link
+                  key={i}
+                  href={contact.href}
+                  className="grid grid-cols-[100px,_1fr] justify-start w-full no-underline"
+                >
+                  {contact.title}:
+                  <strong className="flex group items-center justify-start transition-all duration-150 hover:underline">
+                    {contact.at}
+                    <ArrowUpRight className="w-5 h-5 group-hover:scale-110 duration-150 transition-all" />
+                  </strong>
+                </Link>
+              </strong>
+            ))}
+          </ul>
+        </section>
       </section>
     </div>
   );
