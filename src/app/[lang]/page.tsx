@@ -24,7 +24,9 @@ export default async function HomePage({
       <section className="flex flex-col">
         <h1 className="mb-0">Huilén Solís 👋</h1>
         <strong>Full stack developer</strong>
-        <p>{dictionary.biography}</p>
+        {dictionary.biography.map((paragraph, i) => (
+          <p key={i}>{paragraph}</p>
+        ))}
       </section>
       <section className="flex flex-col">
         <div>

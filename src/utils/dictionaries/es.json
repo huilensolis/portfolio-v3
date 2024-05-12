@@ -1,5 +1,9 @@
 {
-  "biography": "En 22 comencé a aprender desarrollo frontend en Platzi, en 2023 comencé a estudiar en X Academy, en donde profesionales que trabajan en Santex enseñan desarrollo Full Stack. Actualmente, estoy construyendo proyectos open source en GitHub con la comunidad. En mi tiempo libre, me podés encontrar leyendo libros de historia, entrenando taekwondo o configurando mi espacio de trabajo en Arch Linux.",
+  "biography": [
+    "En 2022 comencé a aprender desarrollo frontend en Platzi, en 2023 comencé a estudiar en X Academy, en donde profesionales que trabajan en Santex enseñan desarrollo Full Stack.",
+    "Actualmente, estoy construyendo proyectos open source en GitHub con la comunidad.",
+    "En mi tiempo libre, me podés encontrar leyendo libros de historia, entrenando taekwondo o configurando mi espacio de trabajo en Arch Linux."
+  ],
   "education": {
     "title": "Educación",
     "items": [
