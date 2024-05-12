@@ -1,10 +1,10 @@
 {
-  "biography": "Desarrollador Full-Stack, esta es una descripción en la que pensaré en el futuro, pero por ahora llenaré el espacio con algo de texto para ver cómo se ve el diseño.",
+  "biography": "Desarrollador Full-Stack con un foco en desarrollo Frontend. En 22 comencé a aprender desarrollo frontend en Platzi, en 2023 comencé a estudiar en X Academy, en donde profesionales que trabajan en Santex enseñan desarrollo Full Stack. Actualmente, estoy construyendo proyectos open source en GitHub con la comunidad. En mi tiempo libre, me podés encontrar leyendo libros de historia, entrenando taekwondo o configurando mi espacio de trabajo en Arch Linux.",
   "education": {
     "title": "Educación",
     "items": [
       {
-        "title": "Academia X",
+        "title": "X Academy",
         "description": "Bootcamp de Desarrollo Full Stack",
         "href": "https://drive.google.com/file/d/16rDcl0lApDdaiQhGEHTSBRYYeKEWqmWt/view"
       },
@@ -14,7 +14,7 @@
         "href": "https://platzi.com/p/Huilen/"
       },
       {
-        "title": "Clases privadas de inglés",
+        "title": "Clases particulares de inglés",
         "description": "Nivel C1 Avanzado",
         "href": "https://cert.efset.org/z2Phe6"
       }

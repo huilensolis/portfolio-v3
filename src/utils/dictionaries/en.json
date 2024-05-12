@@ -1,5 +1,5 @@
 {
-  "biography": "Full-Stack Developer, this is a description I'll thing about in the future, but for now I'll fill up the space with some space to see how the design looks!",
+  "biography": "I'm a Full Stack Developer with a focus on Frontend. Back in 2022 I started learning frontend at Platzi, on 2023 joined X Academy, where professionals who work at Santex teach Full Stack Development. I'm currently building open source projects on github with the community. On my free time, you can find me reading history books, training taekwondo or configuring my workspace on Arch Linux.",
   "education": {
     "title": "Education",
     "items": [
@@ -25,7 +25,7 @@
     "items": [
       {
         "title": "Pictura",
-        "description": "Images social network, with images feed, user profiles, email log in, images posting, images collections, bookmarks, etc",
+        "description": "Images social network for sharing and posting images, while creating image collections and user public profiles.",
         "stack": [
           "React",
           "Next js",

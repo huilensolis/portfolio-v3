@@ -23,10 +23,7 @@ export default async function HomePage({
     <div className="flex flex-col prose-li:list-none prose-ul:p-0">
       <section className="flex flex-col">
         <h1 className="mb-0">Huilén Solís 👋</h1>
-        <p>
-          {dictionary.biography}
-          {dictionary.biography}
-        </p>
+        <p>{dictionary.biography}</p>
       </section>
       <section className="flex flex-col">
         <div>
