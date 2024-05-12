@@ -1,14 +1,11 @@
 import { ClockLocal } from "@/components/feature/clock-local";
-import { Dot } from "@/components/ui/dot";
-import { DotWithChildren } from "@/components/ui/dot-with-children";
 import { getDictionary } from "@/utils/dictionaries";
 
 import { ReactComponent as CordobaShape } from "../../../public/cordoba-province-shape.svg";
 import { DateTime } from "luxon";
-import { SingleDot } from "@/components/ui/single-dot";
 import { TIME_ZONE } from "@/utils/consts";
 import { React } from "@/components/icons/react";
-import { ArrowUpRight, FolderGit, Globe } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { TimeRange } from "@/components/feature/time-range/time-range.component";
 
@@ -26,7 +23,7 @@ export default async function HomePage({
   return (
     <div className="flex flex-col prose-li:list-none prose-ul:p-0">
       <section className="flex flex-col">
-        <h1>Huilén Solís 👋</h1>
+        <h1 className="mb-0">Huilén Solís 👋</h1>
         <p>
           {dictionary.biography}
           {dictionary.biography}
@@ -43,7 +40,7 @@ export default async function HomePage({
                     <Link
                       href={item.href}
                       target="_blank"
-                      className="flex items-center duration-150 transition-all group no-underline"
+                      className="w-max flex items-center duration-150 transition-all group no-underline"
                     >
                       <h4>{item.title}</h4>
                       <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
@@ -67,7 +64,7 @@ export default async function HomePage({
                         <Link
                           href={project.deploy}
                           target="_blank"
-                          className="no-underline"
+                          className="w-max no-underline"
                         >
                           <h3>{project.title}</h3>
                         </Link>
@@ -75,7 +72,7 @@ export default async function HomePage({
                           <Link
                             href={project.repository}
                             target="_blank"
-                            className="group duration-150 transition-all hover:text-neutral-50 flex items-center justify-center no-underline"
+                            className="w-max group duration-150 transition-all hover:text-neutral-50 flex items-center justify-center no-underline"
                           >
                             code
                             <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
@@ -83,7 +80,7 @@ export default async function HomePage({
                           <Link
                             href={project.deploy}
                             target="_blank"
-                            className="group duration-150 transition-all hover:text-neutral-50 flex items-center justify-center no-underline"
+                            className="w-max group duration-150 transition-all hover:text-neutral-50 flex items-center justify-center no-underline"
                           >
                             live
                             <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
