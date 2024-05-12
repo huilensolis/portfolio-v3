@@ -134,12 +134,13 @@ export default async function HomePage({
                   <Link
                     key={i}
                     href={contact.href}
-                    className="group flex items-center no-underline"
+                    className="grid grid-cols-2 justify-start w-full no-underline"
                   >
-                    <span className="group-hover:text-neutral-50 transition-all duration-150">
-                      {contact.title} - {contact.at}
+                    {contact.title}:
+                    <span className="flex items-center justify-start hover:text-neutral-50 transition-all duration-150 hover:underline">
+                      {contact.at}
+                      <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
                     </span>
-                    <ArrowUpRight className="w-5 h-5 group-hover:text-neutral-50 group-hover:scale-110 duration-150 transition-all" />
                   </Link>
                 </strong>
               ))}
