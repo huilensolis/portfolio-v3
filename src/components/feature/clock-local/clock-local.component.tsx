@@ -6,17 +6,20 @@ import { TIME_ZONE } from "@/utils/consts";
 
 export function ClockLocal() {
   const [date, setDate] = useState(() => {
-    const date = DateTime.now();
-    date.setZone(TIME_ZONE);
+    const local = DateTime.local();
 
-    return date;
+    const cordobaDate = local.setZone(TIME_ZONE);
+
+    return cordobaDate;
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const newDate = DateTime.now();
-      newDate.setZone(TIME_ZONE);
-      setDate(newDate);
+      const local = DateTime.local();
+
+      const cordobaDate = local.setZone(TIME_ZONE);
+
+      setDate(cordobaDate);
     }, 1000);
 
     return () => {
