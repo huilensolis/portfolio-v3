@@ -85,7 +85,7 @@ export function TimeRange({
               DateTime.now().hour >= 4 && "-translate-x-[calc(50%-1rem)]"
             }`}
           >
-            {your_time_zone_text} {DateTime.now().hour}
+            {your_time_zone_text}
           </span>
         </div>
       </div>
