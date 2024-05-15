@@ -9,19 +9,25 @@ export function TimeRange({
 }: {
   your_time_zone_text: string;
 }) {
-  const [date, setDate] = useState(() => {
+  const [cordobasDate, setCordobasTime] = useState(() => {
     const local = DateTime.local();
 
-    const date = local.setZone();
+    const date = local.setZone(TIME_ZONE);
 
     return date;
   });
+
+  const [clientDate, setClientDate] = useState(DateTime.now());
+
+  useEffect(() => {
+    setClientDate(DateTime.now());
+  }, []);
 
   useEffect(() => {
     const local = DateTime.local();
     const cordobaTime = local.setZone(TIME_ZONE);
 
-    setDate(cordobaTime);
+    setCordobasTime(cordobaTime);
   }, []);
 
   return (
@@ -53,7 +59,7 @@ export function TimeRange({
         style={{
           position: "absolute",
           top: "1rem",
-          left: date.hour * 10 + 3,
+          left: cordobasDate.hour * 10 + 3,
         }}
       >
         <div className="relative pt-[4.25rem] flex items-center justify-center">
@@ -62,7 +68,7 @@ export function TimeRange({
           </div>
           <span
             className={`text-orange-600 ${
-              date.hour >= 4 && "-translate-x-[calc(50%-1rem)]"
+              cordobasDate.hour >= 4 && "-translate-x-[calc(50%-1rem)]"
             }`}
           >
             Cordoba
@@ -73,7 +79,7 @@ export function TimeRange({
         style={{
           position: "absolute",
           bottom: "0",
-          left: DateTime.now().hour * 10 + 3,
+          left: clientDate.hour * 10 + 3,
         }}
       >
         <div className="relative pb-14 flex items-center justify-center">
@@ -82,7 +88,7 @@ export function TimeRange({
           </div>
           <span
             className={`w-max text-yellow-400 ${
-              DateTime.now().hour >= 4 && "-translate-x-[calc(50%-1rem)]"
+              clientDate.hour >= 4 && "-translate-x-[calc(50%-1rem)]"
             }`}
           >
             {your_time_zone_text}
