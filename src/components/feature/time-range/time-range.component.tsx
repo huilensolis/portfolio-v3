@@ -20,7 +20,7 @@ export function TimeRange({
   const [clientDate, setClientDate] = useState(DateTime.now());
 
   useEffect(() => {
-    setClientDate(DateTime.now());
+    setClientDate(DateTime.now().toLocal());
   }, []);
 
   useEffect(() => {
