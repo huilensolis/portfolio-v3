@@ -71,7 +71,7 @@ export function TimeRange({
               cordobasDate.hour >= 4 && "-translate-x-[calc(50%-1rem)]"
             }`}
           >
-            Cordoba
+            Cordoba {cordobasDate.hour}:{cordobasDate.minute}
           </span>
         </div>
       </div>
@@ -91,7 +91,7 @@ export function TimeRange({
               clientDate.hour >= 4 && "-translate-x-[calc(50%-1rem)]"
             }`}
           >
-            {your_time_zone_text}
+            {your_time_zone_text} {clientDate.hour}:{clientDate.minute}
           </span>
         </div>
       </div>
