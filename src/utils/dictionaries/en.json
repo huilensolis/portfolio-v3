@@ -23,7 +23,7 @@
         "title": "English private lessons",
         "description": "C1 Advanced",
         "href": "https://cert.efset.org/z2Phe6",
-        "time_span": { "start": "02/2019", "end": "present" }
+        "time_span": { "start": "02/2019", "end": "Present" }
       }
     ]
   },
@@ -31,6 +31,7 @@
     "title": "Projects",
     "items": [
       {
+        "date": "2023",
         "title": "Pictura",
         "description": "Images social network for sharing and posting images, while creating image collections and user public profiles.",
         "stack": [
@@ -44,6 +45,7 @@
         "deploy": "https://pictura-px.vercel.app/"
       },
       {
+        "date": "Current",
         "title": "Memoir",
         "description": "Document editor for writing and saving journal entries and reflections, with auth, document CRUD, etc",
         "stack": [
@@ -62,6 +64,7 @@
         "deploy": "https://memoir-oak.vercel.app/"
       },
       {
+        "date": "2023",
         "title": "Interestellar",
         "description": "Kanban board for collaboration",
         "stack": [],
@@ -94,7 +97,7 @@
   "localization": {
     "title": "Localization & Time zone",
     "time_zone": "Cordoba, Argentina",
-    "your_time_zone": "your time zone"
+    "your_time_zone": "Your time zone"
   },
   "contact": {
     "title": "Contact",

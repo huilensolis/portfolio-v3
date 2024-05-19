@@ -19,13 +19,13 @@ export default async function GuestbookPage() {
   const userComment = comments?.find((comment) => comment.user_id === user?.id);
 
   return (
-    <div className="flex flex-col gap-2">
-      <h1 className="text-3xl font-semibold text-orange-600">Guestbook</h1>
+    <div className="flex flex-col gap-16 text-neutral-400">
+      <h1 className="dark:text-neutral-50">Guestbook</h1>
       <div className="mb-5">
         {user ? (
           <div>
             <div className="flex items-center gap-2">
-              {user.user_metadata.user_name ?? user.email}
+              you are logged in as: {user.user_metadata.user_name ?? user.email}
               <LogOutBtn />
             </div>
             {!userComment && (
@@ -44,22 +44,19 @@ export default async function GuestbookPage() {
           </div>
         ) : (
           <div className="flex items-center gap-2">
-            <p>Comment on the Guestbook</p>
+            <p>Sign my Guestbook</p>
             <SignInWithGithubBtn redirectAfterSignIn={"/guestbook"} />
           </div>
         )}
       </div>
-      <ul className="w-full flex flex-col gap-2 pl-0">
+      <ul className="w-full flex flex-col gap-8 pl-0">
         {comments &&
           comments?.length > 0 &&
           comments.map((comment) => (
-            <li
-              key={comment.id}
-              className="flex gap-4 items-center prose-li:pl-0"
-            >
-              <div className="flex gap-4 items-center">
+            <li key={comment.id} className="flex gap-4 items-center">
+              <div className="grid sm:grid-cols-[3fr_7fr] gap-2">
                 <UserCard userId={comment.user_id} />
-                <p className="flex-1">&quot;{comment.text}&quot;</p>
+                <p className="text-pretty">&quot;{comment.text}&quot;</p>
               </div>
               {comment.user_id === user?.id && (
                 <form action={deleteComment}>

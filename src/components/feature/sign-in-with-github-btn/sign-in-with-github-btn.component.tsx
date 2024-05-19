@@ -29,14 +29,18 @@ export function SignInWithGithubBtn({
       if (error) throw new Error(error.message);
     } catch (error) {
       //
-    } finally {
       setLoading(false);
     }
   }
   return (
-    <Button className="fill-neutral-300" onClick={signIn} loading={loading}>
+    <Button
+      className="fill-neutral-50 text-neutral-50"
+      size="sm"
+      onClick={signIn}
+      loading={loading}
+    >
       log in
-      <Github />
+      <Github className="w-4 h-4" />
     </Button>
   );
 }

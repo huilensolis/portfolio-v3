@@ -18,13 +18,11 @@ export function LogOutBtn() {
     await supabase.auth.signOut();
 
     router.refresh();
-
-    setLoading(false);
   }
   return (
-    <Button loading={loading} onClick={logOut}>
+    <Button loading={loading} onClick={logOut} size="sm">
       log out
-      <DoorOpen className="h-6 w-6" />
+      <DoorOpen className="h-4 w-4" />
     </Button>
   );
 }

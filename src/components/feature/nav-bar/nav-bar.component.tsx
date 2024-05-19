@@ -7,7 +7,7 @@ export function NavBar({
   currentLang: (typeof SUPPORTED_LANGS)[number];
 }) {
   return (
-    <nav className="flex gap-4 items-center">
+    <nav className="flex gap-4 items-center dark:text-neutral-400">
       <div>
         <Link href="/" className="no-underline">
           Home

@@ -19,9 +19,9 @@ export function LangSwitcher({
       {otherLang && (
         <Link
           href={path.replace(currentLang, otherLang) as any}
-          className="flex gap-2 no-underline"
+          className="flex items-center dark:text-neutral-50"
         >
-          <Languages />
+          <Languages className="w-5 h-5" />
           {otherLang}
         </Link>
       )}

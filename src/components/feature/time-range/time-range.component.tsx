@@ -31,7 +31,7 @@ export function TimeRange({
   }, []);
 
   return (
-    <div className="relative my-10 not-prose">
+    <div className="relative mt-10 mb-20 not-prose">
       <ul className="grid pb-2 grid-cols-[repeat(7,_minmax(0,_1.25rem))] items-start gap-5 relative">
         {["00", "04", "08", "12", "16", "20", "24"].map((time, i) => (
           <li
@@ -62,7 +62,7 @@ export function TimeRange({
           left: cordobasDate.hour * 10 + 3,
         }}
       >
-        <div className="relative pt-[4.25rem] flex items-center justify-center">
+        <div className="relative pt-[4.50rem] flex items-center justify-center">
           <div className="absolute top-[calc(1.50rem+(0.25rem))] left-0 w-[1rem] flex items-center justify-center">
             <div className="h-12 w-[0.03rem] bg-orange-600"></div>
           </div>

@@ -31,6 +31,7 @@
     "title": "Proyectos",
     "items": [
       {
+        "date": "2023",
         "title": "Pictura",
         "description": "Red social de imágenes",
         "stack": [
@@ -44,6 +45,7 @@
         "deploy": "https://pictura-px.vercel.app/"
       },
       {
+        "date": "Presente",
         "title": "Memoir",
         "description": "Aplicación de diario diario",
         "stack": [
@@ -62,6 +64,7 @@
         "deploy": "https://memoir-oak.vercel.app/"
       },
       {
+        "date": "2023",
         "title": "Interestellar",
         "description": "Tablero Kanban para colaboración",
         "stack": [],
