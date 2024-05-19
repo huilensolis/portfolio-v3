@@ -17,8 +17,9 @@ export default async function HomePage({
 }) {
   const dictionary = await getDictionary(lang);
 
-  const date = DateTime.now();
-  date.setZone(TIME_ZONE);
+  const local = DateTime.local();
+  const date = local.setZone(TIME_ZONE);
+
   return (
     <div className="flex flex-col prose-li:list-none prose-ul:p-0">
       <section className="flex flex-col">
