@@ -7,6 +7,7 @@ import { React } from "@/components/icons/react";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { TimeRange } from "@/components/feature/time-range/time-range.component";
+import Image from "next/image";
 
 export const dynamic = "force-static";
 
@@ -36,7 +37,9 @@ export default async function HomePage({
         ))}
       </section>
       <section className="flex flex-col gap-4">
-        <h2 className="dark:text-neutral-50">{dictionary.education.title}</h2>
+        <h2 className="dark:text-neutral-50 font-semibold">
+          {dictionary.education.title}
+        </h2>
         <ul className="flex flex-col gap-8">
           {dictionary.education.items.map((item, i) => (
             <li key={i} className="w-full grid sm:grid-cols-[1fr_4fr]">
@@ -60,19 +63,31 @@ export default async function HomePage({
         </ul>
       </section>
       <section className="flex flex-col gap-4">
-        <h2 className="dark:text-neutral-50">{dictionary.projects.title}</h2>
+        <h2 className="dark:text-neutral-50 font-semibold">
+          {dictionary.projects.title}
+        </h2>
         <ul className="flex flex-col gap-8">
           {dictionary.projects.items.map((project, i) => (
             <li key={i} className="grid sm:grid-cols-[1fr_4fr]">
               <p>{project.date}</p>
+
               <article className="flex flex-col gap-2">
+                {project.images && project.images[0] && (
+                  <Image
+                    src={project.images[0]}
+                    alt={project.title}
+                    width={400}
+                    height={300}
+                    className="w-auto h-auto"
+                  />
+                )}
                 <header className="flex justify-between items-center w-full">
                   <Link
                     href={project.deploy}
                     target="_blank"
                     className="w-max dark:text-neutral-50"
                   >
-                    <h3>{project.title}</h3>
+                    <h3 className="font-medium">{project.title}</h3>
                   </Link>
                   <div className="flex gap-2 text-neutral-50">
                     <Link
@@ -103,7 +118,7 @@ export default async function HomePage({
         </ul>
       </section>
       <section className="w-full flex flex-col gap-4">
-        <h2 className="dark:text-neutral-50">
+        <h2 className="dark:text-neutral-50 font-semibold">
           {dictionary.localization.title}
         </h2>
         <section className="flex justify-between">
@@ -127,7 +142,9 @@ export default async function HomePage({
         </section>
       </section>
       <section className="w-full flex flex-col gap-4">
-        <h2 className="dark:text-neutral-50">{dictionary.contact.title}</h2>
+        <h2 className="dark:text-neutral-50 font-semibold">
+          {dictionary.contact.title}
+        </h2>
         <ul className="flex flex-col gap-8">
           {dictionary.contact.links.map((contact, i) => (
             <li key={i}>

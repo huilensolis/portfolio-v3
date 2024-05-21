@@ -9,7 +9,7 @@
     "items": [
       {
         "title": "X Academy",
-        "description": "Bootcamp de Desarrollo Full Stack",
+        "description": "Academia de Desarrollo Full Stack",
         "href": "https://drive.google.com/file/d/16rDcl0lApDdaiQhGEHTSBRYYeKEWqmWt/view",
         "time_span": { "start": "02/2023", "end": "10/2023" }
       },
@@ -31,6 +31,7 @@
     "title": "Proyectos",
     "items": [
       {
+        "images": ["/14shots_so.png"],
         "date": "2023",
         "title": "Pictura",
         "description": "Red social de imágenes",
@@ -45,6 +46,7 @@
         "deploy": "https://pictura-px.vercel.app/"
       },
       {
+        "images": ["/86shots_so.png"],
         "date": "Presente",
         "title": "Memoir",
         "description": "Aplicación de diario diario",

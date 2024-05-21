@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cx("dark:bg-black", GeistSans.className)}>
       <body className="antialiased min-h-screen overflow-x-hidden xl:px-0 px-5 flex justify-center">
-        <main className="max-w-lg w-full min-w-0 py-5 flex flex-col">
+        <main className="max-w-xl w-full min-w-0 py-5 flex flex-col">
           {children}
           <Analytics />
         </main>

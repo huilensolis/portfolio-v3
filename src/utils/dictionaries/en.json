@@ -9,7 +9,7 @@
     "items": [
       {
         "title": "X Academy",
-        "description": "Full Stack bootcamp",
+        "description": "Full Stack Academy",
         "href": "https://drive.google.com/file/d/16rDcl0lApDdaiQhGEHTSBRYYeKEWqmWt/view",
         "time_span": { "start": "02/2023", "end": "10/2023" }
       },
@@ -31,6 +31,7 @@
     "title": "Projects",
     "items": [
       {
+        "images": ["/14shots_so.png"],
         "date": "2023",
         "title": "Pictura",
         "description": "Images social network for sharing and posting images, while creating image collections and user public profiles.",
@@ -45,6 +46,7 @@
         "deploy": "https://pictura-px.vercel.app/"
       },
       {
+        "images": ["/86shots_so.png"],
         "date": "Current",
         "title": "Memoir",
         "description": "Document editor for writing and saving journal entries and reflections, with auth, document CRUD, etc",
