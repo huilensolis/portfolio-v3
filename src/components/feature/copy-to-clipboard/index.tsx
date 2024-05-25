@@ -30,6 +30,7 @@ export function CopyToClipboardBtn({
         setValueHasBeenCopied(true);
       }}
       className={cn("", className)}
+      variant="ghost"
     >
       {valueHasBeenCopied ? (
         <CopyCheck className="w-6 h-6 transition-all duration-150" />

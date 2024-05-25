@@ -204,7 +204,7 @@ export default async function HomePage({
             </Link>
             <CopyToClipboardBtn
               value={dictionary.contact.gmail.at}
-              className="p-0"
+              className="hover:bg-neutral-700"
             />
           </article>
           <Link
