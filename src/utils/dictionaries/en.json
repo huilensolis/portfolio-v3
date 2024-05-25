@@ -34,13 +34,17 @@
         "images": ["/14shots_so.png"],
         "date": "2023",
         "title": "Pictura",
-        "description": "Images social network for sharing and posting images, while creating image collections and user public profiles.",
+        "description": [
+          "Images social network for sharing and posting images, while creating image collections and user public profiles."
+        ],
         "stack": [
           "React",
           "Next js",
           "Tailwind CSS",
           "Typescript",
-          "PostgreSQL"
+          "PostgreSQL",
+          "Cloudinary",
+          "Supabase"
         ],
         "repository": "https://github.com/Huilensolis/Pictura",
         "deploy": "https://pictura-px.vercel.app/"
@@ -49,7 +53,10 @@
         "images": ["/86shots_so.png"],
         "date": "Current",
         "title": "Memoir",
-        "description": "Document editor for writing and saving journal entries and reflections, with auth, document CRUD, etc",
+        "description": [
+          "I use Obsidian: a native text editor application to write down my reflections, and I wanted to use it on the web, that is why I built Memori: A text editor on the web that allows creating, editing and deleting text documents.",
+          "It has support for text styles: bolds, strikes and italics while supporting different text blocks: headings and paragraphs."
+        ],
         "stack": [
           "React",
           "Next js",
@@ -68,7 +75,7 @@
       {
         "date": "2023",
         "title": "Interestellar",
-        "description": "Kanban board for collaboration",
+        "description": ["Kanban board for collaboration"],
         "stack": [],
         "repository": "https://github.com/Huilensolis/memoir",
         "deploy": "https://memoir-oak.vercel.app/"

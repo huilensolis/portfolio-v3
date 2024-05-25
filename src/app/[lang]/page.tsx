@@ -22,7 +22,7 @@ export default async function HomePage({
   const date = local.setZone(TIME_ZONE);
 
   return (
-    <div className="flex flex-col gap-16 dark:text-neutral-400 text-base">
+    <div className="flex flex-col gap-16 dark:text-gray-300 text-base">
       <section className="flex flex-col gap-4">
         <div>
           <h1 className="text-neutral-50 font-semibold text-lg">
@@ -53,7 +53,9 @@ export default async function HomePage({
                   target="_blank"
                   className="w-max flex items-center duration-150 transition-all group text-neutral-50"
                 >
-                  <h4 className="dark:text-neutral-50">{item.title}</h4>
+                  <h4 className="dark:text-neutral-50 font-semibold">
+                    {item.title}
+                  </h4>
                   <ArrowUpRight className="w-4 h-4 group-hover:scale-110 duration-150 transition-all" />
                 </Link>
                 <p>{item.description}</p>
@@ -70,15 +72,14 @@ export default async function HomePage({
           {dictionary.projects.items.map((project, i) => (
             <li key={i} className="grid sm:grid-cols-[1fr_4fr]">
               <p>{project.date}</p>
-
-              <article className="flex flex-col gap-2">
+              <article className="flex flex-col gap-4">
                 {project.images && project.images[0] && (
                   <Image
                     src={project.images[0]}
                     alt={project.title}
                     width={400}
                     height={300}
-                    className="w-auto h-auto"
+                    className="w-full h-auto rounded-sm"
                   />
                 )}
                 <header className="flex justify-between items-center w-full">
@@ -87,7 +88,7 @@ export default async function HomePage({
                     target="_blank"
                     className="w-max dark:text-neutral-50"
                   >
-                    <h3 className="font-medium">{project.title}</h3>
+                    <h3 className="font-semibold">{project.title}</h3>
                   </Link>
                   <div className="flex gap-2 text-neutral-50">
                     <Link
@@ -108,10 +109,19 @@ export default async function HomePage({
                     </Link>
                   </div>
                 </header>
-                <div className="flex flex-col gap-2">
-                  <p className="text-pretty">{project.description}</p>
-                  <p>{project.stack.length > 0 && project.stack.join(", ")}</p>
-                </div>
+                <section className="flex flex-col gap-2">
+                  {project.description.map((paragraph) => (
+                    <p className="text-pretty">{paragraph}</p>
+                  ))}
+                </section>
+                <ul className="flex flex-wrap gap-1">
+                  {project.stack.length > 0 &&
+                    project.stack.map((technology) => (
+                      <li className="px-2 text-sm rounded-full border border-neutral-600">
+                        {technology}
+                      </li>
+                    ))}
+                </ul>
               </article>
             </li>
           ))}

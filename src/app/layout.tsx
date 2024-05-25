@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cx("dark:bg-black", GeistSans.className)}>
+    <html lang="en" className={cx("dark:bg-neutral-950", GeistSans.className)}>
       <body className="antialiased min-h-screen overflow-x-hidden xl:px-0 px-5 flex justify-center">
         <main className="max-w-xl w-full min-w-0 py-5 flex flex-col">
           {children}
