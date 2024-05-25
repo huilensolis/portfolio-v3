@@ -157,7 +157,7 @@ export default async function HomePage({
         <h2 className="dark:text-neutral-50 font-semibold text-xl">
           {dictionary.contact.title}
         </h2>
-        <ul className="grid grid-cols-8 gap-4">
+        <ul className="md:grid md:grid-cols-8 flex flex-col gap-4">
           <Link
             href={dictionary.contact.linkedin.href}
             target="_blank"
