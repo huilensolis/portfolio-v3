@@ -4,11 +4,7 @@ import { TIME_ZONE } from "@/utils/consts";
 import { DateTime } from "luxon";
 import { useEffect, useState } from "react";
 
-export function TimeRange({
-  your_time_zone_text,
-}: {
-  your_time_zone_text: string;
-}) {
+export function TimeRange() {
   const [cordobasDate, setCordobasTime] = useState(() => {
     const local = DateTime.local();
 
@@ -23,15 +19,8 @@ export function TimeRange({
     setClientDate(DateTime.now().toLocal());
   }, []);
 
-  useEffect(() => {
-    const local = DateTime.local();
-    const cordobaTime = local.setZone(TIME_ZONE);
-
-    setCordobasTime(cordobaTime);
-  }, []);
-
   return (
-    <div className="relative mt-10 mb-20 not-prose">
+    <div className="relative">
       <ul className="grid pb-2 grid-cols-[repeat(7,_minmax(0,_1.25rem))] items-start gap-5 relative">
         {["00", "04", "08", "12", "16", "20", "24"].map((time, i) => (
           <li
@@ -63,36 +52,9 @@ export function TimeRange({
         }}
       >
         <div className="relative pt-[4.50rem] flex items-center justify-center">
-          <div className="absolute top-[calc(1.50rem+(0.25rem))] left-0 w-[1rem] flex items-center justify-center">
-            <div className="h-12 w-[0.03rem] bg-orange-600"></div>
+          <div className="absolute top-2 left-0 w-[1rem] flex items-center justify-center">
+            <div className="h-8 w-[0.03rem] bg-orange-600"></div>
           </div>
-          <span
-            className={`text-orange-600 ${
-              cordobasDate.hour >= 4 && "-translate-x-[calc(50%-1rem)]"
-            }`}
-          >
-            Cordoba {cordobasDate.hour}:{cordobasDate.minute}
-          </span>
-        </div>
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          bottom: "0",
-          left: clientDate.hour * 10 + 3,
-        }}
-      >
-        <div className="relative pb-14 flex items-center justify-center">
-          <div className="absolute top-[calc(1.25rem+(0.25rem/2))] left-0 w-[1rem] flex items-center justify-center">
-            <div className="h-14 w-[0.03rem] bg-yellow-400 rounded-sm"></div>
-          </div>
-          <span
-            className={`w-max text-yellow-400 ${
-              clientDate.hour >= 4 && "-translate-x-[calc(50%-1rem)]"
-            }`}
-          >
-            {your_time_zone_text} {clientDate.hour}:{clientDate.minute}
-          </span>
         </div>
       </div>
     </div>

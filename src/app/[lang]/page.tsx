@@ -136,9 +136,9 @@ export default async function HomePage({
           {dictionary.localization.title}
         </h2>
         <section className="flex justify-between">
-          <div className=" w-full flex flex-col">
+          <div className="w-full flex flex-col font-mono">
             <div className="flex gap-2 items-center dark:text-neutral-50">
-              <h3 className="">{dictionary.localization.time_zone}</h3>-{" "}
+              <h3>{dictionary.localization.time_zone}</h3> -{""}
               <h3>GTM-3</h3>
             </div>
             <p>
@@ -149,9 +149,7 @@ export default async function HomePage({
               })}
             </p>
             <ClockLocal />
-            <TimeRange
-              your_time_zone_text={dictionary.localization.your_time_zone}
-            />
+            <TimeRange />
           </div>
         </section>
       </section>
@@ -163,7 +161,7 @@ export default async function HomePage({
           <Link
             href={dictionary.contact.linkedin.href}
             target="_blank"
-            className="flex justify-between items-center w-full h-full col-span-3 w-full p-4 bg-neutral-800 rounded-sm border border-neutral-700 group hover:brightness-110 duration-150 transition-all"
+            className="flex justify-between items-center h-full col-span-3 w-full p-4 bg-neutral-800 rounded-sm border border-neutral-700 group hover:brightness-110 duration-150 transition-all"
           >
             <div className="flex gap-2">
               <svg
