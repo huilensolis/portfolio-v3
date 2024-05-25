@@ -42,7 +42,7 @@ export default async function HomePage({
         </h2>
         <ul className="flex flex-col gap-8">
           {dictionary.education.items.map((item, i) => (
-            <li key={i} className="w-full grid sm:grid-cols-[1fr_4fr]">
+            <li key={i} className="w-full grid sm:grid-cols-[1fr_4fr] gap-6">
               <div className="text-neutral-500">
                 <span>{item.time_span.start}</span> -{" "}
                 <span>{item.time_span.end}</span>
@@ -70,7 +70,7 @@ export default async function HomePage({
         </h2>
         <ul className="flex flex-col gap-8">
           {dictionary.projects.items.map((project, i) => (
-            <li key={i} className="grid sm:grid-cols-[1fr_4fr]">
+            <li key={i} className="grid sm:grid-cols-[1fr_4fr] gap-6">
               <p>{project.date}</p>
               <article className="flex flex-col gap-4">
                 {project.images && project.images[0] && (

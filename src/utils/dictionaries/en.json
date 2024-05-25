@@ -17,13 +17,13 @@
         "title": "Platzi",
         "description": "Frontend development courses",
         "href": "https://platzi.com/p/Huilen/",
-        "time_span": { "start": "09/2022", "end": "07/2023" }
+        "time_span": { "start": "2022", "end": "2023" }
       },
       {
         "title": "English private lessons",
         "description": "C1 Advanced",
         "href": "https://cert.efset.org/z2Phe6",
-        "time_span": { "start": "02/2019", "end": "Present" }
+        "time_span": { "start": "2019", "end": "Present" }
       }
     ]
   },
@@ -50,12 +50,12 @@
         "deploy": "https://pictura-px.vercel.app/"
       },
       {
-        "images": ["/86shots_so.png"],
+        "images": ["/791shots_so.png"],
         "date": "Current",
         "title": "Memoir",
         "description": [
-          "I use Obsidian: a native text editor application to write down my reflections, and I wanted to use it on the web, that is why I built Memori: A text editor on the web that allows creating, editing and deleting text documents.",
-          "It has support for text styles: bolds, strikes and italics while supporting different text blocks: headings and paragraphs."
+          "I use Obsidian: a native text editor application to write down my reflections, and I wanted to use it on the web, that's why I built Memoir: A text editor on the web that allows creating, editing and deleting text documents.",
+          "It has support for text styles: bolds, strikes and italics and different text blocks: headings and paragraphs."
         ],
         "stack": [
           "React",

@@ -17,13 +17,13 @@
         "title": "Platzi",
         "description": "Cursos de desarrollo Frontend",
         "href": "https://platzi.com/p/Huilen/",
-        "time_span": { "start": "09/2022", "end": "07/2023" }
+        "time_span": { "start": "2022", "end": "2023" }
       },
       {
         "title": "Clases particulares de inglés",
         "description": "Nivel C1 Avanzado",
         "href": "https://cert.efset.org/z2Phe6",
-        "time_span": { "start": "02/2019", "end": "presente" }
+        "time_span": { "start": "2019", "end": "presente" }
       }
     ]
   },
