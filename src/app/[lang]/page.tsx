@@ -25,7 +25,7 @@ export default async function HomePage({
     <div className="flex flex-col gap-16 dark:text-gray-300 text-base">
       <section className="flex flex-col gap-4">
         <div>
-          <h1 className="text-neutral-50 font-semibold text-lg">
+          <h1 className="text-neutral-50 font-semibold text-2xl">
             Huilén Solís 👋
           </h1>
           <span>Full stack developer</span>
@@ -37,14 +37,16 @@ export default async function HomePage({
         ))}
       </section>
       <section className="flex flex-col gap-4">
-        <h2 className="dark:text-neutral-50 font-semibold">
+        <h2 className="dark:text-neutral-50 font-semibold text-xl">
           {dictionary.education.title}
         </h2>
         <ul className="flex flex-col gap-8">
           {dictionary.education.items.map((item, i) => (
-            <li key={i} className="w-full grid sm:grid-cols-[1fr_4fr] gap-6">
-              <div className="text-neutral-500">
-                <span>{item.time_span.start}</span> -{" "}
+            <li key={i} className="w-full grid sm:grid-cols-[1fr_4fr] gap-4">
+              <div className="text-neutral-500 font-mono flex flex-col">
+                <div>
+                  <span>{item.time_span.start}</span> -
+                </div>
                 <span>{item.time_span.end}</span>
               </div>
               <article className="flex flex-col">
@@ -65,13 +67,13 @@ export default async function HomePage({
         </ul>
       </section>
       <section className="flex flex-col gap-4">
-        <h2 className="dark:text-neutral-50 font-semibold">
+        <h2 className="dark:text-neutral-50 font-semibold text-xl">
           {dictionary.projects.title}
         </h2>
         <ul className="flex flex-col gap-8">
           {dictionary.projects.items.map((project, i) => (
-            <li key={i} className="grid sm:grid-cols-[1fr_4fr] gap-6">
-              <p>{project.date}</p>
+            <li key={i} className="grid sm:grid-cols-[1fr_4fr] gap-4">
+              <p className="font-mono">{project.date}</p>
               <article className="flex flex-col gap-4">
                 {project.images && project.images[0] && (
                   <Image
@@ -128,7 +130,7 @@ export default async function HomePage({
         </ul>
       </section>
       <section className="w-full flex flex-col gap-4">
-        <h2 className="dark:text-neutral-50 font-semibold">
+        <h2 className="dark:text-neutral-50 font-semibold text-xl">
           {dictionary.localization.title}
         </h2>
         <section className="flex justify-between">
@@ -152,7 +154,7 @@ export default async function HomePage({
         </section>
       </section>
       <section className="w-full flex flex-col gap-4">
-        <h2 className="dark:text-neutral-50 font-semibold">
+        <h2 className="dark:text-neutral-50 font-semibold text-xl">
           {dictionary.contact.title}
         </h2>
         <ul className="flex flex-col gap-8">
@@ -161,7 +163,7 @@ export default async function HomePage({
               <Link
                 key={i}
                 href={contact.href}
-                className="grid sm:grid-cols-[1fr_4fr] justify-start w-full no-underline"
+                className="grid sm:grid-cols-[1fr_4fr] gap-4 justify-start w-full no-underline"
               >
                 {contact.title}:
                 <span className="flex group items-center justify-start transition-all duration-150 hover:underline dark:text-neutral-50">
