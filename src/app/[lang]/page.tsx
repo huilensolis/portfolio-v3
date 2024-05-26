@@ -161,7 +161,7 @@ export default async function HomePage({
           <Link
             href={dictionary.contact.linkedin.href}
             target="_blank"
-            className="flex justify-between items-center h-full col-span-3 w-full p-4 bg-neutral-800 rounded-sm border border-neutral-700 group hover:brightness-110 duration-150 transition-all"
+            className="flex justify-between items-center h-full col-span-3 w-full p-4 bg-neutral-900 rounded-sm border border-neutral-800 group hover:brightness-110 duration-150 transition-all"
           >
             <div className="flex gap-2">
               <svg
@@ -179,7 +179,7 @@ export default async function HomePage({
             </div>
             <ArrowUpRight className="group-hover:scale-110 duration-150 transition-all" />
           </Link>
-          <article className="relative flex justify-end items-center h-full col-span-5 w-full p-4 bg-neutral-800 rounded-sm border border-neutral-700 group hover:brightness-110 duration-150 transition-all">
+          <article className="relative flex justify-end items-center h-full col-span-5 w-full p-4 bg-neutral-900 rounded-sm border border-neutral-800 group hover:brightness-110 duration-150 transition-all">
             <Link
               href={dictionary.contact.gmail.href}
               target="_blank"
@@ -202,13 +202,13 @@ export default async function HomePage({
             </Link>
             <CopyToClipboardBtn
               value={dictionary.contact.gmail.at}
-              className="hover:bg-neutral-700"
+              className="hover:bg-neutral-800"
             />
           </article>
           <Link
             href={dictionary.contact.twitter.href}
             target="_blank"
-            className="flex justify-between items-center h-full col-span-5 w-full p-4 bg-neutral-800 rounded-sm border border-neutral-700 group hover:brightness-110 duration-150 transition-all"
+            className="flex justify-between items-center h-full col-span-5 w-full p-4 bg-neutral-900 rounded-sm border border-neutral-800 group hover:brightness-110 duration-150 transition-all"
           >
             <div className="flex gap-2">
               <svg
@@ -229,7 +229,7 @@ export default async function HomePage({
           <Link
             href={dictionary.contact.github.href}
             target="_blank"
-            className="flex justify-between items-center h-full col-span-3 w-full p-4 bg-neutral-800 rounded-sm border border-neutral-700 group hover:brightness-110 duration-150 transition-all"
+            className="flex justify-between items-center h-full col-span-3 w-full p-4 bg-neutral-900 rounded-sm border border-neutral-800 group hover:brightness-110 duration-150 transition-all"
           >
             <div className="flex gap-2">
               <svg
