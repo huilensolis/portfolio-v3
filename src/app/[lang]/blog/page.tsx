@@ -3,6 +3,7 @@ import { readFile, readdir } from "node:fs/promises";
 import { cwd } from "node:process";
 import matter from "gray-matter";
 import Link from "next/link";
+import path from "node:path";
 
 type TPostMetadata = {
   slug: string;
@@ -12,7 +13,7 @@ type TPostMetadata = {
 };
 
 export default async function BlogPage() {
-  const postsPath = cwd() + POSTS_PATH;
+  const postsPath = path.join(cwd(), POSTS_PATH);
 
   const postList = await readdir(postsPath, { encoding: "utf8" });
 

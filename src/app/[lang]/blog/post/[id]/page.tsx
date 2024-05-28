@@ -4,13 +4,14 @@ import * as matter from "gray-matter";
 import { POSTS_PATH } from "@/utils/consts";
 import { readFile } from "fs/promises";
 import { cwd } from "process";
+import path from "path";
 
 export default async function PostPage({
   params: { id },
 }: {
   params: { id: string };
 }) {
-  const postsPath = cwd() + POSTS_PATH;
+  const postsPath = path.join(cwd(), POSTS_PATH);
 
   const post = await readFile(`${postsPath}/${id}.mdx`, "utf8");
 
