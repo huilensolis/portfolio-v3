@@ -31,7 +31,7 @@
     "title": "Proyectos",
     "items": [
       {
-        "images": ["/14shots_so.png"],
+        "images": ["/pictura.webp"],
         "date": "2023",
         "title": "Pictura",
         "description": ["Red social de imágenes"],
@@ -46,7 +46,7 @@
         "deploy": "https://pictura-px.vercel.app/"
       },
       {
-        "images": ["/86shots_so.png"],
+        "images": ["/memoir.webp"],
         "date": "Presente",
         "title": "Memoir",
         "description": ["Aplicación de diario diario"],

@@ -4,11 +4,10 @@ import { getDictionary } from "@/utils/dictionaries";
 import { DateTime } from "luxon";
 import { TIME_ZONE } from "@/utils/consts";
 import { React } from "@/components/icons/react";
-import { ArrowUpRight, Copy, MailPlus } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { TimeRange } from "@/components/feature/time-range/time-range.component";
 import Image from "next/image";
-import { Button } from "@/components/ui/button/button.component";
 import { CopyToClipboardBtn } from "@/components/feature/copy-to-clipboard";
 
 export const dynamic = "force-static";
@@ -114,14 +113,19 @@ export default async function HomePage({
                   </div>
                 </header>
                 <section className="flex flex-col gap-2">
-                  {project.description.map((paragraph) => (
-                    <p className="text-pretty">{paragraph}</p>
+                  {project.description.map((paragraph, i) => (
+                    <p className="text-pretty" key={i}>
+                      {paragraph}
+                    </p>
                   ))}
                 </section>
                 <ul className="flex flex-wrap gap-2">
                   {project.stack.length > 0 &&
-                    project.stack.map((technology) => (
-                      <li className="px-2 bg-neutral-800 text-sm rounded-full border border-neutral-700">
+                    project.stack.map((technology, i) => (
+                      <li
+                        className="px-2 bg-neutral-800 text-sm rounded-full border border-neutral-700"
+                        key={i}
+                      >
                         {technology}
                       </li>
                     ))}

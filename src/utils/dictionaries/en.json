@@ -31,7 +31,7 @@
     "title": "Projects",
     "items": [
       {
-        "images": ["/14shots_so.png"],
+        "images": ["/pictura.webp"],
         "date": "2023",
         "title": "Pictura",
         "description": [
@@ -50,7 +50,7 @@
         "deploy": "https://pictura-px.vercel.app/"
       },
       {
-        "images": ["/791shots_so.png"],
+        "images": ["/memoir.webp"],
         "date": "Current",
         "title": "Memoir",
         "description": [
