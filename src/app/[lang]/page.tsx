@@ -23,7 +23,7 @@ export default async function HomePage({
   const date = local.setZone(TIME_ZONE);
 
   return (
-    <div className="flex flex-col gap-16 dark:text-gray-300 text-base">
+    <div className="flex flex-col gap-16">
       <section className="flex flex-col gap-4">
         <div>
           <h1 className="text-neutral-50 font-semibold text-2xl">

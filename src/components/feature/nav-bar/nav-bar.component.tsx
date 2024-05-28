@@ -17,7 +17,7 @@ export function NavBar({
         <Link href={`/${currentLang}/guestbook`} className="no-underline">
           Guestbook
         </Link>
-        <Link href={`/${currentLang}/guestbook`} className="no-underline">
+        <Link href={`/${currentLang}/blog`} className="no-underline">
           Blog
         </Link>
         <Link href={`/${currentLang}/guestbook`} className="no-underline">
