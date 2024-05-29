@@ -13,7 +13,10 @@ export default async function PostPage({
 }) {
   const postsPath = path.join(cwd(), POSTS_PATH);
 
-  const post = await readFile(`${postsPath}/${id}.mdx`, "utf8");
+  const post = await readFile(
+    `${postsPath}/${id.replaceAll("%20", "-")}.mdx`,
+    "utf8",
+  );
 
   const parsedPostFile = matter.default(post);
 
