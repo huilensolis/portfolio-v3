@@ -33,18 +33,23 @@ export async function generateMetadata(
 
   const { data } = parsedPost;
 
-  const metadata = data as TPostMetadata;
+  const metadata = (data as TPostMetadata) || undefined;
 
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
 
   const dictionary = await getDictionary("en");
+
+  const ogImage = post
+    ? `https://${process.env.VERCEL_URL}/en/blog/post/${id}/opengraph-image`
+    : `https://${process.env.VERCEL_URL}`;
+
   return {
     title: metadata.title,
     description: metadata.description,
     creator: "Huilen Solis",
     openGraph: {
-      images: [...previousImages],
+      images: [{ url: ogImage }, ...previousImages],
       title: metadata.title,
       description: metadata.description,
       type: "article",
@@ -56,7 +61,8 @@ export async function generateMetadata(
       title: metadata.title,
       description: metadata.description,
       creator: dictionary.contact.twitter.at || undefined,
-      images: [...previousImages],
+      images: [{ url: ogImage, alt: metadata.title }, ...previousImages],
+      card: "summary_large_image",
     },
   };
 }
