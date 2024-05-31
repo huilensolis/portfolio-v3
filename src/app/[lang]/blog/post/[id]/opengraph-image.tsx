@@ -36,12 +36,16 @@ export default async function Image({
           height: "100%",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
           padding: "2rem",
         }}
       >
         <h1
-          style={{ textAlign: "start", fontSize: "5rem", textWrap: "balance" }}
+          style={{
+            textAlign: "center",
+            fontSize: "5rem",
+            textWrap: "balance",
+            width: "80%",
+          }}
         >
           {id.replaceAll("%20", " ")}
         </h1>

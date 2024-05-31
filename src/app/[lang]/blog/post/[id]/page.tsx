@@ -77,7 +77,9 @@ export default async function PostPage({
   const post = await readFile(
     `${postsPath}/${id.replaceAll("%20", "-")}.mdx`,
     "utf8",
-  );
+  ).catch(() => undefined);
+
+  if (!post) return <p>not found</p>;
 
   const parsedPostFile = matter.default(post);
 
