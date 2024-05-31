@@ -4,13 +4,7 @@ import { cwd } from "node:process";
 import matter from "gray-matter";
 import Link from "next/link";
 import path from "node:path";
-
-type TPostMetadata = {
-  slug: string;
-  title: string;
-  date: string;
-  description: string;
-};
+import { TPostMetadata } from "@/app/types/post";
 
 export default async function BlogPage() {
   const postsPath = path.join(cwd(), POSTS_PATH);
