@@ -41,7 +41,7 @@ export async function generateMetadata(
   const dictionary = await getDictionary("en");
 
   const ogImage = post
-    ? `https://${process.env.VERCEL_URL}/en/blog/post/${id}/opengraph-image`
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/en/blog/post/${id}/opengraph-image`
     : `https://${process.env.VERCEL_URL}`;
 
   return {
