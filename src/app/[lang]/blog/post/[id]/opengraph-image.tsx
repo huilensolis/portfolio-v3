@@ -30,25 +30,29 @@ export default async function Image({
     (
       <div
         style={{
-          background: "rgb(10 10 10 / 1)",
           color: "rgb(250 250 250 / 1)",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
           padding: "2rem",
+          lineHeight: "0.75",
+          letterSpacing: "-0.025em",
+          backgroundImage:
+            "linear-gradient(207deg, rgba(126, 130, 255, 1) 2%, rgba(0, 0, 0, 1) 35%)",
         }}
       >
-        <h1
+        <p
           style={{
-            textAlign: "center",
-            fontSize: "5rem",
-            textWrap: "balance",
-            width: "80%",
+            fontSize: "4rem",
+            color: "rgb(209 213 219 / 1)",
+            fontWeight: 400,
           }}
         >
           {id.replaceAll("%20", " ")}
-        </h1>
+        </p>
       </div>
     ),
     // ImageResponse options
