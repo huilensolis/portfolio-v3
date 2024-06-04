@@ -178,28 +178,28 @@ export default async function HomePage({
           ))}
         </ul>
       </section>
-      <section className="w-full flex flex-col gap-4">
-        <h2 className="dark:text-neutral-50 font-semibold text-xl">
-          {dictionary.localization.title}
-        </h2>
-        <section className="flex justify-between">
-          <div className="w-full flex flex-col font-mono">
-            <div className="flex gap-2 items-center dark:text-neutral-50">
-              <h3>{dictionary.localization.time_zone}</h3> -{""}
-              <h3>GTM-3</h3>
-            </div>
-            <p>
-              {date.setLocale(lang).toLocaleString({
-                month: "short",
-                weekday: "short",
-                day: "2-digit",
-              })}
-            </p>
-            <ClockLocal />
-            <TimeRange />
-          </div>
-        </section>
-      </section>
+      {/* <section className="w-full flex flex-col gap-4"> */}
+      {/*   <h2 className="dark:text-neutral-50 font-semibold text-xl"> */}
+      {/*     {dictionary.localization.title} */}
+      {/*   </h2> */}
+      {/*   <section className="flex justify-between"> */}
+      {/*     <div className="w-full flex flex-col font-mono"> */}
+      {/*       <div className="flex gap-2 items-center dark:text-neutral-50"> */}
+      {/*         <h3>{dictionary.localization.time_zone}</h3> -{""} */}
+      {/*         <h3>GTM-3</h3> */}
+      {/*       </div> */}
+      {/*       <p> */}
+      {/*         {date.setLocale(lang).toLocaleString({ */}
+      {/*           month: "short", */}
+      {/*           weekday: "short", */}
+      {/*           day: "2-digit", */}
+      {/*         })} */}
+      {/*       </p> */}
+      {/*       <ClockLocal /> */}
+      {/*       <TimeRange /> */}
+      {/*     </div> */}
+      {/*   </section> */}
+      {/* </section> */}
       <section className="w-full flex flex-col gap-4">
         <h2 className="dark:text-neutral-50 font-semibold text-xl">
           {dictionary.contact.title}
