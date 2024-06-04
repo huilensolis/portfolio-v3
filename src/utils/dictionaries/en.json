@@ -1,8 +1,8 @@
 {
   "biography": [
     "Back in 2022 I started learning frontend at Platzi, on 2023 joined X Academy, where professionals who work at Santex teach Full Stack Development.",
-    "I'm currently building open source projects on github with the community.",
-    "On my free time, you can find me reading history books, training taekwondo or configuring my workspace on Arch Linux."
+    "Currently, I'm building open source projects on Github with the community.",
+    "On my free time, you can find me reading history books or training taekwondo"
   ],
   "education": {
     "title": "Education",
@@ -23,7 +23,7 @@
         "title": "English private lessons",
         "description": "C1 Advanced",
         "href": "https://cert.efset.org/z2Phe6",
-        "time_span": { "start": "2019", "end": "Present" }
+        "time_span": { "start": "2019", "end": "Current" }
       }
     ]
   },
@@ -35,7 +35,7 @@
         "date": "2023",
         "title": "Pictura",
         "description": [
-          "Images social network for sharing and posting images, while creating image collections and user public profiles."
+          "Pictura is a social network dedicated to image sharing and posting. It allows users to sign up, upload, edit, and delete image posts. Additionally, users can create image collections and set up a public profile."
         ],
         "stack": [
           "React",
@@ -54,8 +54,8 @@
         "date": "Current",
         "title": "Memoir",
         "description": [
-          "I use Obsidian: a native text editor application to write down my reflections, and I wanted to use it on the web, that's why I built Memoir: A text editor on the web that allows creating, editing and deleting text documents.",
-          "It has support for text styles: bolds, strikes and italics and different text blocks: headings and paragraphs."
+          "Memoir is a web-based text editor I developed to extend the capabilities of Obsidian, a native text editor application I use for writing my notes and reflections.",
+          "Memoir allows users to create, edit, and delete text documents online. It supports various text styles, including bold, strikethrough, and italics, as well as different text blocks like headings and paragraphs."
         ],
         "stack": [
           "React",
@@ -75,8 +75,24 @@
       {
         "date": "2023",
         "title": "Interestellar",
-        "description": ["Kanban board for collaboration"],
-        "stack": [],
+        "description": [
+          "Interestellar is a focused task management tool designed specifically for development team collaboration.",
+          "Developed in collaboration with Jesus Oyola, with my focus on the frontend and Jesus on the backend, Interestelar facilitates efficient project management",
+          " Features include user sign-up, organization creation, member invitations, customizable Kanban board columns, task creation, task assignment to team members, and linking tasks to GitHub issues."
+        ],
+        "stack": [
+          "Rect",
+          "Next js",
+          "Typescript",
+          "Tailwind CSS",
+          "Typebox (input validation)",
+          "Axios",
+          "Nest js",
+          "JWT",
+          "PostgreSQL",
+          "Typeorm",
+          "Zod"
+        ],
         "repository": "https://github.com/Huilensolis/memoir",
         "deploy": "https://memoir-oak.vercel.app/"
       }
