@@ -2,7 +2,7 @@
   "biography": [
     "En 2022 comencé a aprender desarrollo frontend en Platzi, en 2023 comencé a estudiar en X Academy, en donde profesionales que trabajan en Santex enseñan desarrollo Full Stack.",
     "Actualmente, estoy construyendo proyectos open source en GitHub con la comunidad.",
-    "En mi tiempo libre, me podés encontrar leyendo libros de historia, entrenando taekwondo o configurando mi espacio de trabajo en Arch Linux."
+    "En mi tiempo libre, me podés encontrar leyendo libros de historia o entrenando taekwondo."
   ],
   "education": {
     "title": "Educación",
@@ -23,7 +23,7 @@
         "title": "Clases particulares de inglés",
         "description": "Nivel C1 Avanzado",
         "href": "https://cert.efset.org/z2Phe6",
-        "time_span": { "start": "2019", "end": "presente" }
+        "time_span": { "start": "2019", "end": "Presente" }
       }
     ]
   },
@@ -34,7 +34,10 @@
         "images": ["/pictura.webp"],
         "date": "2023",
         "title": "Pictura",
-        "description": ["Red social de imágenes"],
+        "description": [
+          "Pictura es una red social dedicada a publicar y compartir imágenes.",
+          "Permite registrarse, subir, editar y eliminar imágenes. Adicionalmente, los usuarios pueden crear colecciones de imágenes y un perfil público."
+        ],
         "stack": [
           "React",
           "Next js",
@@ -49,7 +52,10 @@
         "images": ["/memoir.webp"],
         "date": "Presente",
         "title": "Memoir",
-        "description": ["Aplicación de diario diario"],
+        "description": [
+          "Memoir es un editor de texto en la web que desarrolle para extender las capacidades de Obsidian. Una aplicación de editor de texto nativa que utilizo para escribir mis notas y reflexiones.",
+          "Memoir permite a los usuarios a crear, editar y eliminar documentos de texto en línea. Soporta varios estilos de texto, incluyendo bold, strikethrough, e italic, como también diferentes tipos de bloques de texto, como encabezados y párrafos."
+        ],
         "stack": [
           "React",
           "Next js",
@@ -67,9 +73,25 @@
       },
       {
         "date": "2023",
-        "title": "Interestellar",
-        "description": ["Tablero Kanban para colaboración"],
-        "stack": [],
+        "title": "Interestelar",
+        "description": [
+          "Interestelar es una herramienta de organización de tareas diseñada específicamente para equipos colaborativos de desarrollo.",
+          "Desarrollada en colaboración con Jesús Oyola, con mi foco en el frontend y el de Jesús en el backend. Interestellar facilita la organización de proyectos eficiente.",
+          "La lista de funcionalidades incluye registro de usuarios, creación de organizaciones, invitación a miembros, customización de columnas del tablero Kanban, creación de tareas, asignación de tareas a miembros del equipo, y enlazamiento de tareas a issues de GitHub."
+        ],
+        "stack": [
+          "Rect",
+          "Next js",
+          "Typescript",
+          "Tailwind CSS",
+          "Typebox (validacion de input)",
+          "Axios",
+          "Nest js",
+          "JWT",
+          "PostgreSQL",
+          "Typeorm",
+          "Zod"
+        ],
         "repository": "https://github.com/Huilensolis/memoir",
         "deploy": "https://memoir-oak.vercel.app/"
       }
