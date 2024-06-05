@@ -16,6 +16,16 @@ const config: Config = {
       animation: {
         dash: "dash 200s forwards infinite",
       },
+      boxShadow: {
+        top: "inset 0px 1px 0",
+        bottom: "inset 0px -1px 0px 0px",
+        right: "inset -1px 0px 0",
+        left: "inset 1px 0px 0",
+        "top-right": "inset -1px 1px",
+        "top-left": "inset 1px 1px",
+        "bottom-right": "inset -1px -1px",
+        "bottom-left": "inset 1px -1px",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

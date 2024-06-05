@@ -48,11 +48,12 @@ export default function RootLayout({
       className={cx(
         "dark:bg-neutral-950 dark:text-gray-300",
         GeistSans.variable,
+        GeistSans.className,
         GeistMono.variable,
       )}
     >
       <body className="antialiased min-h-screen overflow-x-hidden xl:px-0 px-5 flex justify-center">
-        <main className="max-w-xl w-full min-w-0 py-5 flex flex-col font-sans">
+        <main className="max-w-3xl w-full min-w-0 py-5 flex flex-col">
           {children}
           <Analytics />
         </main>

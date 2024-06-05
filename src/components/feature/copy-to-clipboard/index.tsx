@@ -33,9 +33,9 @@ export function CopyToClipboardBtn({
       variant="ghost"
     >
       {valueHasBeenCopied ? (
-        <CopyCheck className="w-6 h-6 transition-all duration-150" />
+        <CopyCheck className="w-4 h-4 transition-all duration-150" />
       ) : (
-        <Copy className="w-6 h-6 transition-all duration-150" />
+        <Copy className="w-4 h-4 transition-all duration-150" />
       )}
     </Button>
   );
