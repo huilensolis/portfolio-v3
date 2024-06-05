@@ -1,5 +1,15 @@
 import { SUPPORTED_LANGS } from "@/utils/consts";
 import Link from "next/link";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTrigger,
+} from "@/components/feature/drawer";
+import { Button } from "@/components/ui/button/button.component";
+import { Menu, X } from "lucide-react";
 
 export function NavBar({
   currentLang,
@@ -8,28 +18,75 @@ export function NavBar({
 }) {
   return (
     <nav className="flex gap-4 items-center dark:text-neutral-400">
-      <div>
-        <Link href="/" className="no-underline">
-          Home
-        </Link>
+      <div className="hidden sm:block">
+        <NavLinks currentLang={currentLang} />
       </div>
-      <div className="flex gap-4">
-        <Link href={`/${currentLang}/guestbook`} className="no-underline">
-          Guestbook
-        </Link>
-        <Link href={`/${currentLang}/blog`} className="no-underline">
-          Blog
-        </Link>
-        <Link href={`/${currentLang}/guestbook`} className="no-underline">
-          Journey
-        </Link>
-        <Link href={`/${currentLang}/guestbook`} className="no-underline">
-          Workspace
-        </Link>
-        <Link href={`/${currentLang}/guestbook`} className="no-underline">
-          Contact
-        </Link>
+      <div className="sm:hidden">
+        <Drawer>
+          <DrawerTrigger>
+            <Menu />
+          </DrawerTrigger>
+          <DrawerContent className="bg-neutral-950">
+            <DrawerHeader>
+              <DrawerClose>
+                <Button variant="ghost" className="p-0">
+                  <X />
+                </Button>
+              </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+              <NavLinks currentLang={currentLang} />
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
       </div>
     </nav>
+  );
+}
+
+function NavLinks({
+  currentLang,
+}: {
+  currentLang: (typeof SUPPORTED_LANGS)[number];
+}) {
+  return (
+    <div className="flex gap-4 items-start sm:flex-row flex-col dark:text-neutral-400">
+      <Link
+        href="/"
+        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+      >
+        Home
+      </Link>
+      <Link
+        href={`/${currentLang}/guestbook`}
+        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+      >
+        Guestbook
+      </Link>
+      <Link
+        href={`/${currentLang}/blog`}
+        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+      >
+        Blog
+      </Link>
+      <Link
+        href={`/${currentLang}/journey`}
+        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+      >
+        Journey
+      </Link>
+      <Link
+        href={`/${currentLang}/workspace`}
+        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+      >
+        Workspace
+      </Link>
+      <Link
+        href={`/${currentLang}#contact`}
+        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+      >
+        Contact
+      </Link>
+    </div>
   );
 }

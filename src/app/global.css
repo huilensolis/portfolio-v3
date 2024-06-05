@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*:focus-visible {
+  outline: none;
+}
+
+*:focus {
+  outline: 2px solid rgb(209 213 219 / 1);
+}
