@@ -172,8 +172,8 @@ export default async function HomePage({
                                 <div className="py-4 shadow-right shadow-neutral-900"></div>
                                 <div className="py-4 shadow-right shadow-gray-900"></div>
                               </div>
-                              <div className="shadow-top shadow-sky-950">
-                                <div className="shadow-bottom shadow-gray-900">
+                              <div className="shadow-top shadow-neutral-900">
+                                <div className="shadow-bottom shadow-neutral-900">
                                   <header className="grid grid-cols-[3fr_1fr_1fr] w-full">
                                     <Link
                                       href={project.deploy}
@@ -187,7 +187,7 @@ export default async function HomePage({
                                     <Link
                                       href={project.repository}
                                       target="_blank"
-                                      className="w-full text-neutral-50 hover:bg-gradient-to-r hover:from-sky-950/10 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right shadow-sky-950"
+                                      className="w-full text-neutral-50 hover:bg-neutral-900/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right shadow-neutral-900"
                                     >
                                       code
                                       <ArrowUpRight className="w-4 h-4 group-hover:scale-110 duration-150 transition-all" />
@@ -195,7 +195,7 @@ export default async function HomePage({
                                     <Link
                                       href={project.deploy}
                                       target="_blank"
-                                      className="w-full text-neutral-50 hover:bg-gradient-to-r hover:from-green-900/20 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right shadow-green-950"
+                                      className="w-full text-neutral-50 hover:bg-neutral-900/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right shadow-green-950"
                                     >
                                       live
                                       <ArrowUpRight className="w-4 h-4 group-hover:scale-110 duration-150 transition-all" />
