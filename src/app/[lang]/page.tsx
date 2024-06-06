@@ -277,7 +277,7 @@ export default async function HomePage({
                       target="_blank"
                       className="col-span-4 group hover:brightness-110 hover:bg-gradient-to-t hover:from-gray-900/10 duration-150 transition-all"
                     >
-                      <div className="shadow-bottom shadow-indigo-950 h-full">
+                      <div className="shadow-bottom shadow-neutral-900 h-full">
                         <div className="shadow-right shadow-neutral-900 h-full">
                           <div className="flex flex-col gap-32 pb-8 pl-8 p-4 h-full">
                             <header className="flex justify-end w-full">
@@ -302,7 +302,7 @@ export default async function HomePage({
                       </div>
                     </Link>
                     <article className="col-span-4 w-full h-full group hover:brightness-110 hover:bg-gradient-to-t hover:from-gray-900/10 duration-150 transition-all">
-                      <div className="shadow-bottom shadow-indigo-950 h-full">
+                      <div className="shadow-bottom shadow-neutral-900 h-full">
                         <div className="shadow-right shadow-neutral-900 h-full">
                           <div className="p-4 relative flex justify-end items-start h-full sm:pb-0 pb-32">
                             <Link
