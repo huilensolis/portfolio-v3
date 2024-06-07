@@ -72,6 +72,7 @@
         "deploy": "https://memoir-oak.vercel.app/"
       },
       {
+        "images": ["/interestelar.webp"],
         "title": "Interestelar",
         "date": "Presente",
         "description": [
