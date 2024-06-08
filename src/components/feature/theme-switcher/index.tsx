@@ -12,8 +12,11 @@ export function ThemeSwitcher() {
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
+      localStorage.theme = "dark";
+
       return "dark";
     } else {
+      localStorage.theme = "light";
       return "light";
     }
   });
