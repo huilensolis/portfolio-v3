@@ -26,7 +26,7 @@ export function NavBar({
           <DrawerTrigger>
             <Menu />
           </DrawerTrigger>
-          <DrawerContent className="bg-neutral-950">
+          <DrawerContent className="dark:bg-neutral-950 bg-gray-100">
             <DrawerHeader>
               <DrawerClose>
                 <Button variant="ghost" className="p-0">
@@ -53,37 +53,37 @@ function NavLinks({
     <div className="flex gap-4 items-start sm:flex-row flex-col dark:text-neutral-400">
       <Link
         href="/"
-        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+        className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all"
       >
         Home
       </Link>
       <Link
         href={`/${currentLang}/guestbook`}
-        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+        className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all"
       >
         Guestbook
       </Link>
       <Link
         href={`/${currentLang}/blog`}
-        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+        className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all"
       >
         Blog
       </Link>
       {/* <Link */}
       {/*   href={`/${currentLang}/journey`} */}
-      {/*   className="no-underline hover:text-neutral-100 duration-150 transition-all" */}
+      {/* className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all" */}
       {/* > */}
       {/*   Journey */}
       {/* </Link> */}
       {/* <Link */}
       {/*   href={`/${currentLang}/workspace`} */}
-      {/*   className="no-underline hover:text-neutral-100 duration-150 transition-all" */}
+      {/* className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all" */}
       {/* > */}
       {/*   Workspace */}
       {/* </Link> */}
       <Link
         href={`/${currentLang}#contact`}
-        className="no-underline hover:text-neutral-100 duration-150 transition-all"
+        className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all"
       >
         Contact
       </Link>

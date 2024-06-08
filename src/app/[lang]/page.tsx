@@ -66,17 +66,19 @@ export default async function HomePage({
   return (
     <div>
       <div className="grid grid-cols-2 relative w-full">
-        <div className="w-full py-5 shadow-bottom-left shadow-neutral-900"></div>
-        <div className="w-full py-5 shadow-bottom-right shadow-neutral-900"></div>
-        <div className="absolute top-0 right-full w-10 py-5 shadow-bottom shadow-neutral-900"></div>
-        <div className="absolute top-0 left-full w-10 py-5 shadow-bottom shadow-neutral-900"></div>
+        <div className="w-full py-5 shadow-bottom-left dark:shadow-neutral-900 shadow-gray-200"></div>
+        <div className="w-full py-5 shadow-bottom-right dark:shadow-neutral-900 shadow-gray-200"></div>
+        <div className="absolute top-0 right-full w-10 py-5 shadow-bottom dark:shadow-neutral-900 shadow-gray-200"></div>
+        <div className="absolute top-0 left-full w-10 py-5 shadow-bottom dark:shadow-neutral-900 shadow-gray-200"></div>
       </div>
-      <div className="shadow-left shadow-neutral-900">
-        <div className="shadow-right shadow-neutral-900">
+      <div className="shadow-left dark:shadow-neutral-900 shadow-gray-200">
+        <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200">
           <div className="flex flex-col">
-            <section className="flex flex-col gap-4 px-8 py-16 shadow-bottom shadow-gray-900">
+            <section className="flex flex-col gap-4 px-8 py-16 shadow-bottom dark:shadow-gray-900 shadow-gray-200">
               <div>
-                <h1 className="text-neutral-50 text-2xl">Huilén Solís 👋</h1>
+                <h1 className="dark:text-neutral-50 text-neutral-900 text-2xl">
+                  Huilén Solís 👋
+                </h1>
                 <span>Full stack developer</span>
               </div>
               {dictionary.biography.map((paragraph, i) => (
@@ -87,14 +89,14 @@ export default async function HomePage({
             </section>
             <div className="w-full grid grid-cols-[2fr_6fr]">
               <div className="py-8"></div>
-              <div className="shadow-left shadow-neutral-900"></div>
+              <div className="shadow-left dark:shadow-neutral-900 shadow-gray-200"></div>
             </div>
-            <section className="flex flex-col shadow-bottom shadow-neutral-900">
-              <div className="shadow-top shadow-gray-900 grid sm:grid-cols-[2fr_6fr]">
-                <h2 className="dark:text-neutral-50 text-2xl w-full text-start pl-8 py-16">
+            <section className="flex flex-col shadow-bottom dark:shadow-neutral-900 shadow-gray-200">
+              <div className="shadow-top dark:shadow-gray-900 shadow-gray-200 grid sm:grid-cols-[2fr_6fr]">
+                <h2 className="dark:text-neutral-50 text-neutral-900 text-2xl w-full text-start pl-8 py-16">
                   {dictionary.education.title}
                 </h2>
-                <div className="hidden sm:block shadow-left shadow-gray-900"></div>
+                <div className="hidden sm:block shadow-left dark:shadow-gray-900 shadow-gray-200"></div>
               </div>
               <ul className="flex flex-col">
                 {dictionary.education.items.map((item, i) => (
@@ -104,10 +106,10 @@ export default async function HomePage({
                       target="_blank"
                       className="w-full grid grid-cols-[7rem_1fr] sm:grid-cols-[2fr_6fr]"
                     >
-                      <div className="shadow-bottom shadow-neutral-900">
-                        <div className="shadow-top shadow-neutral-900">
-                          <div className="group-hover:bg-neutral-900/40 transition-all duration-150">
-                            <div className="text-neutral-500 font-mono flex flex-col py-4 px-4 pl-8">
+                      <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200">
+                        <div className="shadow-top dark:shadow-neutral-900 shadow-gray-200">
+                          <div className="group-hover:bg-neutral-200/40 transition-all duration-150">
+                            <div className="dark:text-neutral-500 text-neutral-500 font-mono flex flex-col py-4 px-4 pl-8">
                               <div>
                                 <span>{item.time_span.start}</span> -
                               </div>
@@ -116,13 +118,11 @@ export default async function HomePage({
                           </div>
                         </div>
                       </div>
-                      <div className="shadow-top shadow-neutral-900 h-full group-hover:bg-neutral-900/40 transition-all duration-150">
-                        <div className="shadow-bottom shadow-gray-900 h-full">
+                      <div className="shadow-top dark:shadow-neutral-900 shadow-gray-200 h-full group-hover:bg-neutral-200/40 transition-all duration-150">
+                        <div className="shadow-bottom dark:shadow-gray-900 shadow-gray-200 h-full">
                           <article className="flex flex-col py-4 sm:px-8 px-4 h-full">
-                            <div className="w-max flex items-center duration-150 transition-all group text-neutral-50">
-                              <h4 className="dark:text-neutral-50 font-semibold">
-                                {item.title}
-                              </h4>
+                            <div className="w-max flex items-center duration-150 transition-all group dark:text-neutral-50 text-neutral-900">
+                              <h4 className="font-semibold">{item.title}</h4>
                               <ArrowUpRight className="w-4 h-4 group-hover:scale-110 duration-150 transition-all" />
                             </div>
                             <p>{item.description}</p>
@@ -136,24 +136,26 @@ export default async function HomePage({
             </section>
             <div className="w-full grid grid-cols-[2fr_6fr]">
               <div className="py-8"></div>
-              <div className="shadow-left shadow-neutral-900"></div>
+              <div className="shadow-left dark:shadow-neutral-900 shadow-gray-200"></div>
             </div>
-            <section className="flex flex-col shadow-bottom shadow-neutral-900">
-              <div className="shadow-top shadow-gray-900">
+            <section className="flex flex-col shadow-bottom dark:shadow-neutral-900 shadow-gray-200">
+              <div className="shadow-top dark:shadow-gray-900 shadow-gray-200">
                 <div className="grid sm:grid-cols-[2fr_6fr]">
-                  <h2 className="dark:text-neutral-50 text-2xl pl-8 py-16">
+                  <h2 className="dark:text-neutral-50 text-neutral-900 text-2xl pl-8 py-16">
                     {dictionary.projects.title}
                   </h2>
-                  <div className="hidden sm:block shadow-left shadow-neutral-900 py-8"></div>
+                  <div className="hidden sm:block shadow-left dark:shadow-neutral-900 shadow-gray-200 py-8"></div>
                 </div>
                 <ul className="flex flex-col">
                   {dictionary.projects.items.map((project, i) => (
                     <li key={i} className="">
-                      <div className="shadow-top shadow-sky-950">
-                        <div className="shadow-bottom shadow-gray-900">
+                      <div className="shadow-top dark:shadow-sky-950 shadow-sky-200">
+                        <div className="shadow-bottom dark:shadow-gray-900 shadow-gray-200">
                           <div className="grid sm:grid-cols-[2fr_6fr]">
-                            <div className="pl-8 py-8 shadow-right shadow-neutral-900">
-                              <p className="font-mono">{project.date}</p>
+                            <div className="pl-8 py-8 shadow-right dark:shadow-neutral-900 shadow-gray-200">
+                              <p className="font-mono dark:text-neutral-500 text-neutral-500">
+                                {project.date}
+                              </p>
                             </div>
                             <article className="flex flex-col">
                               <div>
@@ -168,26 +170,26 @@ export default async function HomePage({
                                 )}
                               </div>
                               <div className="grid grid-cols-[3fr_1fr_1fr] w-full">
-                                <div className="py-4 shadow-right shadow-gray-900"></div>
-                                <div className="py-4 shadow-right shadow-neutral-900"></div>
-                                <div className="py-4 shadow-right shadow-gray-900"></div>
+                                <div className="py-4 shadow-right dark:shadow-gray-900 shadow-gray-200"></div>
+                                <div className="py-4 shadow-right dark:shadow-neutral-900 shadow-gray-200"></div>
+                                <div className="py-4 shadow-right dark:shadow-gray-900 shadow-gray-200"></div>
                               </div>
-                              <div className="shadow-top shadow-neutral-900">
-                                <div className="shadow-bottom shadow-neutral-900">
+                              <div className="shadow-top dark:shadow-neutral-900 shadow-gray-200">
+                                <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200">
                                   <header className="grid grid-cols-[3fr_1fr_1fr] w-full">
                                     <Link
                                       href={project.deploy}
                                       target="_blank"
-                                      className="w-full dark:text-neutral-50"
+                                      className="w-full dark:text-neutral-50 text-neutral-900"
                                     >
-                                      <h3 className="shadow-right shadow-neutral-900 py-4 pl-8">
+                                      <h3 className="shadow-right dark:shadow-neutral-900 shadow-gray-200 py-4 pl-8">
                                         {project.title}
                                       </h3>
                                     </Link>
                                     <Link
                                       href={project.repository}
                                       target="_blank"
-                                      className="w-full text-neutral-50 hover:bg-neutral-900/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right shadow-neutral-900"
+                                      className="w-full dark:text-neutral-50 text-neutral-900 hover:bg-neutral-200/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right dark:shadow-neutral-900 shadow-gray-200"
                                     >
                                       code
                                       <ArrowUpRight className="w-4 h-4 group-hover:scale-110 duration-150 transition-all" />
@@ -195,7 +197,7 @@ export default async function HomePage({
                                     <Link
                                       href={project.deploy}
                                       target="_blank"
-                                      className="w-full text-neutral-50 hover:bg-neutral-900/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right shadow-green-950"
+                                      className="w-full dark:text-neutral-50 dark:hover:bg-neutral-900/40 hover:bg-neutral-200/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right dark:shadow-green-950 shadow-green-200"
                                     >
                                       live
                                       <ArrowUpRight className="w-4 h-4 group-hover:scale-110 duration-150 transition-all" />
@@ -210,13 +212,13 @@ export default async function HomePage({
                                   </p>
                                 ))}
                               </section>
-                              <div className="shadow-top shadow-neutral-900">
-                                <div className="shadow-bottom shadow-neutral-900">
+                              <div className="shadow-top dark:shadow-neutral-900 shadow-gray-200">
+                                <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200">
                                   <ul className="grid grid-cols-2 sm:grid-cols-4">
                                     {project.stack.length > 0 &&
                                       project.stack.map((technology, i) => (
                                         <li
-                                          className="text-sm shadow-right shadow-neutral-900"
+                                          className="text-sm shadow-right dark:shadow-neutral-900 shadow-gray-200"
                                           key={i}
                                         >
                                           <div className="py-4 px-4">
@@ -233,7 +235,7 @@ export default async function HomePage({
                       </div>
                       <div className="w-full grid grid-cols-[2fr_6fr]">
                         <div className="py-8"></div>
-                        <div className="shadow-left shadow-gray-900"></div>
+                        <div className="shadow-left dark:shadow-gray-900 shadow-gray-200"></div>
                       </div>
                     </li>
                   ))}
@@ -262,26 +264,26 @@ export default async function HomePage({
             {/*     </div> */}
             {/*   </section> */}
             {/* </section> */}
-            <section className="w-full flex flex-col shadow-bottom shadow-neutral-900">
+            <section className="w-full flex flex-col shadow-bottom dark:shadow-neutral-900 shadow-gray-200">
               <div className="grid sm:grid-cols-[2fr_6fr]">
                 <h2
-                  className="dark:text-neutral-50 text-2xl pl-8 py-16"
+                  className="dark:text-neutral-50 text-neutral-900 text-2xl pl-8 py-16"
                   id="contact"
                 >
                   {dictionary.contact.title}
                 </h2>
-                <div className="hidden sm:block shadow-left shadow-indigo-950"></div>
+                <div className="hidden sm:block shadow-left dark:shadow-indigo-950 shadow-indigo-200"></div>
               </div>
-              <div className="shadow-top shadow-neutral-900">
-                <div className="shadow-bottom shadow-neutral-900">
+              <div className="shadow-top dark:shadow-neutral-900 shadow-gray-200">
+                <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200">
                   <ul className="flex flex-col sm:grid sm:grid-cols-8">
                     <Link
                       href={dictionary.contact.linkedin.href}
                       target="_blank"
-                      className="col-span-4 group hover:brightness-110 hover:bg-gradient-to-t hover:from-gray-900/10 duration-150 transition-all"
+                      className="col-span-4 group dark:hover:brightness-110 hover:brightness-90 hover:bg-gradient-to-t dark:hover:from-gray-900/10 hover:from-gray-200/10 duration-150 transition-all"
                     >
-                      <div className="shadow-bottom shadow-neutral-900 h-full">
-                        <div className="shadow-right shadow-neutral-900 h-full">
+                      <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 h-full">
+                        <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200 h-full">
                           <div className="flex flex-col gap-32 pb-8 pl-8 p-4 h-full">
                             <header className="flex justify-end w-full">
                               <ArrowUpRight className="h-4 w-4 group-hover:scale-110 duration-150 transition-all" />
@@ -289,7 +291,7 @@ export default async function HomePage({
                             <div className="flex items-end h-full">
                               <div className="flex items-start gap-2">
                                 <svg
-                                  className="fill-neutral-50 h-4 w-4"
+                                  className="dark:fill-neutral-300 fill-neutral-600 h-4 w-4"
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="24"
                                   height="24"
@@ -304,9 +306,9 @@ export default async function HomePage({
                         </div>
                       </div>
                     </Link>
-                    <article className="col-span-4 w-full h-full group hover:brightness-110 hover:bg-gradient-to-t hover:from-gray-900/10 duration-150 transition-all">
-                      <div className="shadow-bottom shadow-neutral-900 h-full">
-                        <div className="shadow-right shadow-neutral-900 h-full">
+                    <article className="col-span-4 w-full h-full group dark:hover:brightness-110 hover:brightness-90 hover:bg-gradient-to-t dark:hover:from-gray-900/10 hover:from-gray-200/10 duration-150 transition-all">
+                      <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 h-full">
+                        <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200 h-full">
                           <div className="p-4 relative flex justify-end items-start h-full sm:pb-0 pb-32">
                             <Link
                               href={dictionary.contact.gmail.href}
@@ -315,7 +317,7 @@ export default async function HomePage({
                             >
                               <div className="flex items-center gap-2">
                                 <svg
-                                  className="w-4 h-4 fill-neutral-300"
+                                  className="w-4 h-4 dark:fill-neutral-300 fill-neutral-600"
                                   role="img"
                                   viewBox="0 0 24 24"
                                   xmlns="http://www.w3.org/2000/svg"
@@ -330,7 +332,7 @@ export default async function HomePage({
                             </Link>
                             <CopyToClipboardBtn
                               value={dictionary.contact.gmail.at}
-                              className="hover:bg-neutral-800"
+                              className="dark:hover:bg-neutral-800 hover:bg-neutral-200"
                             />
                           </div>
                         </div>
@@ -339,10 +341,10 @@ export default async function HomePage({
                     <Link
                       href={dictionary.contact.twitter.href}
                       target="_blank"
-                      className="col-span-3 group hover:brightness-110 hover:bg-gradient-to-t hover:from-gray-900/10 duration-150 transition-all"
+                      className="col-span-3 group dark:hover:brightness-110 hover:brightness-90 hover:bg-gradient-to-t dark:hover:from-gray-900/10 hover:from-gray-200/10 duration-150 transition-all"
                     >
-                      <div className="shadow-bottom shadow-neutral-900 h-full">
-                        <div className="shadow-right shadow-neutral-900 h-full">
+                      <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 h-full">
+                        <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200 h-full">
                           <div className="flex flex-col gap-32 pb-8 pl-8 p-4 h-full">
                             <header className="w-full flex justify-end">
                               <ArrowUpRight className="h-4 w-4 group-hover:scale-110 duration-150 transition-all" />
@@ -350,7 +352,7 @@ export default async function HomePage({
                             <div className="flex items-end h-full">
                               <div className="flex items-center gap-2">
                                 <svg
-                                  className="w-4 h-4 fill-neutral-300"
+                                  className="w-4 h-4 dark:fill-neutral-300 fill-neutral-600"
                                   role="img"
                                   viewBox="0 0 24 24"
                                   xmlns="http://www.w3.org/2000/svg"
@@ -370,10 +372,10 @@ export default async function HomePage({
                     <Link
                       href={dictionary.contact.github.href}
                       target="_blank"
-                      className="col-span-5 group hover:brightness-110 hover:bg-gradient-to-t hover:from-gray-900/10 duration-150 transition-all"
+                      className="col-span-5 group dark:hover:brightness-110 hover:brightness-90 hover:bg-gradient-to-t dark:hover:from-gray-900/10 hover:from-gray-200/10 duration-150 transition-all"
                     >
-                      <div className="shadow-bottom shadow-neutral-900 h-full">
-                        <div className="shadow-right shadow-neutral-900 h-full">
+                      <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 h-full">
+                        <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200 h-full">
                           <div className="flex flex-col gap-32 pb-8 pl-8 p-4">
                             <header className="flex justify-end w-full">
                               <ArrowUpRight className="h-4 w-4 group-hover:scale-110 duration-150 transition-all" />
@@ -381,7 +383,7 @@ export default async function HomePage({
                             <div className="flex items-end h-full">
                               <div className="flex items-center gap-2">
                                 <svg
-                                  className="w-4 h-4 fill-neutral-300"
+                                  className="w-4 h-4 dark:fill-neutral-300 fill-neutral-600"
                                   role="img"
                                   viewBox="0 0 24 24"
                                   xmlns="http://www.w3.org/2000/svg"
@@ -410,8 +412,8 @@ export default async function HomePage({
         </div>
       </div>
       <div className="grid grid-cols-2 relative w-full">
-        <div className="absolute w-full py-5 shadow-left shadow-neutral-900"></div>
-        <div className="absolute w-full py-5 shadow-right shadow-neutral-900"></div>
+        <div className="absolute w-full py-5 shadow-left dark:shadow-neutral-900 shadow-gray-200"></div>
+        <div className="absolute w-full py-5 shadow-right dark:shadow-neutral-900 shadow-gray-200"></div>
       </div>
     </div>
   );

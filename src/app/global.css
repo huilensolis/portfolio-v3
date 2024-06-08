@@ -6,6 +6,8 @@
   outline: none;
 }
 
-*:focus {
+button:focus,
+a:focus,
+input:focus {
   outline: 2px solid rgb(209 213 219 / 1);
 }

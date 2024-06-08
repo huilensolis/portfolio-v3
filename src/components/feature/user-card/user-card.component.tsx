@@ -12,13 +12,8 @@ export async function UserCard({ userId }: { userId: string }) {
   if (!user) return <></>;
 
   return (
-    <article className="flex gap-2 items-start justify-centr">
-      <img
-        src={user.avatar_url || ""}
-        className="h-8 w-8 rounded-full"
-        alt={user.full_name || user.username || " "}
-      />
-      <span className="dark:text-neutral-50">{user.full_name ?? ""}</span>
-    </article>
+    <span className="dark:text-neutral-50 text-neutral-900">
+      {user.full_name ?? ""}
+    </span>
   );
 }

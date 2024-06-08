@@ -34,7 +34,7 @@ export function SignInWithGithubBtn({
   }
   return (
     <Button
-      className="fill-neutral-50 text-neutral-50"
+      className="dark:fill-neutral-50 fill-neutral-900 dark:text-neutral-50 text-neutral-900"
       size="sm"
       onClick={signIn}
       loading={loading}
