@@ -264,7 +264,10 @@ export default async function HomePage({
             {/* </section> */}
             <section className="w-full flex flex-col shadow-bottom shadow-neutral-900">
               <div className="grid sm:grid-cols-[2fr_6fr]">
-                <h2 className="dark:text-neutral-50 text-2xl pl-8 py-16">
+                <h2
+                  className="dark:text-neutral-50 text-2xl pl-8 py-16"
+                  id="contact"
+                >
                   {dictionary.contact.title}
                 </h2>
                 <div className="hidden sm:block shadow-left shadow-indigo-950"></div>

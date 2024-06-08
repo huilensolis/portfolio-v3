@@ -69,18 +69,18 @@ function NavLinks({
       >
         Blog
       </Link>
-      <Link
-        href={`/${currentLang}/journey`}
-        className="no-underline hover:text-neutral-100 duration-150 transition-all"
-      >
-        Journey
-      </Link>
-      <Link
-        href={`/${currentLang}/workspace`}
-        className="no-underline hover:text-neutral-100 duration-150 transition-all"
-      >
-        Workspace
-      </Link>
+      {/* <Link */}
+      {/*   href={`/${currentLang}/journey`} */}
+      {/*   className="no-underline hover:text-neutral-100 duration-150 transition-all" */}
+      {/* > */}
+      {/*   Journey */}
+      {/* </Link> */}
+      {/* <Link */}
+      {/*   href={`/${currentLang}/workspace`} */}
+      {/*   className="no-underline hover:text-neutral-100 duration-150 transition-all" */}
+      {/* > */}
+      {/*   Workspace */}
+      {/* </Link> */}
       <Link
         href={`/${currentLang}#contact`}
         className="no-underline hover:text-neutral-100 duration-150 transition-all"
