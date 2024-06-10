@@ -108,7 +108,7 @@ export default async function HomePage({
                     >
                       <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200">
                         <div className="shadow-top dark:shadow-neutral-900 shadow-gray-200">
-                          <div className="group-hover:bg-neutral-200/40 transition-all duration-150">
+                          <div className="group-hover:bg-neutral-200/40 dark:group-hover:bg-neutral-800/40 transition-all duration-150">
                             <div className="dark:text-neutral-500 text-neutral-500 font-mono flex flex-col py-4 px-4 pl-8">
                               <div>
                                 <span>{item.time_span.start}</span> -
@@ -118,7 +118,7 @@ export default async function HomePage({
                           </div>
                         </div>
                       </div>
-                      <div className="shadow-top dark:shadow-neutral-900 shadow-gray-200 h-full group-hover:bg-neutral-200/40 transition-all duration-150">
+                      <div className="shadow-top dark:shadow-neutral-900 shadow-gray-200 h-full group-hover:bg-neutral-200/40 dark:group-hover:bg-neutral-800/40 transition-all duration-150">
                         <div className="shadow-bottom dark:shadow-gray-900 shadow-gray-200 h-full">
                           <article className="flex flex-col py-4 sm:px-8 px-4 h-full">
                             <div className="w-max flex items-center duration-150 transition-all group dark:text-neutral-50 text-neutral-900">
@@ -189,7 +189,7 @@ export default async function HomePage({
                                     <Link
                                       href={project.repository}
                                       target="_blank"
-                                      className="w-full dark:text-neutral-50 text-neutral-900 hover:bg-neutral-200/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right dark:shadow-neutral-900 shadow-gray-200"
+                                      className="w-full dark:text-neutral-50 text-neutral-900 hover:bg-neutral-200/40 dark:hover:bg-neutral-800/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right dark:shadow-neutral-900 shadow-gray-200"
                                     >
                                       code
                                       <ArrowUpRight className="w-4 h-4 group-hover:scale-110 duration-150 transition-all" />
@@ -197,7 +197,7 @@ export default async function HomePage({
                                     <Link
                                       href={project.deploy}
                                       target="_blank"
-                                      className="w-full dark:text-neutral-50 dark:hover:bg-neutral-900/40 hover:bg-neutral-200/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right dark:shadow-green-950 shadow-green-200"
+                                      className="w-full dark:text-neutral-50 hover:bg-neutral-200/40 dark:hover:bg-neutral-800/40 group duration-150 transition-all flex items-center justify-center no-underline py-4 shadow-right dark:shadow-green-950 shadow-green-200"
                                     >
                                       live
                                       <ArrowUpRight className="w-4 h-4 group-hover:scale-110 duration-150 transition-all" />
@@ -280,7 +280,7 @@ export default async function HomePage({
                     <Link
                       href={dictionary.contact.linkedin.href}
                       target="_blank"
-                      className="col-span-4 group dark:hover:brightness-110 hover:brightness-90 hover:bg-gradient-to-t dark:hover:from-gray-900/10 hover:from-gray-200/10 duration-150 transition-all"
+                      className="col-span-4 group hover:bg-neutral-200/40 dark:hover:bg-neutral-800/40 duration-150 transition-all"
                     >
                       <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 h-full">
                         <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200 h-full">
@@ -306,7 +306,7 @@ export default async function HomePage({
                         </div>
                       </div>
                     </Link>
-                    <article className="col-span-4 w-full h-full group dark:hover:brightness-110 hover:brightness-90 hover:bg-gradient-to-t dark:hover:from-gray-900/10 hover:from-gray-200/10 duration-150 transition-all">
+                    <article className="col-span-4 w-full h-full group hover:bg-neutral-200/40 dark:hover:bg-neutral-800/40 duration-150 transition-all">
                       <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 h-full">
                         <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200 h-full">
                           <div className="p-4 relative flex justify-end items-start h-full sm:pb-0 pb-32">
@@ -341,7 +341,7 @@ export default async function HomePage({
                     <Link
                       href={dictionary.contact.twitter.href}
                       target="_blank"
-                      className="col-span-3 group dark:hover:brightness-110 hover:brightness-90 hover:bg-gradient-to-t dark:hover:from-gray-900/10 hover:from-gray-200/10 duration-150 transition-all"
+                      className="col-span-3 group hover:bg-neutral-200/40 dark:hover:bg-neutral-800/40 duration-150 transition-all"
                     >
                       <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 h-full">
                         <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200 h-full">
@@ -372,7 +372,7 @@ export default async function HomePage({
                     <Link
                       href={dictionary.contact.github.href}
                       target="_blank"
-                      className="col-span-5 group dark:hover:brightness-110 hover:brightness-90 hover:bg-gradient-to-t dark:hover:from-gray-900/10 hover:from-gray-200/10 duration-150 transition-all"
+                      className="col-span-5 group hover:bg-neutral-200/40 dark:hover:bg-neutral-800/40 duration-150 transition-all"
                     >
                       <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 h-full">
                         <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200 h-full">
