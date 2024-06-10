@@ -1,11 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button/button.component";
-import { MoonStar, Sun } from "lucide-react";
+import { Loader, MoonStar, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function ThemeSwitcher() {
+  const [isClient, setIsClient] = useState(false);
   const [theme, setTheme] = useState<"dark" | "light">(() => {
+    if (typeof localStorage === "undefined") return "light";
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -47,12 +49,22 @@ export function ThemeSwitcher() {
     setTheme("dark");
   }
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <Button variant="ghost" onClick={toggleTheme}>
-      {theme === "light" ? (
-        <MoonStar className="w-5 h-5" />
+      {isClient ? (
+        <>
+          {theme === "light" ? (
+            <MoonStar className="w-5 h-5" suppressHydrationWarning />
+          ) : (
+            <Sun className="w-5 h-5" suppressHydrationWarning />
+          )}
+        </>
       ) : (
-        <Sun className="w-5 h-5" />
+        <Loader className="animate-spin duration-150 w-5 h-5" />
       )}
     </Button>
   );
