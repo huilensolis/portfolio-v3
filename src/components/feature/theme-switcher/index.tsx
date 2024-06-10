@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 export function ThemeSwitcher() {
   const [theme, setTheme] = useState<"dark" | "light">(() => {
-    if (typeof localStorage) return "light";
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -17,6 +16,7 @@ export function ThemeSwitcher() {
       return "dark";
     } else {
       localStorage.theme = "light";
+
       return "light";
     }
   });
