@@ -58,7 +58,7 @@ export default async function GuestbookPage() {
           comments?.length > 0 &&
           comments.map((comment) => (
             <li key={comment.id} className="flex gap-4 items-center">
-              <div className="sm:grid sm:grid-cols-[2fr_11fr] flex flex-col">
+              <div className="w-full sm:grid sm:grid-cols-[2fr_11fr] flex flex-col">
                 <div>
                   <UserCard userId={comment.user_id} />:
                 </div>
