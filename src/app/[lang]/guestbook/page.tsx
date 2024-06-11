@@ -49,7 +49,7 @@ export default async function GuestbookPage() {
             <h2 className="dark:text-neutral-200 text-neutral-900">
               Sign my Guestbook
             </h2>
-            <SignInWithGithubBtn redirectAfterSignIn={"/guestbook"} />
+            <SignInWithGithubBtn redirectAfterSignIn={"/en/guestbook"} />
           </div>
         )}
       </div>
