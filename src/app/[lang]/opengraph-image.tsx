@@ -37,8 +37,8 @@ export default async function Image({
     (
       <div
         style={{
-          // background: "rgb(10 10 10 / 1)",
-          color: "rgb(250 250 250 / 1)",
+          backgroundColor: "white",
+          color: "rgb(23 23 23 / 1)",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -48,8 +48,6 @@ export default async function Image({
           padding: "2rem",
           lineHeight: "0.75",
           letterSpacing: "-0.025em",
-          backgroundImage:
-            "linear-gradient(207deg, rgba(126, 130, 255, 1) 2%, rgba(0, 0, 0, 1) 35%)",
         }}
       >
         <h1
@@ -65,7 +63,6 @@ export default async function Image({
         <span
           style={{
             fontSize: "2rem",
-            color: "rgb(209 213 219 / 1)",
             fontWeight: 300,
           }}
         >
