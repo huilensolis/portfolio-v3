@@ -10,8 +10,7 @@ export async function GET(request: NextRequest) {
     const next = reqUrl.searchParams.get("next") || "";
 
     if (!code) {
-      console.log("no code found in request");
-      return;
+      throw new Error("no code found in request");
     }
 
     const supabase = createClient();
@@ -22,6 +21,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.redirect(`${reqUrl.origin}/${next}`);
   } catch (error) {
+    console.log(error);
     return NextResponse.redirect(reqUrl.origin);
   }
 }
