@@ -68,8 +68,8 @@ export default async function HomePage({
       <div className="grid grid-cols-2 relative w-full">
         <div className="w-full py-5 shadow-bottom-left dark:shadow-neutral-900 shadow-gray-200"></div>
         <div className="w-full py-5 shadow-bottom-right dark:shadow-neutral-900 shadow-gray-200"></div>
-        <div className="absolute top-0 right-full w-10 py-5 shadow-bottom dark:shadow-neutral-900 shadow-gray-200"></div>
-        <div className="absolute top-0 left-full w-10 py-5 shadow-bottom dark:shadow-neutral-900 shadow-gray-200"></div>
+        <div className="hidden lg:block absolute top-0 right-full w-10 py-5 shadow-bottom dark:shadow-neutral-900 shadow-gray-200"></div>
+        <div className="hidden lg:block absolute top-0 left-full w-10 py-5 shadow-bottom dark:shadow-neutral-900 shadow-gray-200"></div>
       </div>
       <div className="shadow-left dark:shadow-neutral-900 shadow-gray-200">
         <div className="shadow-right dark:shadow-neutral-900 shadow-gray-200">
@@ -412,8 +412,8 @@ export default async function HomePage({
         </div>
       </div>
       <div className="grid grid-cols-2 relative w-full">
-        <div className="absolute w-full py-5 shadow-left dark:shadow-neutral-900 shadow-gray-200"></div>
-        <div className="absolute w-full py-5 shadow-right dark:shadow-neutral-900 shadow-gray-200"></div>
+        <div className="hidden lg:block absolute w-full py-5 shadow-left dark:shadow-neutral-900 shadow-gray-200"></div>
+        <div className="hidden lg:block absolute w-full py-5 shadow-right dark:shadow-neutral-900 shadow-gray-200"></div>
       </div>
     </div>
   );
