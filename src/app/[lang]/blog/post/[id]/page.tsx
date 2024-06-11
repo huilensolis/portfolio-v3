@@ -10,6 +10,8 @@ import type { Metadata, ResolvingMetadata } from "next";
 import { TPostMetadata } from "@/app/types/post";
 import { getDictionary } from "@/utils/dictionaries";
 
+export const dynamic = "force-static";
+
 type Props = {
   params: { id: string };
   searchParams: { [key: string]: string | string[] | undefined };

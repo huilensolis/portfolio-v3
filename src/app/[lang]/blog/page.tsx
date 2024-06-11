@@ -6,6 +6,8 @@ import Link from "next/link";
 import path from "node:path";
 import { TPostMetadata } from "@/app/types/post";
 
+export const dynamic = "force-static";
+
 export default async function BlogPage() {
   const postsPath = path.join(cwd(), POSTS_PATH);
 
