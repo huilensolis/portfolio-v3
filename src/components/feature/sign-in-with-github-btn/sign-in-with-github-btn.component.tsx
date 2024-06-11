@@ -22,7 +22,7 @@ export function SignInWithGithubBtn({
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "github",
         options: {
-          redirectTo: `${BASE_URL}/auth/confirm?next=${redirectAfterSignIn}`,
+          redirectTo: `${BASE_URL}/en/auth/confirm?next=${redirectAfterSignIn}`,
         },
       });
 
