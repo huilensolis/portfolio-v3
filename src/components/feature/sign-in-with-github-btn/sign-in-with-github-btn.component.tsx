@@ -1,13 +1,13 @@
 "use client";
 
-import { baseUrl } from "@/app/sitemap";
+import { BASE_URL } from "@/app/sitemap";
 import { Github } from "@/components/icons/github";
 import { Button } from "@/components/ui/button/button.component";
 import { createClient } from "@/utils/supabase/client";
 import { useState } from "react";
 
 export function SignInWithGithubBtn({
-  redirectAfterSignIn = baseUrl,
+  redirectAfterSignIn = BASE_URL,
 }: {
   redirectAfterSignIn?: string;
 }) {
@@ -22,7 +22,7 @@ export function SignInWithGithubBtn({
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "github",
         options: {
-          redirectTo: `${baseUrl}/auth/confirm?next=${redirectAfterSignIn}`,
+          redirectTo: `${BASE_URL}/auth/confirm?next=${redirectAfterSignIn}`,
         },
       });
 

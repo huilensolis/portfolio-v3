@@ -2,11 +2,11 @@ import "./global.css";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
-import { baseUrl } from "@/app/sitemap";
+import { BASE_URL } from "@/app/sitemap";
 import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "Huilen Solis portfolio",
     template: "%s | Huilen Solis Portfolio",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Huilen Solis portfolio",
     description:
       "Personal Portfolio, explore education, projects, tech stack and get in touch.",
-    url: baseUrl,
+    url: BASE_URL,
     siteName: "Huilen Solis portfolio",
     locale: "en_US",
     type: "website",

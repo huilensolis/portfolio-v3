@@ -1,7 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 
 import { createClient } from "@/utils/supabase/server";
-import { baseUrl } from "@/app/sitemap";
 
 export async function GET(request: NextRequest) {
   const reqUrl = new URL(request.url);
@@ -21,8 +20,8 @@ export async function GET(request: NextRequest) {
 
     if (error) throw new Error("error exchanging code for session");
 
-    return NextResponse.redirect(`${baseUrl}/${next}`);
+    return NextResponse.redirect(`${reqUrl.origin}/${next}`);
   } catch (error) {
-    return NextResponse.redirect(baseUrl);
+    return NextResponse.redirect(reqUrl.origin);
   }
 }
