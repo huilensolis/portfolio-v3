@@ -54,7 +54,7 @@ export default function RootLayout({
     >
       <body className="antialiased min-h-screen overflow-x-hidden">
         <div className="w-full h-full xl:px-0 px-5 flex justify-center">
-          <main className="max-w-3xl w-full min-w-0 py-5 flex flex-col">
+          <main className="max-w-6xl w-full min-w-0 flex flex-col">
             {children}
             <Analytics />
           </main>

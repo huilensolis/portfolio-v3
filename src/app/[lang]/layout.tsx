@@ -11,8 +11,8 @@ export default function Layout({
   children: ReactNode;
 }) {
   return (
-    <div className="flex flex-col py-16">
-      <header className="flex justify-between w-full pb-10">
+    <div className="flex flex-col">
+      <header className="flex justify-between w-full pb-10 py-8">
         <NavBar currentLang={lang} />
         <div className="flex">
           <ThemeSwitcher />
