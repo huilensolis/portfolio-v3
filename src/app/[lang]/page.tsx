@@ -267,7 +267,7 @@ export default async function HomePage({
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center flex-col">
           <article className="flex flex-col gap-8">
             <h2 className="text-6xl text-neutral-900 dark:text-neutral-50 font-semibold w-full text-center text-balance">
-              Let's get in touch!
+              Let&apos;s get in touch!
             </h2>
             <section className="flex flex-col items-center gap-4">
               <div className="flex flex-wrap justify-center sm:grid sm:grid-cols-2 gap-4 sm:gap-y-8">
