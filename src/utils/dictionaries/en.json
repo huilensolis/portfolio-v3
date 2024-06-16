@@ -35,7 +35,8 @@
         "date": "11/2023 - 02/2024",
         "title": "Pictura",
         "description": [
-          "Pictura is a social network dedicated to image sharing and posting. It allows users to sign up, upload, edit, and delete image posts. Additionally, users can create image collections and set up a public profile."
+          "Pictura is a social network dedicated to image sharing and posting.",
+          "It allows users to sign up, upload, edit, and delete image posts. Additionally, users can create image collections and set up a public profile."
         ],
         "stack": [
           "React",
@@ -71,31 +72,6 @@
         ],
         "repository": "https://github.com/Huilensolis/memoir",
         "deploy": "https://memoir-oak.vercel.app/"
-      },
-      {
-        "images": ["/interestelar.webp"],
-        "title": "Interestelar",
-        "date": "Current",
-        "description": [
-          "Interestellar is a focused task management tool designed specifically for development team collaboration.",
-          "Developed in collaboration with Jesus Oyola, with my focus on the frontend and Jesus on the backend, Interestelar facilitates efficient project management",
-          " Features include user sign-up, organization creation, member invitations, customizable Kanban board columns, task creation, task assignment to team members, and linking tasks to GitHub issues."
-        ],
-        "stack": [
-          "Rect",
-          "Next js",
-          "Typescript",
-          "Tailwind CSS",
-          "Typebox (input validation)",
-          "Axios",
-          "Nest js",
-          "JWT",
-          "PostgreSQL",
-          "Typeorm",
-          "Zod"
-        ],
-        "repository": "https://github.com/Huilensolis/memoir",
-        "deploy": "https://memoir-oak.vercel.app/"
       }
     ]
   },
@@ -106,16 +82,13 @@
       "React",
       "Next js",
       "Typescript",
-      "Javascript",
       "Tailwind CSS",
-      "CSS",
+      "node js",
       "Express",
       "PostgreSQL",
       "Drizzle",
-      "Sequelize",
       "Bun",
-      "Elysia",
-      "Bun test",
+      "playwright",
       "Git",
       "Turborepo"
     ]

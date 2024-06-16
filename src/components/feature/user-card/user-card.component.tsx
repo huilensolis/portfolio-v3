@@ -1,4 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
+import Link from "next/link";
 
 export async function UserCard({ userId }: { userId: string }) {
   const supabase = createClient();
@@ -12,8 +13,11 @@ export async function UserCard({ userId }: { userId: string }) {
   if (!user) return <></>;
 
   return (
-    <span className="dark:text-neutral-50 text-neutral-900">
-      {user.full_name ?? ""}
-    </span>
+    <Link
+      href={`https://github.com/${user.username ?? ""}`}
+      className="font-medium dark:text-neutral-50 text-neutral-900"
+    >
+      {user.full_name ?? user.username ?? "anonymous"}
+    </Link>
   );
 }

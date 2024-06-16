@@ -1,7 +1,7 @@
 import { cn } from "@/utils/cn";
 import { SVGAttributes } from "react";
 
-export function Github({
+export function GitHub({
   className,
   ...props
 }: SVGAttributes<HTMLOrSVGElement>) {

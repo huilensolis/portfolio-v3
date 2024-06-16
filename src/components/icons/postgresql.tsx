@@ -8,7 +8,7 @@ export function PostgreSQL({
   return (
     <svg
       {...props}
-      className={cn("h-6 w-6", className)}
+      className={cn("h-6 w-6 fill-blue-600", className)}
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"

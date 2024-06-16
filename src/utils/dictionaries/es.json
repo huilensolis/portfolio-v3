@@ -105,16 +105,13 @@
       "React",
       "Next js",
       "Typescript",
-      "Javascript",
       "Tailwind CSS",
-      "CSS",
+      "node js",
       "Express",
       "PostgreSQL",
       "Drizzle",
-      "Sequelize",
       "Bun",
-      "Elysia",
-      "Bun test",
+      "playwright",
       "Git",
       "Turborepo"
     ]

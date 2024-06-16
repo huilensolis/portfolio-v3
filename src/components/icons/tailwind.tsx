@@ -1,14 +1,14 @@
 import { cn } from "@/utils/cn";
 import { SVGAttributes } from "react";
 
-export function Tailwind({
+export function TailwindCSS({
   className,
   ...props
 }: SVGAttributes<HTMLOrSVGElement>) {
   return (
     <svg
       {...props}
-      className={cn("h-6 w-6", className)}
+      className={cn("h-6 w-6 fill-blue-500 dark:fill-sky-400", className)}
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"

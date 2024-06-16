@@ -28,7 +28,7 @@ export function NavBar({
           </DrawerTrigger>
           <DrawerContent className="dark:bg-neutral-950 bg-gray-100">
             <DrawerHeader>
-              <DrawerClose>
+              <DrawerClose asChild>
                 <Button variant="ghost" className="p-0">
                   <X />
                 </Button>
@@ -53,9 +53,9 @@ function NavLinks({
     <div className="flex gap-4 items-start sm:flex-row flex-col dark:text-neutral-400">
       <Link
         href="/"
-        className="no-underline dark:text-neutral-50 font-medium text-base text-neutral-950 duration-150 transition-all"
+        className="flex items-center gap-2 no-underline dark:text-neutral-50 font-semibold text-base text-neutral-950 duration-150 transition-all"
       >
-        huilen
+        Huilen solis
       </Link>
       <Link
         href={`/${currentLang}/guestbook`}
