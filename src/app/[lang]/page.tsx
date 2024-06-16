@@ -136,7 +136,7 @@ export default async function HomePage({
                     </div>
                   </div>
                 </div>
-                <div className="sm:col-span-8 w-full h-full shadow-top dark:shadow-neutral-900 shadow-gray-200 group-hover:bg-neutral-200/40 dark:group-hover:bg-neutral-800/40 transition-all duration-150">
+                <div className="sm:col-span-9 w-full h-full shadow-top dark:shadow-neutral-900 shadow-gray-200 group-hover:bg-neutral-200/40 dark:group-hover:bg-neutral-800/40 transition-all duration-150">
                   <div className="shadow-bottom dark:shadow-gray-900 shadow-gray-200 h-full">
                     <article className="flex flex-col justify-center py-4 sm:px-8 px-4 h-full">
                       <div className="flex items-center duration-150 transition-all group dark:text-neutral-50 text-neutral-900">
