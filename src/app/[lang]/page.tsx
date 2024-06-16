@@ -180,7 +180,7 @@ export default async function HomePage({
               <Link
                 href={project.repository}
                 target="_blank"
-                className="group px-5 py-1.5 font-medium flex items-center gap-2 hover:bg-neutral-900 transition-all duration-150"
+                className="group px-5 py-1.5 font-medium flex items-center gap-2 hover:bg-neutral-200 hover:dark:bg-neutral-900 transition-all duration-150"
               >
                 Repository
                 <div className="flex">
@@ -191,7 +191,7 @@ export default async function HomePage({
               <Link
                 href={project.deploy}
                 target="_blank"
-                className="group px-5 py-1.5 font-medium flex items-center gap-2 hover:bg-neutral-900 transition-all duration-150"
+                className="group px-5 py-1.5 font-medium flex items-center gap-2 hover:bg-neutral-200 hover:dark:bg-neutral-900 transition-all duration-150"
               >
                 Live
                 <div className="flex">
@@ -274,7 +274,7 @@ export default async function HomePage({
                 <Link
                   href={dictionary.contact.upwork.href}
                   target="_blank"
-                  className="font-medium group flex items-center gap-2 px-5 py-2 text-neutral-50 bg-blue-600 dark:bg-amber-600 hover:brightness-110 transition-all duration-150 rounded-sm"
+                  className="font-medium group flex items-center justify-center gap-2 px-5 py-2 text-neutral-50 bg-blue-600 dark:bg-amber-600 hover:brightness-110 transition-all duration-150 rounded-sm"
                 >
                   Contact on upwork
                   <div className="flex">
@@ -285,7 +285,7 @@ export default async function HomePage({
                 <Link
                   href={dictionary.contact.linkedin.href}
                   target="_blank"
-                  className="font-medium group flex items-center gap-2 px-5 py-2 text-neutral-50 dark:text-neutral-950 bg-neutral-800 dark:bg-neutral-300 hover:brightness-110 transition-all duration-150 rounded-sm"
+                  className="font-medium group flex items-center justify-center gap-2 px-5 py-2 text-neutral-50 dark:text-neutral-950 bg-neutral-800 dark:bg-neutral-300 hover:brightness-110 transition-all duration-150 rounded-sm"
                 >
                   Contact on Linkedin
                   <ArrowUpRight className="w-4 h-4 group-hover:scale-110 transition-all duration-150" />
