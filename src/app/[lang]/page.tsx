@@ -114,7 +114,10 @@ export default async function HomePage({
         </div>
       </main>
       <div className="w-full py-5 border-x border-gray-200 dark:border-neutral-900"></div>
-      <section className="flex flex-col shadow-bottom dark:shadow-neutral-900 shadow-gray-200">
+      <section
+        id="education"
+        className="flex flex-col shadow-bottom dark:shadow-neutral-900 shadow-gray-200"
+      >
         <ul className="flex flex-col border-x border-gray-200 dark:border-neutral-900 ">
           {dictionary.education.items.map((item, i) => (
             <li key={i} className="group duration-150 transition-all">
@@ -150,7 +153,10 @@ export default async function HomePage({
         </ul>
       </section>
       <div className="w-full py-5 border-x border-gray-200 dark:border-neutral-900"></div>
-      <section className="w-full flex flex-col sm:grid sm:grid-cols-10 border-l border-gray-200 dark:border-neutral-900">
+      <section
+        id="projects"
+        className="w-full flex flex-col sm:grid sm:grid-cols-10 border-l border-gray-200 dark:border-neutral-900"
+      >
         {dictionary.projects.items.map((project, i) => (
           <article
             key={i}
@@ -219,7 +225,10 @@ export default async function HomePage({
         ))}
       </section>
       <div className="w-full py-5 border-x border-gray-200 dark:border-neutral-900"></div>
-      <section className="grid grid-cols-2 sm:grid-cols-9 border-l border-gray-200 dark:border-neutral-900 bg-gradient-to-t from-gray-200/20 dark:from-neutral-900/20">
+      <section
+        id="stack"
+        className="grid grid-cols-2 sm:grid-cols-9 border-l border-gray-200 dark:border-neutral-900 bg-gradient-to-t from-gray-200/20 dark:from-neutral-900/20"
+      >
         {dictionary.tech_stack.items.map((tech, i) => {
           const Icon =
             TECHNOLOGIES_ICONS[
