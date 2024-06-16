@@ -1,9 +1,8 @@
 import { Metadata, ResolvingMetadata } from "next";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Folder, Globe } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { React } from "@/components/icons/react";
-import { CopyToClipboardBtn } from "@/components/feature/copy-to-clipboard";
 import { getDictionary } from "@/utils/dictionaries";
 import { Nextjs } from "@/components/icons/nextjs";
 import { Typescript } from "@/components/icons/typescript";
@@ -124,7 +123,7 @@ export default async function HomePage({
                 target="_blank"
                 className="w-full grid grid-cols-[120px_1fr] sm:grid-cols-10"
               >
-                <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 sm:col-span-2">
+                <div className="shadow-bottom dark:shadow-neutral-900 shadow-gray-200 sm:col-span-1">
                   <div className="shadow-top dark:shadow-neutral-900 shadow-gray-200">
                     <div className="group-hover:bg-neutral-200/40 dark:group-hover:bg-neutral-800/40 transition-all duration-150">
                       <div className="dark:text-neutral-500 text-neutral-500 font-mono flex flex-col py-4 px-4">
@@ -172,6 +171,30 @@ export default async function HomePage({
                 <div className="w-full h-full absolute top-0 lef-0 bg-gradient-to-t from-neutral-200/80 dark:from-neutral-900/80"></div>
               </div>
             )}
+            <header className="flex justify-end">
+              <Link
+                href={project.repository}
+                target="_blank"
+                className="group px-5 py-1.5 font-medium flex items-center gap-2 hover:bg-neutral-900 transition-all duration-150"
+              >
+                Repository
+                <div className="flex">
+                  <Folder className="w-4 h-4 group-hover:scale-110 transition-all duration-150" />
+                  <ArrowUpRight className="w-4 h-4 group-hover:scale-110 transition-all duration-150" />
+                </div>
+              </Link>
+              <Link
+                href={project.deploy}
+                target="_blank"
+                className="group px-5 py-1.5 font-medium flex items-center gap-2 hover:bg-neutral-900 transition-all duration-150"
+              >
+                Live
+                <div className="flex">
+                  <Globe className="w-4 h-4 group-hover:scale-110 transition-all duration-150" />
+                  <ArrowUpRight className="w-4 h-4 group-hover:scale-110 transition-all duration-150" />
+                </div>
+              </Link>
+            </header>
             <section className="flex flex-col justify-between h-full gap-4 text-lg">
               <div className="flex flex-col gap-2">
                 {project.description.map((paragraph, i) => (
@@ -221,7 +244,10 @@ export default async function HomePage({
         })}
       </section>
       <div className="w-full py-5 border-x border-gray-200 dark:border-neutral-900"></div>
-      <section className="w-full h-full border-y border-l dark:border-neutral-900 border-gray-200 grid grid-cols-10 grid-rows-7 relative">
+      <section
+        id="contact"
+        className="w-full h-full border-y border-l dark:border-neutral-900 border-gray-200 grid grid-cols-10 grid-rows-7 relative"
+      >
         {Array(10 * 7)
           .fill("")
           .map((_, i) => (
@@ -238,7 +264,8 @@ export default async function HomePage({
             <section className="flex flex-col items-center gap-4">
               <div className="flex flex-wrap justify-center sm:grid sm:grid-cols-2 gap-4 sm:gap-y-8">
                 <Link
-                  href={dictionary.contact.linkedin}
+                  href={dictionary.contact.upwork.href}
+                  target="_blank"
                   className="font-medium group flex items-center gap-2 px-5 py-2 text-neutral-50 bg-blue-600 dark:bg-amber-600 hover:brightness-110 transition-all duration-150 rounded-sm"
                 >
                   Contact on upwork
@@ -248,28 +275,31 @@ export default async function HomePage({
                   </div>
                 </Link>
                 <Link
-                  href={dictionary.contact.linkedin}
+                  href={dictionary.contact.linkedin.href}
+                  target="_blank"
                   className="font-medium group flex items-center gap-2 px-5 py-2 text-neutral-50 dark:text-neutral-950 bg-neutral-800 dark:bg-neutral-300 hover:brightness-110 transition-all duration-150 rounded-sm"
                 >
                   Contact on Linkedin
                   <ArrowUpRight className="w-4 h-4 group-hover:scale-110 transition-all duration-150" />
                 </Link>
-                {/* <Link */}
-                {/*   href={dictionary.contact.twitter} */}
-                {/*   target="_blank" */}
-                {/*   className="flex gap-2 py-1.5 px-3 group items-center" */}
-                {/* > */}
-                {/*   Connect on twitter */}
-                {/*   <ArrowUpRight className="w-4 h-4 group-hover:scale-110 transition-all duration-150" /> */}
-                {/* </Link> */}
-                {/* <Link */}
-                {/*   href={dictionary.contact.github} */}
-                {/*   target="_blank" */}
-                {/*   className="flex gap-2  py-1.5 px-3 group items-center" */}
-                {/* > */}
-                {/*   Connect on github */}
-                {/*   <ArrowUpRight className="w-4 h-4 group-hover:scale-110 transition-all duration-150" /> */}
-                {/* </Link> */}
+                <div className="col-span-2 flex justify-center items-center gap-2">
+                  <Link
+                    href={dictionary.contact.twitter}
+                    target="_blank"
+                    className="font-medium flex gap-2 py-1.5 px-3 group items-center"
+                  >
+                    Twitter
+                    <ArrowUpRight className="w-4 h-4 group-hover:scale-110 transition-all duration-150" />
+                  </Link>
+                  <Link
+                    href={dictionary.contact.github}
+                    target="_blank"
+                    className="font-medium flex gap-2 py-1.5 px-3 group items-center"
+                  >
+                    GitHub
+                    <ArrowUpRight className="w-4 h-4 group-hover:scale-110 transition-all duration-150" />
+                  </Link>
+                </div>
               </div>
             </section>
           </article>

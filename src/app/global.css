@@ -10,3 +10,7 @@ button:focus,
 input:focus {
   outline: 2px solid rgb(209 213 219 / 1);
 }
+
+html {
+  scroll-behavior: smooth;
+}
