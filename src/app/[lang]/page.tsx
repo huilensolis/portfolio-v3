@@ -109,7 +109,7 @@ export default async function HomePage({
             <strong className="font-semibold text-blue-500 dark:text-blue-400">
               accessible
             </strong>{" "}
-            UIs with nextjs
+            UIs with Next js
           </h2>
         </div>
       </main>
@@ -165,10 +165,9 @@ export default async function HomePage({
                   src={project.images[0]}
                   alt={project.title}
                   className="w-full h-auto rounded-sm"
-                  height={500}
-                  width={400}
+                  height={400}
+                  width={500}
                 />
-                <div className="w-full h-full absolute top-0 lef-0 bg-gradient-to-t from-neutral-200/80 dark:from-neutral-900/80"></div>
               </div>
             )}
             <header className="flex justify-end">
