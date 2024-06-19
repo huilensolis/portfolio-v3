@@ -15,6 +15,7 @@ export async function UserCard({ userId }: { userId: string }) {
   return (
     <Link
       href={`https://github.com/${user.username ?? ""}`}
+      target="_blank"
       className="font-medium dark:text-neutral-50 text-neutral-900"
     >
       {user.full_name ?? user.username ?? "anonymous"}
