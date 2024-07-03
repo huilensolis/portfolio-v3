@@ -1,7 +1,7 @@
 ideas
 - [ ] display location and weather of Argentina, cordoba
 - [ ] use indigo as my primary color
-- [ ] take inspiration from [linear](https://linear.app/), [keywordsai](https://keywordsai.co/), [canvas](https://www.canvas.supply/?via=dark)
+- [ ] take inspiration from [linear](https://linear.app/), [keywordsai](https://keywordsai.co/), [canvas](https://www.canvas.supply/?via=dark), [studioultra](https://www.studioultra.co/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
