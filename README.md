@@ -1,3 +1,7 @@
+ideas
+- [ ] display location and weather of Argentina, cordoba
+- [ ] use indigo as my primary color
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
