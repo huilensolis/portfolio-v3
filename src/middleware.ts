@@ -1,10 +1,10 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { updateSession } from "@/utils/supabase/middleware";
+// import { updateSession } from "@/utils/supabase/middleware";
 import { SUPPORTED_LANGS } from "./utils/consts";
 import { headers } from "next/headers";
 
 export async function middleware(request: NextRequest) {
-  await updateSession(request);
+  // await updateSession(request);
 
   const { pathname } = request.nextUrl;
 

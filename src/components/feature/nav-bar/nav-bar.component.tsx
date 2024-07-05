@@ -57,12 +57,13 @@ function NavLinks({
       >
         Huilen solis
       </Link>
-      <Link
-        href={`/${currentLang}/guestbook`}
-        className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all"
-      >
-        Guestbook
-      </Link>
+      {/* <Link
+      //   href={`/${currentLang}/guestbook`}
+      //   className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all"
+      // >
+      //   Guestbook
+      // </Link>
+				/* */}
       <Link
         href={`/${currentLang}/blog`}
         className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all"
