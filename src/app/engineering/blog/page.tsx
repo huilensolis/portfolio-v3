@@ -4,7 +4,7 @@ import { cwd } from "node:process";
 import matter from "gray-matter";
 import Link from "next/link";
 import path from "node:path";
-import { TPostMetadata } from "@/app/types/post";
+import { TPostMetadata } from "@/types/post";
 
 export const dynamic = "force-static";
 

@@ -7,8 +7,7 @@ import { cwd } from "process";
 import path from "path";
 
 import type { Metadata, ResolvingMetadata } from "next";
-import { TPostMetadata } from "@/app/types/post";
-import { getDictionary } from "@/utils/dictionaries";
+import { TPostMetadata } from "@/types/post";
 
 export const dynamic = "force-static";
 
@@ -40,8 +39,6 @@ export async function generateMetadata(
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
 
-  const dictionary = await getDictionary("en");
-
   const ogImage = post
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/en/blog/post/${id}/opengraph-image`
     : `https://${process.env.VERCEL_URL}`;
@@ -62,7 +59,7 @@ export async function generateMetadata(
     twitter: {
       title: metadata.title,
       description: metadata.description,
-      creator: dictionary.contact.twitter.at || undefined,
+      creator: "huilensolis",
       images: [{ url: ogImage, alt: metadata.title }, ...previousImages],
       card: "summary_large_image",
     },
