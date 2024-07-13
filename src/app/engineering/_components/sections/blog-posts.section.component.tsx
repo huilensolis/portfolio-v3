@@ -31,7 +31,7 @@ export async function BlogPostsSection() {
                       })}
                     </span>
                   </header>
-                  <p className="text-pretty line-clamp-4">
+                  <p className="text-pretty font-medium line-clamp-4">
                     {blogPost.description}
                   </p>
                 </footer>

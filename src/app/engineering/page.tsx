@@ -47,7 +47,7 @@ export const dynamic = "force-static";
 
 export default function EngineeringPage() {
   return (
-    <article className="w-full flex flex-col gap-20">
+    <article className="w-full flex flex-col gap-36">
       <MainSection />
       <ProjectsSection />
       <BlogPostsSection />

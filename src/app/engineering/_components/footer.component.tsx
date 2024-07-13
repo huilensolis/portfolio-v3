@@ -4,7 +4,10 @@ import { Suspense } from "react";
 export function Footer() {
   return (
     <>
-      <footer className="w-full p-10 pt-16 dark:border-neutral-800 border-gray-300/20">
+      <footer
+        className="w-full p-10 pt-16 dark:border-neutral-800 border-gray-300/20"
+        id="contact"
+      >
         <h1 className="text-[12rem] font-semibold dark:text-neutral-200">
           Contact
         </h1>
