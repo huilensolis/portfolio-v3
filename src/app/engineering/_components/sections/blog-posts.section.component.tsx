@@ -15,17 +15,26 @@ export async function BlogPostsSection() {
             className="group hover:brightness-125 duration-150 transition-all"
           >
             <Link href={`/engineering/blog/post/${blogPost.slug}`}>
-              <article className="flex flex-col gap-10 bg-neutral-800 rounded-md border border-neutral-700/60 p-4">
+              <article className="flex flex-col gap-24 bg-neutral-800/60 rounded-md border border-neutral-700/40 p-4">
                 <header className="w-full flex justify-between">
                   <span className="font-medium">blog post</span>
                   <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
                 </header>
-                <section>
-                  <h1 className="text-3xl font-medium">{blogPost.title}</h1>
+                <footer className="flex flex-col gap-4">
+                  <header className="flex flex-col">
+                    <h1 className="text-3xl font-medium">{blogPost.title}</h1>
+                    <span>
+                      {new Date(blogPost.date).toLocaleString("en-US", {
+                        day: "2-digit",
+                        month: "2-digit",
+                        year: "2-digit",
+                      })}
+                    </span>
+                  </header>
                   <p className="text-pretty line-clamp-4">
                     {blogPost.description}
                   </p>
-                </section>
+                </footer>
               </article>
             </Link>
           </li>

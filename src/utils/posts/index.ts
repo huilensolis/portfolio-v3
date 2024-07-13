@@ -18,9 +18,9 @@ export async function getBlogPostList() {
     ),
   );
 
-  const postMetadataList: Partial<TPostMetadata>[] = postsContent.map(
+  const postMetadataList = postsContent.map(
     (content) => matter(content).data,
-  );
+  ) as TPostMetadata[];
 
   return postMetadataList;
 }
