@@ -1,4 +1,5 @@
 import { Metadata, ResolvingMetadata } from "next";
+import { MainSection } from "./_components/sections/main.section.component";
 
 type Props = {
   params: { lang: "es" | "en" };
@@ -43,5 +44,9 @@ export async function generateMetadata(
 export const dynamic = "force-static";
 
 export default function EngineeringPage() {
-  return <div className="h-[500vh] w-full bg-indigo-400">engineering</div>;
+  return (
+    <article className="w-full">
+      <MainSection />
+    </article>
+  );
 }
