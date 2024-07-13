@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 import { BASE_URL } from "@/app/sitemap";
 import { GeistMono } from "geist/font/mono";
+import { cn } from "@/utils/cn";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -35,8 +36,6 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classes: string[]) => classes.filter(Boolean).join(" ");
-
 export default function RootLayout({
   children,
 }: {
@@ -45,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(
+      className={cn(
         "bg-gray-50 dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300",
         GeistSans.variable,
         GeistSans.className,

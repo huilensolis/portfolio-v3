@@ -43,5 +43,5 @@ export async function generateMetadata(
 export const dynamic = "force-static";
 
 export default function EngineeringPage() {
-  return <>engineering</>;
+  return <div className="h-[500vh] w-full bg-indigo-400">engineering</div>;
 }
