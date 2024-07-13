@@ -27,6 +27,9 @@ const config: Config = {
         "bottom-right": "inset -1px -1px",
         "bottom-left": "inset 1px -1px",
       },
+      colors: {
+        "cm-indigo-bg": "#151519",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

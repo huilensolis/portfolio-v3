@@ -5,7 +5,7 @@ export function MainSection() {
     <>
       <div
         aria-hidden
-        className="w-full h-96 pointer-events-none absolute top-0 left-0 mx-auto bg-[linear-gradient(to_bottom,_rgb(29_23_56/0.1)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_bottom,_rgb(229_229_229_/0.05)_0%,_transparent_100%)]"
+        className="w-full h-96 pointer-events-none absolute top-0 left-0 mx-auto bg-[linear-gradient(to_bottom,_rgb(29_23_56/0.15)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_bottom,_rgb(229_229_229_/0.05)_0%,_transparent_100%)]"
       ></div>
       <main>
         <section className="py-32 flex flex-col gap-5 max-w-5xl">
@@ -38,7 +38,7 @@ export function MainSection() {
           <div>
             <Link
               href="/engineering#contact"
-              className="bg-neutral-100 rounded-md text-neutral-900 px-5 py-3"
+              className="bg-neutral-800 dark:bg-neutral-100 rounded-md text-neutral-200 dark:text-neutral-900 px-5 py-3"
             >
               Contact
             </Link>

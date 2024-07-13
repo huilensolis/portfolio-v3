@@ -40,7 +40,7 @@ export function Footer() {
       </footer>
       <div
         aria-hidden
-        className="w-full h-96 pointer-events-none absolute bottom-0 left-0 mx-auto bg-[linear-gradient(to_top,_rgb(29_23_56/0.1)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_top,_rgb(229_229_229_/0.05)_0%,_transparent_100%)]"
+        className="w-full h-96 pointer-events-none absolute bottom-0 left-0 mx-auto bg-[linear-gradient(to_top,_rgb(29_23_56/0.15)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_top,_rgb(229_229_229_/0.05)_0%,_transparent_100%)]"
       ></div>
     </>
   );
