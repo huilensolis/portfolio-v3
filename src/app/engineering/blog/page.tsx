@@ -1,52 +1,24 @@
-import { POSTS_PATH } from "@/utils/consts";
-import { readFile, readdir } from "node:fs/promises";
-import { cwd } from "node:process";
-import matter from "gray-matter";
+import { getBlogPostList } from "@/utils/posts";
 import Link from "next/link";
-import path from "node:path";
-import { TPostMetadata } from "@/types/post";
 
 export const dynamic = "force-static";
 
 export default async function BlogPage() {
-  const postsPath = path.join(cwd(), POSTS_PATH);
-
-  const postList = await readdir(postsPath, { encoding: "utf8" });
-
-  const postsContent = await Promise.all(
-    postList.map(
-      async (post) => await readFile(postsPath + "/" + post, "utf8"),
-    ),
-  );
-
-  const postMetadataList: Partial<TPostMetadata>[] = postsContent.map(
-    (content) => matter(content).data,
-  );
+  const postMetadataList = await getBlogPostList();
 
   return (
     <div className="flex flex-col">
-      <main className="w-full h-full border-y border-l dark:border-neutral-900 border-gray-200 grid grid-cols-10 grid-rows-4 relative">
-        {Array(10 * 4)
-          .fill("")
-          .map((_, i) => (
-            <div
-              key={i}
-              className={`h-24 w-full border-r dark:border-neutral-900 border-gray-200`}
-            ></div>
-          ))}
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center flex-col">
-          <h1 className="max-w-[60rem] text-4xl sm:text-6xl text-neutral-800 dark:text-neutral-50 font-medium w-full text-center text-balance">
-            Blog
-          </h1>
-        </div>
+      <main className="w-full py-32">
+        <h1 className="text-6xl sm:text-6xl text-neutral-800 dark:text-neutral-50 font-medium w-full text-balance">
+          Blog
+        </h1>
       </main>
-      <div className="w-full py-5 border-x border-gray-200 dark:border-neutral-900"></div>
       <ul className="flex flex-col bg-gradient-to-b from-neutral-900/40 h-full py-5">
         {postMetadataList.map((postMetadata, i) => (
           <li key={i}>
             <Link
               href={`/blog/post/${postMetadata.slug}`}
-              className="flex w-full border-x border-gray-200 dark:border-neutral-900 p-4"
+              className="flex w-ful"
             >
               <article className="flex flex-col gap-2">
                 <header>

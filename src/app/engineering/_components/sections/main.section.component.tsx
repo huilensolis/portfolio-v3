@@ -36,7 +36,12 @@ export function MainSection() {
             technologies
           </h2>
           <div>
-            <Link href="/engineering#contact">Contact</Link>
+            <Link
+              href="/engineering#contact"
+              className="bg-neutral-100 rounded-md text-neutral-900 px-5 py-3"
+            >
+              Contact
+            </Link>
           </div>
         </section>
       </main>

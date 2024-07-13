@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Build Square",
+    "description": "software project based social media",
+    "cover_img": "/memoir.webp"
+  },
+  {
+    "title": "Memoir",
+    "description": "Web text editor",
+    "cover_img": "/memoir.webp"
+  },
+  {
+    "title": "Pictura",
+    "description": "images social media",
+    "cover_img": "/pictura.webp"
+  },
+  {
+    "title": "Rust tiny",
+    "description": "a image compressor as a service written in rust",
+    "cover_img": "/pictura.webp"
+  }
+]

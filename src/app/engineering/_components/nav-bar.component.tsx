@@ -56,7 +56,7 @@ function NavLinks() {
       // </Link>
 				/* */}
       <Link
-        href={`/blog`}
+        href={`/engineering/blog`}
         className="no-underline dark:hover:text-neutral-100 hover:text-neutral-500 duration-150 transition-all"
       >
         Blog

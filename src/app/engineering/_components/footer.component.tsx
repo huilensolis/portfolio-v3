@@ -4,7 +4,6 @@ import { Suspense } from "react";
 export function Footer() {
   return (
     <>
-      <div className="absolute left-0 w-full h-px bg-gradient-to-t from-neutral-800 to-transparent"></div>
       <footer className="w-full p-10 pt-16 dark:border-neutral-800 border-gray-300/20">
         <h1 className="text-[12rem] font-semibold dark:text-neutral-200">
           Contact
