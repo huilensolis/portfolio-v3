@@ -1,6 +1,7 @@
 import { ThemeSwitcher } from "@/components/feature/theme-switcher";
 import { ReactNode } from "react";
 import { NavBar } from "./_components/nav-bar.component";
+import { Footer } from "./_components/footer.component";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -14,6 +15,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         </div>
       </header>
       {children}
+      <Footer />
     </div>
   );
 }

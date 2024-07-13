@@ -1,6 +1,5 @@
 import { Metadata, ResolvingMetadata } from "next";
 import { MainSection } from "./_components/sections/main.section.component";
-import { Footer } from "./_components/footer.component";
 
 type Props = {
   params: { lang: "es" | "en" };
@@ -48,8 +47,6 @@ export default function EngineeringPage() {
   return (
     <article className="w-full">
       <MainSection />
-      <div className="h-[100vh]"></div>
-      <Footer />
     </article>
   );
 }

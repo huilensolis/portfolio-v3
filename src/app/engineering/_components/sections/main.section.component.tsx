@@ -11,10 +11,12 @@ export function MainSection() {
         <section className="py-32 flex flex-col gap-5 max-w-5xl">
           <h1 className="font-medium text-6xl tracking-tight text-balance text-stone-600 dark:text-neutral-400">
             I&apos;m{" "}
-            <span className="text-amber-400 font-semibold">Huilen</span>, a{" "}
+            <span className="text-amber-500 font-semibold">Huilen</span>, <br />
             <span className="text-indigo-400 font-semibold">
               Software Engineer{" "}
-            </span>{" "}
+            </span>
+          </h1>
+          <h2 className=" text-5xl w-full max-w-3xl tracking-tight text-balance text-stone-600 dark:text-neutral-400">
             Developing and Architecturing{" "}
             <span className="dark:text-neutral-200 text-zinc-800 font-semibold">
               Accessible
@@ -32,7 +34,7 @@ export function MainSection() {
               State-Of-Art{" "}
             </span>
             technologies
-          </h1>
+          </h2>
           <div>
             <Link href="/engineering#contact">Contact</Link>
           </div>
