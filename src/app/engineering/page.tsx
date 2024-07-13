@@ -48,6 +48,7 @@ export default function EngineeringPage() {
   return (
     <article className="w-full">
       <MainSection />
+      <div className="h-[100vh]"></div>
       <Footer />
     </article>
   );

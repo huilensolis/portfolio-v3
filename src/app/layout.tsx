@@ -51,7 +51,7 @@ export default function RootLayout({
         GeistMono.variable,
       )}
     >
-      <body className="antialiased min-h-screen overflow-x-hidden">
+      <body className="antialiased min-h-screen overflow-x-hidden sticky">
         <div className="w-full h-full xl:px-0 px-5 flex justify-center">
           <div className="max-w-6xl w-full min-w-0 flex flex-col">
             {children}

@@ -1,10 +1,10 @@
-import { Flower, Leaf, MapPin, MoveRight, Snowflake, Sun } from "lucide-react";
+import { Flower, Leaf, MoveRight, Snowflake, Sun } from "lucide-react";
 import { Suspense } from "react";
 
 export function Footer() {
   return (
     <>
-      <div className="absolute left-0 w-screen h-px bg-gradient-to-t from-neutral-800 to-transparent"></div>
+      <div className="absolute left-0 w-full h-px bg-gradient-to-t from-neutral-800 to-transparent"></div>
       <footer className="w-full p-10 pt-16 dark:border-neutral-800 border-gray-300/20">
         <h1 className="text-[12rem] font-semibold dark:text-neutral-200">
           Contact
@@ -38,7 +38,7 @@ export function Footer() {
       </footer>
       <div
         aria-hidden
-        className="w-full h-96 pointer-events-none fixed bottom-0 left-0 mx-auto bg-[linear-gradient(to_top,_rgb(29_23_56/0.1)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_top,_rgb(229_229_229_/0.05)_0%,_transparent_100%)]"
+        className="w-full h-96 pointer-events-none absolute bottom-0 left-0 mx-auto bg-[linear-gradient(to_top,_rgb(29_23_56/0.1)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_top,_rgb(229_229_229_/0.05)_0%,_transparent_100%)]"
       ></div>
     </>
   );
