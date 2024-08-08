@@ -2,21 +2,29 @@
   {
     "title": "Build Square",
     "description": "software project based social media",
-    "cover_img": "/memoir.webp"
-  },
-  {
-    "title": "Memoir",
-    "description": "Web text editor",
-    "cover_img": "/memoir.webp"
-  },
-  {
-    "title": "Pictura",
-    "description": "images social media",
-    "cover_img": "/pictura.webp"
+    "cover_img": "/buildsquare.png",
+    "grid-cols": 3,
+    "grid-rows": 1
   },
   {
     "title": "Rust tiny",
     "description": "a image compressor as a service written in rust",
-    "cover_img": "/pictura.webp"
+    "cover_img": "/pictura.png",
+    "grid-cols": 2,
+    "grid-rows": 1
+  },
+  {
+    "title": "Pictura",
+    "description": "images social media",
+    "cover_img": "/pictura.png",
+    "grid-cols": 2,
+    "grid-rows": 1
+  },
+  {
+    "title": "Memoir",
+    "description": "Web text editor",
+    "cover_img": "/memoir.png",
+    "grid-cols": 3,
+    "grid-rows": 1
   }
 ]
