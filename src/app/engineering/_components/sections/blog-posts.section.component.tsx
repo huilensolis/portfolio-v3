@@ -7,7 +7,6 @@ export async function BlogPostsSection() {
 
   return (
     <section className="flex flex-col gap-8 dark:text-neutral-200">
-      <h3 className="font-medium text-4xl">Blog Posts</h3>
       <ul className="w-full grid grid-cols-3 gap-4">
         {[...posts, ...posts, ...posts, ...posts].map((blogPost, i) => (
           <li key={i} className="group">

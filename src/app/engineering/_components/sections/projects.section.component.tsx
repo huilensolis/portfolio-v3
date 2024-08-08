@@ -5,9 +5,8 @@ import Link from "next/link";
 
 export async function ProjectsSection() {
   return (
-    <section className="flex flex-col gap-10">
-      <h3 className="text-4xl font-medium">Projects</h3>
-      <ul className="md:grid md:grid-cols-5 flex flex-col gap-5 w-full">
+    <section className="flex flex-col">
+      <ul className="md:grid md:grid-cols-5 flex flex-col gap-4 w-full">
         {projectList.map((project, i) => (
           <li
             key={i}
@@ -19,7 +18,9 @@ export async function ProjectsSection() {
           >
             <article className="h-full w-full dark:bg-neutral-800/40 flex flex-col group">
               <header className="flex justify-between items-center gap-4 p-4 text-neutral-600">
-                <h1 className="text-lg font-normal">{project.title}</h1>
+                <h1 className="text-lg font-normal">
+                  {project.title} | project
+                </h1>
                 <Link href={""}>
                   <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
                 </Link>
