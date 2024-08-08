@@ -44,9 +44,9 @@ function NavLinks() {
     <div className="flex gap-4 items-start sm:flex-row flex-col dark:text-neutral-400">
       <Link
         href="/"
-        className="flex items-center gap-2 no-underline dark:text-neutral-50 font-semibold text-base text-neutral-950 duration-150 transition-all"
+        className="flex items-center gap-2 no-underline dark:text-neutral-50 text-base text-neutral-950 duration-150 transition-all"
       >
-        Huilen solis
+        home
       </Link>
       {/* <Link
       //   href={`/${currentLang}/guestbook`}
