@@ -5,7 +5,7 @@ import { Footer } from "./_components/footer.component";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-col w-full pt-16">
+    <div className="flex flex-col w-full pt-48">
       <div
         aria-hidden
         className="w-full h-96 pointer-events-none absolute top-0 left-0 mx-auto bg-[linear-gradient(to_bottom,_rgb(29_23_56/0.15)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_bottom,_rgb(229_229_229_/12%)_0%,_transparent_100%)]"

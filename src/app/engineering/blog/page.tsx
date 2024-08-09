@@ -9,7 +9,7 @@ export default async function BlogPage() {
 
   return (
     <div className="flex flex-col">
-      <main className="w-full py-32">
+      <main className="w-full mb-32">
         <h1 className="text-6xl sm:text-6xl text-neutral-800 dark:text-neutral-50 font-medium w-full text-balance">
           Blog
         </h1>
