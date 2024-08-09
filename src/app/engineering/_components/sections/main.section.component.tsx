@@ -1,10 +1,6 @@
 export function MainSection() {
   return (
     <>
-      <div
-        aria-hidden
-        className="w-full h-96 pointer-events-none absolute top-0 left-0 mx-auto bg-[linear-gradient(to_bottom,_rgb(29_23_56/0.15)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_bottom,_rgb(229_229_229_/12%)_0%,_transparent_100%)]"
-      ></div>
       <main>
         <section className="py-32 flex flex-col gap-5 max-w-5xl">
           <h1 className="font-medium text-6xl tracking-tight text-balance text-stone-600 dark:text-neutral-400">
