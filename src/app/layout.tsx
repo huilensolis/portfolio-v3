@@ -65,7 +65,7 @@ export default function RootLayout({
                 aria-hidden
                 className="w-full h-96 pointer-events-none absolute top-0 left-0 mx-auto bg-[linear-gradient(to_bottom,_rgb(29_23_56/0.15)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_bottom,_rgb(229_229_229_/12%)_0%,_transparent_100%)]"
               ></div>
-              <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 backdrop-blur-sm border-b dark:border-neutral-800/40 border-gray-300/40">
+              <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 backdrop-blur-sm border-b dark:border-neutral-800/40 border-gray-200/20">
                 <div className="max-w-6xl w-full min-w-0 flex justify-between">
                   <NavBar />
                   <div className="flex">
