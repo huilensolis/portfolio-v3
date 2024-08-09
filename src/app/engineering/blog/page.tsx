@@ -17,7 +17,7 @@ export default async function BlogPage() {
         {postMetadataList.map((postMetadata, i) => (
           <li key={i}>
             <Link
-              href={`/blog/post/${postMetadata.slug}`}
+              href={`/engineering/blog/post/${postMetadata.slug}`}
               className="flex w-ful"
             >
               <article className="flex flex-col gap-2">

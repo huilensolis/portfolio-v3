@@ -1,5 +1,5 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import * as matter from "gray-matter";
+import matter from "gray-matter";
 
 import { POSTS_PATH } from "@/utils/consts";
 import { readFile } from "fs/promises";
@@ -30,9 +30,7 @@ export async function generateMetadata(
     "utf8",
   );
 
-  const parsedPost = matter.default(post);
-
-  const { data } = parsedPost;
+  const { data } = matter(post);
 
   const metadata = (data as TPostMetadata) || undefined;
 
@@ -80,15 +78,15 @@ export default async function PostPage({
 
   if (!post) return <p>not found</p>;
 
-  const parsedPostFile = matter.default(post);
+  const { data, content } = matter(post);
 
-  if (!post || !parsedPostFile.content) return <p>not found</p>;
+  if (!post || !content) return <p>not found</p>;
 
   return (
     <div className="prose prose-neutral dark:prose-invert prose-headings:font-semibold">
       <div>
-        {parsedPostFile.data.title && <h1>{parsedPostFile.data.title}</h1>}
-        <MDXRemote source={parsedPostFile.content} />
+        {data.title && <h1>{data.title}</h1>}
+        <MDXRemote source={content} />
       </div>
     </div>
   );
