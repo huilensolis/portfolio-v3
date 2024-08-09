@@ -2,22 +2,15 @@ import { getBlogPostList } from "@/utils/posts";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-export const dynamic = "force-static";
-
-export default async function BlogPage() {
-  const postMetadataList = await getBlogPostList();
+export async function BlogPostsSection() {
+  const posts = await getBlogPostList();
 
   return (
-    <div className="flex flex-col">
-      <main className="w-full mb-32">
-        <h1 className="text-6xl sm:text-6xl text-neutral-800 dark:text-neutral-50 font-medium w-full text-balance">
-          Blog
-        </h1>
-      </main>
+    <section className="flex flex-col gap-8 dark:text-neutral-200">
       <ul className="w-full grid grid-cols-3 gap-4">
-        {[...postMetadataList].map((blogPost, i) => (
+        {[...posts].map((blogPost, i) => (
           <li key={i} className="group">
-            <Link href={`/engineering/blog/post/${blogPost.slug}`}>
+            <Link href={`/blog/post/${blogPost.slug}`}>
               <article className="flex flex-col gap-24 bg-gray-100 dark:bg-neutral-800/60 rounded-md border border-gray-200/40 dark:border-neutral-700/40 p-4 hover:dark:brightness-125 hover:bg-gray-200/60 hover:dark:bg-neutral-800/60 duration-150 transition-all">
                 <header className="w-full flex justify-between">
                   <span className="font-medium">blog post</span>
@@ -43,6 +36,6 @@ export default async function BlogPage() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
