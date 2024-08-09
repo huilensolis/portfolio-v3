@@ -10,14 +10,14 @@ export async function ProjectsSection() {
         {projectList.map((project, i) => (
           <li
             key={i}
-            className="bg-gray-100 dark:bg-cm-indigo-bg border border-gray-200 rounded-md"
+            className="bg-gray-100 dark:bg-neutral-800/60 border border-gray-200 dark:border-neutral-700/40 rounded-md"
             style={{
               gridColumn: `span ${project["grid-cols"]}`,
               gridRow: `span ${project["grid-rows"]}`,
             }}
           >
             <article className="h-full w-full dark:bg-neutral-800/40 flex flex-col group">
-              <header className="flex justify-between items-center gap-4 p-4 text-neutral-600">
+              <header className="flex justify-between items-center gap-4 p-4 text-neutral-600 dark:text-neutral-200">
                 <h1 className="text-lg font-normal">
                   {project.title} | project
                 </h1>
@@ -31,7 +31,7 @@ export async function ProjectsSection() {
                   height={700}
                   src={project.cover_img}
                   alt={project.description}
-                  className="w-full h-full object-cover object-left-top rounded-tl-[0.270rem] shadow-xl shadow-neutral-400 group-hover:shadow-neutral-500 translate-x-6 translate-y-10 group-hover:translate-y-6 transition-all duration-300"
+                  className="w-full h-full object-cover object-left-top rounded-tl-[0.270rem] shadow-xl shadow-neutral-400 dark:shadow-gray-800 group-hover:shadow-neutral-500 dark:group-hover:shadow-gray-700 translate-x-6 translate-y-10 group-hover:translate-y-6 transition-all duration-300"
                 />
               </div>
             </article>
