@@ -16,25 +16,25 @@ export async function ProjectsSection() {
               gridRow: `span ${project["grid-rows"]}`,
             }}
           >
-            <article className="h-full w-full dark:bg-neutral-800/40 flex flex-col group">
-              <header className="flex justify-between items-center gap-4 p-4 text-neutral-600 dark:text-neutral-200">
-                <h1 className="text-lg font-normal">
-                  {project.title} | project
-                </h1>
-                <Link href={""}>
+            <Link href={`/project/${project.title}`}>
+              <article className="h-full w-full dark:bg-neutral-800/40 flex flex-col group">
+                <header className="flex justify-between items-center gap-4 p-4 text-neutral-600 dark:text-neutral-200">
+                  <h1 className="text-lg font-normal">
+                    {project.title} | project
+                  </h1>
                   <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
-                </Link>
-              </header>
-              <div className="w-full h-full overflow-hidden">
-                <Image
-                  width={1000}
-                  height={700}
-                  src={project.cover_img}
-                  alt={project.description}
-                  className={`w-full h-full object-cover border-2 border-gray-200 dark:border-neutral-700/40 shadow-xl shadow-neutral-400 dark:shadow-gray-800 group-hover:shadow-neutral-500 dark:group-hover:shadow-gray-700 ${project["grid-cols"] === 2 ? "translate-x-8 translate-y-10 group-hover:translate-y-6 object-left-top rounded-tl-[0.270rem]" : "scale-x-90 translate-y-9 group-hover:translate-y-5 object-top rounded-t-[0.270rem]"} transition-all duration-300`}
-                />
-              </div>
-            </article>
+                </header>
+                <div className="w-full h-full overflow-hidden">
+                  <Image
+                    width={1000}
+                    height={700}
+                    src={project.cover_img}
+                    alt={project.description}
+                    className={`w-full h-full object-cover border-2 border-gray-200 dark:border-neutral-700/40 shadow-xl shadow-neutral-400 dark:shadow-gray-800 group-hover:shadow-neutral-500 dark:group-hover:shadow-gray-700 ${project["grid-cols"] === 2 ? "translate-x-8 translate-y-10 group-hover:translate-y-6 object-left-top rounded-tl-[0.270rem]" : "scale-x-90 translate-y-9 group-hover:translate-y-5 object-top rounded-t-[0.270rem]"} transition-all duration-300`}
+                  />
+                </div>
+              </article>
+            </Link>
           </li>
         ))}
       </ul>

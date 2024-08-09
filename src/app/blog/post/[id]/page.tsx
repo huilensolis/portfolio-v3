@@ -26,7 +26,7 @@ export async function generateMetadata(
   const postsPath = path.join(cwd(), POSTS_PATH);
 
   const post = await readFile(
-    `${postsPath}/${id.replaceAll("%20", "-")}.mdx`,
+    `${postsPath}/${id.toLowerCase().trim().replaceAll("%20", "-")}.mdx`,
     "utf8",
   );
 
