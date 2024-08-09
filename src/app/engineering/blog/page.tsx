@@ -1,4 +1,5 @@
 import { getBlogPostList } from "@/utils/posts";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 export const dynamic = "force-static";
@@ -13,40 +14,30 @@ export default async function BlogPage() {
           Blog
         </h1>
       </main>
-      <ul className="flex flex-col bg-gradient-to-b from-neutral-900/40 h-full py-5">
-        {postMetadataList.map((postMetadata, i) => (
-          <li key={i}>
-            <Link
-              href={`/engineering/blog/post/${postMetadata.slug}`}
-              className="flex w-ful"
-            >
-              <article className="flex flex-col gap-2">
-                <header>
-                  <h1 className="dark:text-neutral-50 font-semibold">
-                    {postMetadata.title ?? "Untitled"}
-                  </h1>
-                  {postMetadata.date && (
-                    <span>
-                      {[
-                        new Date(postMetadata.date).getDay(),
-                        new Date(postMetadata.date).getMonth(),
-                        new Date(postMetadata.date).getFullYear(),
-                      ].join("/")}
-                    </span>
-                  )}
+      <ul className="w-full grid grid-cols-3 gap-4">
+        {[...postMetadataList].map((blogPost, i) => (
+          <li key={i} className="group">
+            <Link href={`/engineering/blog/post/${blogPost.slug}`}>
+              <article className="flex flex-col gap-24 bg-gray-100 dark:bg-neutral-800/60 rounded-md border border-gray-200/40 dark:border-neutral-700/40 p-4 hover:dark:brightness-125 hover:bg-gray-200/60 hover:dark:bg-neutral-800/60 duration-150 transition-all">
+                <header className="w-full flex justify-between">
+                  <span className="font-medium">blog post</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
                 </header>
-                {postMetadata.description && (
-                  <div className="relative">
-                    <p className="text-pretty w-full">
-                      {postMetadata.description.length > 2 * 80
-                        ? postMetadata.description.slice(0, 2 * 80)
-                        : postMetadata.description}
-                    </p>
-                    {postMetadata.description.length > 1 * 80 && (
-                      <div className="absolute bottom-0 left-0 h-2/6 w-full bg-gradient-to-t from-neutral-950"></div>
-                    )}
-                  </div>
-                )}
+                <footer className="flex flex-col gap-4">
+                  <header className="flex flex-col">
+                    <h1 className="text-3xl font-medium">{blogPost.title}</h1>
+                    <span>
+                      {new Date(blogPost.date).toLocaleString("en-US", {
+                        day: "2-digit",
+                        month: "2-digit",
+                        year: "2-digit",
+                      })}
+                    </span>
+                  </header>
+                  <p className="text-pretty font-medium line-clamp-4">
+                    {blogPost.description}
+                  </p>
+                </footer>
               </article>
             </Link>
           </li>
