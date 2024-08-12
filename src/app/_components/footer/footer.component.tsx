@@ -80,28 +80,28 @@ function Season() {
   if (month > 11 || month < 2)
     return (
       <span className="flex gap-1 items-center">
-        <Sun className="h-4 w-4 text-orange-400" /> Summer
+        Summer <Sun className="h-4 w-4 text-orange-400" />
       </span>
     );
 
   if (month > 2 && month < 6)
     return (
       <span className="flex gap-1 items-center">
-        <Leaf className="h-4 w-4 text-amber-600" /> Autumn
+        Autumn <Leaf className="h-4 w-4 text-amber-600" />
       </span>
     );
 
   if (month > 5 && month < 9)
     return (
       <span className="flex items-center">
-        <Snowflake className="h-4 w-4 text-sky-200" />
         Winter
+        <Snowflake className="h-4 w-4 text-sky-200" />
       </span>
     );
 
   return (
     <span className="flex gap-1 items-center">
-      <Flower className="h-4 w-4 text-lime-400" /> Spring
+      Spring <Flower className="h-4 w-4 text-lime-400" />
     </span>
   );
 }
