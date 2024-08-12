@@ -1,4 +1,4 @@
-import { POSTS_PATH } from "@/utils/consts";
+import { PROJECTS_PATH } from "@/utils/consts";
 import { readFile } from "fs/promises";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -10,12 +10,12 @@ export default async function Project({
 }: {
   params: { slug: string };
 }) {
-  const postsPath = path.join(cwd(), POSTS_PATH);
+  const projectsPath = path.join(cwd(), PROJECTS_PATH);
 
   const projectFile = await readFile(
-    `${postsPath}/${slug.toLowerCase().trim().replaceAll("%20", "-")}.mdx`,
+    `${projectsPath}/${slug.toLowerCase().trim().replaceAll("%20", "-")}.mdx`,
     "utf8",
-  ).catch(() => undefined);
+  ).catch((e) => console.log(e));
 
   if (!projectFile)
     return (
@@ -36,7 +36,7 @@ export default async function Project({
     );
 
   return (
-    <div className="prose prose-neutral dark:prose-invert prose-headings:font-semibold">
+    <div className="prose prose-neutral dark:prose-invert prose-headings:font-semibold prose-hr:my-1">
       <div>
         {data.title && <h1>{data.title}</h1>}
         <MDXRemote source={content} />
