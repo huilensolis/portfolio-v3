@@ -19,8 +19,10 @@ export default async function Project({
 }) {
   const projectsPath = path.join(cwd(), PROJECTS_PATH);
 
+  const cleanSlug = slug.toLowerCase().trim().replaceAll("%20", "-");
+
   const projectFile = await readFile(
-    `${projectsPath}/${slug.toLowerCase().trim().replaceAll("%20", "-")}.mdx`,
+    `${projectsPath}/${cleanSlug}.mdx`,
     "utf8",
   ).catch((e) => console.log(e));
 
