@@ -8,6 +8,7 @@ import path from "path";
 
 import type { Metadata, ResolvingMetadata } from "next";
 import { TPostMetadata } from "@/types/post";
+import { MarkDownMdx } from "@/app/_components/markdown/markdown.component";
 
 export const dynamic = "force-static";
 
@@ -28,7 +29,9 @@ export async function generateMetadata(
   const post = await readFile(
     `${postsPath}/${id.toLowerCase().trim().replaceAll("%20", "-")}.mdx`,
     "utf8",
-  );
+  ).catch((e) => console.log(e));
+
+  if (!post) return { title: "Not Found", description: "404" };
 
   const { data } = matter(post);
 
@@ -74,20 +77,13 @@ export default async function PostPage({
   const post = await readFile(
     `${postsPath}/${id.replaceAll("%20", "-")}.mdx`,
     "utf8",
-  ).catch(() => undefined);
+  ).catch((e) => console.log(e));
 
   if (!post) return <p>not found</p>;
 
-  const { data, content } = matter(post);
+  const { data: _data, content } = matter(post);
 
   if (!post || !content) return <p>not found</p>;
 
-  return (
-    <div className="prose prose-neutral dark:prose-invert prose-headings:font-semibold">
-      <div>
-        {data.title && <h1>{data.title}</h1>}
-        <MDXRemote source={content} />
-      </div>
-    </div>
-  );
+  return <MarkDownMdx source={content} />;
 }

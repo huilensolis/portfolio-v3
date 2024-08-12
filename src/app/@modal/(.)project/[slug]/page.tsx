@@ -1,3 +1,4 @@
+import { MarkDownMdx } from "@/app/_components/markdown/markdown.component";
 import { Modal } from "@/app/_components/modal";
 import { PROJECTS_PATH } from "@/utils/consts";
 import { readFile } from "fs/promises";
@@ -43,9 +44,7 @@ export default async function Project({
 
   return (
     <Modal title={(data as TMetadata).slug}>
-      <div className="pb-5 prose prose-neutral dark:prose-invert prose-headings:font-semibold prose-hr:my-1 prose-hr:mb-5 prose-h1:mb-5 prose-h2:mt-4 prose-h2:my-3">
-        <MDXRemote source={content} />
-      </div>
+      <MarkDownMdx source={content} />
     </Modal>
   );
 }

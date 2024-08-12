@@ -1,3 +1,4 @@
+import { MarkDownMdx } from "@/app/_components/markdown/markdown.component";
 import { PROJECTS_PATH } from "@/utils/consts";
 import { readFile } from "fs/promises";
 import matter from "gray-matter";
@@ -35,12 +36,5 @@ export default async function Project({
       </div>
     );
 
-  return (
-    <div className="prose prose-neutral dark:prose-invert prose-headings:font-semibold prose-hr:my-1">
-      <div>
-        {data.title && <h1>{data.title}</h1>}
-        <MDXRemote source={content} />
-      </div>
-    </div>
-  );
+  return <MarkDownMdx source={content} />;
 }
