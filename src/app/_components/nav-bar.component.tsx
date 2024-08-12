@@ -12,7 +12,7 @@ import { Menu, X } from "lucide-react";
 
 export function NavBar() {
   return (
-    <nav className="flex gap-4 items-center dark:text-neutral-400">
+    <nav className="flex gap-4 items-center text-neutral-800 dark:text-neutral-200">
       <div className="hidden sm:block">
         <NavLinks />
       </div>
