@@ -1,5 +1,15 @@
 import { Flower, Leaf, MoveRight, Snowflake, Sun } from "lucide-react";
 import { Suspense } from "react";
+import { GmailBtn } from "./gmail-btn.component";
+import Link from "next/link";
+
+const socialMediaLinks = {
+  linkedin: "https://www.linkedin.com/in/huilensolis/",
+  twitter: "https://www.x.com/solishuilen",
+  gmail: "huilendev@gmail.com",
+  upwork: "https://www.upwork.com/freelancers/~01dfd70e2536e235ea",
+  github: "https://www.github.com/https://github.com/huilensolis",
+};
 
 export function Footer() {
   return (
@@ -30,11 +40,29 @@ export function Footer() {
                 <Temperature />
               </Suspense>
             </li>
-            <li>huilendev@gmail.com</li>
-            <li>Upwork</li>
-            <li className="flex items-center">Twitter</li>
-            <li>Linkedin</li>
-            <li>Github</li>
+            <li>
+              <GmailBtn gmail={socialMediaLinks.gmail} />
+            </li>
+            <li>
+              <Link href={socialMediaLinks.upwork} target="_blank">
+                UpWork
+              </Link>
+            </li>
+            <li>
+              <Link href={socialMediaLinks.twitter} target="_blank">
+                Twitter
+              </Link>
+            </li>
+            <li>
+              <Link href={socialMediaLinks.linkedin} target="_blank">
+                Linkedin
+              </Link>
+            </li>
+            <li>
+              <Link href={socialMediaLinks.github} target="_blank">
+                Github
+              </Link>
+            </li>
           </ul>
         </section>
       </footer>

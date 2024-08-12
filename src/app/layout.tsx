@@ -1,6 +1,6 @@
 import { ThemeSwitcher } from "@/components/feature/theme-switcher";
 import { NavBar } from "./_components/nav-bar.component";
-import { Footer } from "./_components/footer.component";
+import { Footer } from "./_components/footer/footer.component";
 
 import "./global.css";
 import type { Metadata } from "next";
