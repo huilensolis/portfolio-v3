@@ -4,3 +4,55 @@ date: "2024-05-28T02:50:15.473Z"
 ---
 
 # Memoir
+
+[GitHub Repository](https://github.com/huilensolis/memoir) - [Live Website](https://memoir-oak.vercel.app/)
+
+**Memoir** is a web-based text editor.
+
+The idea for Memoir came when I was evaluating different note-taking editors to organize and write my documents. I explored Obsidian, a desktop app, and Notion, a web app. While both are great for taking notes, they each have drawbacks: Obsidian is limited to the desktop, and I wanted a browser-based solution, while Notion uses user data for advertising and AI training. To address these issues, I built my own solution: a simple, open-source text editor on the web.
+
+## Key Features:
+
+- **User Authentication:** A custom-built authentication system.
+- **Text Editor:** A rich text editor that supports Markdown and includes a Notion-like slash command palette.
+- **Document Synchronization:** Documents are saved in a PostgreSQL database for persistence, with a debounce feature to optimize network resources when updating documents.
+- **Document CRUD:** Create, read, update, and delete documents.
+
+## Technical Overview
+
+- **Turborepo:** For managing monorepos.
+- **GitHub Pipelines (CI/CD):** For running tests, type checking, and linting on each pull request.
+
+---
+
+- **Next.js:** For server-side rendering, server actions, data streaming, and optimized performance.
+- **TypeScript:** Ensuring type safety and robust code.
+- **Tailwind CSS:** For utility-first, responsive styling.
+- **Tip-Tap:** For setting up a rich text editor.
+- **Axios:** An HTTP client.
+- **Zustand:** A lightweight state management solution.
+- **React Hook Form:** For client-side form validation and handling.
+- **Playwright:** End-to-end testing.
+
+---
+
+- **Bun:** A JavaScript runtime.
+- **Elysia JS:** An API REST framework x21 times faster than Express.
+- **PostgreSQL:** Database.
+- **DrizzleORM:** SQL ORM.
+- **Bun Test:** Unit testing.
+- **Typebox:** Input validation.
+- **Swagger:** API documentation.
+
+### Soft Delete
+
+Memoir supports soft deletion, allowing users to recover documents they may have mistakenly deleted.
+
+### Cookies and JWT Authentication
+
+Memoir uses cookies and JWTs for secure authentication.
+
+<img src="/projects/memoir/memoir-sign-up.png" width={700} height={400} />
+<img src="/projects/memoir/memoir-search.png" width={700} height={400} />
+<img src="/projects/memoir/memoir-document.png" width={700} height={400} />
+<img src="/projects/memoir/memoir-slash-command.png" width={700} height={400} />
