@@ -7,7 +7,6 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 import { BASE_URL } from "@/app/sitemap";
-import { GeistMono } from "geist/font/mono";
 import { cn } from "@/utils/cn";
 
 export const metadata: Metadata = {
@@ -52,9 +51,7 @@ export default function RootLayout({
       lang="en"
       className={cn(
         "bg-gray-50 dark:bg-cm-indigo-bg text-neutral-700 dark:text-neutral-300 tracking-tight",
-        GeistSans.variable,
         GeistSans.className,
-        GeistMono.variable,
       )}
     >
       <body className="antialiased min-h-screen overflow-x-hidden sticky">
@@ -63,7 +60,7 @@ export default function RootLayout({
             <div className="flex flex-col w-full pt-48">
               <div
                 aria-hidden
-                className="w-full h-96 pointer-events-none absolute top-0 left-0 mx-auto bg-[linear-gradient(to_bottom,_rgb(29_23_56/0.15)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_bottom,_rgb(229_229_229_/12%)_0%,_transparent_100%)]"
+                className="w-full h-96 pointer-events-none absolute top-0 left-0 mx-auto bg-[linear-gradient(to_bottom,_rgb(29_23_56/0.12)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_bottom,_rgb(229_229_229_/0.10)_0%,_transparent_100%)]"
               ></div>
               <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 backdrop-blur-sm border-b dark:border-neutral-800/40 border-gray-200/20">
                 <div className="max-w-6xl w-full min-w-0 flex justify-between">

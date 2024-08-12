@@ -55,7 +55,7 @@ export function Modal({ title, children }: TProps) {
 
   return createPortal(
     <div
-      className="w-full h-full fixed top-0 left-0 bg-neutral-800/20 z-50 flex justify-end"
+      className="w-full h-full fixed top-0 left-0 bg-neutral-800/10 z-50 flex justify-end"
       onClick={() => {
         CloseModal();
       }}

@@ -20,7 +20,7 @@ export async function ProjectsSection() {
               <article className="h-full w-full dark:bg-neutral-800/40 flex flex-col group">
                 <header className="flex justify-between items-center gap-4 p-4 text-neutral-600 dark:text-neutral-200">
                   <h1 className="text-lg font-normal">
-                    {project.title} | project
+                    {project.title} (project)
                   </h1>
                   <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
                 </header>
