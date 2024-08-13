@@ -8,7 +8,7 @@ const socialMediaLinks = {
   twitter: "https://www.x.com/solishuilen",
   gmail: "huilendev@gmail.com",
   upwork: "https://www.upwork.com/freelancers/~01dfd70e2536e235ea",
-  github: "https://www.github.com/https://github.com/huilensolis",
+  github: "https://www.github.com/huilensolis",
 };
 
 export function Footer() {
