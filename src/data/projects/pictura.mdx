@@ -1,0 +1,48 @@
+---
+slug: "pictura"
+date: "2024-05-28T02:50:15.473Z"
+---
+
+# Pictura
+
+[GitHub Repository](https://github.com/huilensolis/Pictura) - [Live Website](https://pictura-px.vercel.app/)
+
+**Pictura** is a social media platform designed for sharing and discovering images.
+
+## Key Features:
+
+- **Image Search:** Easily find images based on keywords.
+- **Image Posting:** Upload and share your own images with the community.
+- **Image Optimization:** Images are compressed on writting time, ensuring fast loading times with optimized images.
+- **Personal Image Collections:** Organize your favorite images into collections.
+- **Public Profile Creation:** Customize and share your profile with others.
+- **User Authentication:** Secure login options using email or GitHub.
+
+## Technical Overview
+
+- **Next.js:** For server-side rendering, server actions, data streaming and optimized performance.
+- **TypeScript:** Ensuring type safety and robust code.
+- **Tailwind CSS:** For utility-first, responsive styling.
+- **Zustand:** A lightweight state management solution.
+- **React Hook Form:** For client side form validation and handling.
+
+### Database and Authentication
+
+Pictura leverages **[Supabase](https://www.supabase.com)** as its backend, using **PostgreSQL** for data storage. The authentication system is powered by Supabase, offering email and GitHub login integrations.
+
+### Image Handling
+
+For image management, Pictura integrates with **[Cloudinary](https://cloudinary.com/)**, a REST API that allows to upload, delete, retrieve, and optimize images.
+
+### Performance Optimization
+
+To enhance user experience, Pictura implements **Image Lazy Loading**. This ensures that only images within the user's viewport are loaded, reducing unnecessary bandwidth usage and improving performance. Additionally, a loading skeleton is displayed for images that are still being fetched, creating a smoother visual experience.
+
+<img src="/projects/pictura/pictura-profile.png" width={700} height={400} />
+<img src="/projects/pictura/pictura-searching.png" width={700} height={400} />
+<img
+  src="/projects/pictura/pictura-image-lazy-loading.png"
+  width={700}
+  height={400}
+/>
+<img src="/projects/pictura/pictura-collection.png" width={700} height={400} />

@@ -17,15 +17,13 @@ const config: Config = {
       animation: {
         dash: "dash 200s forwards infinite",
       },
-      boxShadow: {
-        top: "inset 0px 1px 0",
-        bottom: "inset 0px -1px 0px 0px",
-        right: "inset -1px 0px 0",
-        left: "inset 1px 0px 0",
-        "top-right": "inset -1px 1px",
-        "top-left": "inset 1px 1px",
-        "bottom-right": "inset -1px -1px",
-        "bottom-left": "inset 1px -1px",
+      colors: {
+        "cm-indigo-bg": "#151519",
+        cool_color: "#00000",
+        cool_color_zed: "#00231",
+        my_color: "#00012",
+        my_second_color: "#44552:",
+        other_color: "#454223",
       },
     },
   },

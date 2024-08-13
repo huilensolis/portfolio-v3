@@ -1,9 +1,13 @@
+import { ThemeSwitcher } from "@/components/feature/theme-switcher";
+import { NavBar } from "./_components/nav-bar.component";
+import { Footer } from "./_components/footer/footer.component";
+
 import "./global.css";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 import { BASE_URL } from "@/app/sitemap";
-import { GeistMono } from "geist/font/mono";
+import { cn } from "@/utils/cn";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -35,27 +39,41 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classes: string[]) => classes.filter(Boolean).join(" ");
-
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <html
       lang="en"
-      className={cx(
-        "bg-gray-50 dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300",
-        GeistSans.variable,
+      className={cn(
+        "bg-gray-50 dark:bg-cm-indigo-bg text-neutral-700 dark:text-neutral-300 tracking-tight",
         GeistSans.className,
-        GeistMono.variable,
       )}
     >
-      <body className="antialiased min-h-screen overflow-x-hidden">
+      <body className="antialiased min-h-screen overflow-x-hidden sticky">
         <div className="w-full h-full xl:px-0 px-5 flex justify-center">
           <div className="max-w-6xl w-full min-w-0 flex flex-col">
-            {children}
+            <div className="flex flex-col w-full pt-48">
+              <div
+                aria-hidden
+                className="w-full h-96 pointer-events-none absolute top-0 left-0 mx-auto bg-[linear-gradient(to_bottom,_rgb(29_23_56/0.12)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_bottom,_rgb(229_229_229_/0.10)_0%,_transparent_100%)]"
+              ></div>
+              <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 backdrop-blur-sm border-b dark:border-neutral-800/40 border-gray-200/20">
+                <div className="max-w-6xl w-full min-w-0 flex justify-between">
+                  <NavBar />
+                  <div className="flex">
+                    <ThemeSwitcher />
+                  </div>
+                </div>
+              </header>
+              {children}
+              {modal}
+              <Footer />
+            </div>
             <Analytics />
           </div>
         </div>
