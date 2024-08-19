@@ -13,64 +13,53 @@ const socialMediaLinks = {
 
 export function Footer() {
   return (
-    <>
-      <footer
-        className="w-full py-10 pt-16 dark:border-neutral-800 border-gray-300/20"
-        id="contact"
-      >
-        <h1 className="text-[12rem] font-semibold dark:text-neutral-200">
-          Contact
-        </h1>
-        <section>
-          <ul className="grid grid-cols-3 gap-y-5 w-full dark:text-neutral-200 font-medium">
-            <li className="flex items-center gap-1">
-              Argentina <MoveRight className="w-4 h-4" />{" "}
-              {new Date().toLocaleString("en-US", {
-                timeZone: "America/Buenos_Aires",
-                hour: "2-digit",
-                hour12: false,
-                hourCycle: "h24",
-                minute: "2-digit",
-              })}{" "}
-              hs
-            </li>
-            <li className="flex gap-1 items-center">
-              <Season />
-              <Suspense fallback={"loading temperature..."}>
-                <Temperature />
-              </Suspense>
-            </li>
-            <li>
-              <GmailBtn gmail={socialMediaLinks.gmail} />
-            </li>
-            <li>
-              <Link href={socialMediaLinks.upwork} target="_blank">
-                UpWork
-              </Link>
-            </li>
-            <li>
-              <Link href={socialMediaLinks.twitter} target="_blank">
-                Twitter
-              </Link>
-            </li>
-            <li>
-              <Link href={socialMediaLinks.linkedin} target="_blank">
-                Linkedin
-              </Link>
-            </li>
-            <li>
-              <Link href={socialMediaLinks.github} target="_blank">
-                Github
-              </Link>
-            </li>
-          </ul>
-        </section>
-      </footer>
-      <div
-        aria-hidden
-        className="w-full h-96 pointer-events-none absolute bottom-0 left-0 mx-auto bg-[linear-gradient(to_top,_rgb(29_23_56/0.12)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_top,_rgb(229_229_229_/0.10)_0%,_transparent_100%)]"
-      ></div>
-    </>
+    <footer className="w-full py-10 pt-16 border-gray-300/20" id="contact">
+      <h1 className="text-[12rem] font-semibold">Contact</h1>
+      <section>
+        <ul className="grid grid-cols-3 gap-y-5 w-full font-medium">
+          <li className="flex items-center gap-1">
+            Argentina <MoveRight className="w-4 h-4" />{" "}
+            {new Date().toLocaleString("en-US", {
+              timeZone: "America/Buenos_Aires",
+              hour: "2-digit",
+              hour12: false,
+              hourCycle: "h24",
+              minute: "2-digit",
+            })}{" "}
+            hs
+          </li>
+          <li className="flex gap-1 items-center">
+            <Season />
+            <Suspense fallback={"loading temperature..."}>
+              <Temperature />
+            </Suspense>
+          </li>
+          <li>
+            <GmailBtn gmail={socialMediaLinks.gmail} />
+          </li>
+          <li>
+            <Link href={socialMediaLinks.upwork} target="_blank">
+              UpWork
+            </Link>
+          </li>
+          <li>
+            <Link href={socialMediaLinks.twitter} target="_blank">
+              Twitter
+            </Link>
+          </li>
+          <li>
+            <Link href={socialMediaLinks.linkedin} target="_blank">
+              Linkedin
+            </Link>
+          </li>
+          <li>
+            <Link href={socialMediaLinks.github} target="_blank">
+              Github
+            </Link>
+          </li>
+        </ul>
+      </section>
+    </footer>
   );
 }
 

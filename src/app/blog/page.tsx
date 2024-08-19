@@ -10,7 +10,7 @@ export default async function BlogPage() {
   return (
     <div className="flex flex-col">
       <main className="w-full mb-32">
-        <h1 className="text-6xl sm:text-6xl text-neutral-800 dark:text-neutral-50 font-medium w-full text-balance">
+        <h1 className="text-6xl sm:text-6xl text-neutral-800 font-medium w-full text-balance">
           Blog
         </h1>
       </main>
@@ -18,7 +18,7 @@ export default async function BlogPage() {
         {[...postMetadataList].map((blogPost, i) => (
           <li key={i} className="group">
             <Link href={`/blog/post/${blogPost.slug}`}>
-              <article className="flex flex-col gap-24 bg-gray-100 dark:bg-neutral-800/60 rounded-md border border-gray-200/40 dark:border-neutral-700/40 p-4 hover:dark:brightness-125 hover:bg-gray-200/60 hover:dark:bg-neutral-800/60 duration-150 transition-all">
+              <article className="flex flex-col gap-24 bg-gray-100 rounded-md border border-gray-200/40 p-4 hover:bg-gray-200/60 duration-150 transition-all">
                 <header className="w-full flex justify-between">
                   <span className="font-medium">blog post</span>
                   <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />

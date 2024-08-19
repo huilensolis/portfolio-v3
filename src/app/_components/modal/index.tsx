@@ -62,7 +62,7 @@ export function Modal({ title, children }: TProps) {
     >
       <article
         className={[
-          "w-full md:max-w-3xl md:h-screen p-4 pb-8 flex flex-col gap-4 h-full bg-neutral-100 dark:bg-cm-indigo-bg md:border-l-2 md:border-gray-300 md:dark:border-neutral-800 shadow-2xl shadow-neutral-700 dark:shadow-neutral-900 overflow-y-auto",
+          "w-full md:max-w-3xl md:h-screen p-4 pb-8 flex flex-col gap-4 h-full bg-neutral-100 md:border-l-2 md:border-gray-300 shadow-2xl shadow-neutral-700 overflow-y-auto",
           dragToLeft ? "translate-x-0" : "translate-x-full",
           // the transition duration must be the same one of the time out that runs when calling CloseModal() - why? so we await for the translating-x animation to end before deleting the node
           "transition-all duration-500",
@@ -77,7 +77,7 @@ export function Modal({ title, children }: TProps) {
             onClick={() => {
               CloseModal();
             }}
-            className="text-neutral-800 dark:text-neutral-200 p-1 rounded-sm hover:bg-gray-200 dark:hover:bg-neutral-800 transition-all duration-150"
+            className="text-neutral-800 p-1 rounded-sm hover:bg-gray-200 transition-all duration-150"
           >
             <X className="w-4 h-4" />
           </button>

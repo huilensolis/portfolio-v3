@@ -10,15 +10,15 @@ export async function ProjectsSection() {
         {projectList.map((project, i) => (
           <li
             key={i}
-            className="bg-gray-100 dark:bg-neutral-800/60 border border-gray-200 dark:border-neutral-700/40 rounded-md"
+            className="bg-gray-100 border border-gray-200 rounded-md"
             style={{
               gridColumn: `span ${project["grid-cols"]}`,
               gridRow: `span ${project["grid-rows"]}`,
             }}
           >
             <Link href={`/project/${project.title}`}>
-              <article className="h-full w-full dark:bg-neutral-800/40 flex flex-col group">
-                <header className="flex justify-between items-center gap-4 p-4 text-neutral-600 dark:text-neutral-200">
+              <article className="h-full w-full flex flex-col group">
+                <header className="flex justify-between items-center gap-4 p-4 text-neutral-600">
                   <h1 className="text-lg font-normal">
                     {project.title} (project)
                   </h1>
@@ -30,7 +30,7 @@ export async function ProjectsSection() {
                     height={700}
                     src={project.cover_img}
                     alt={project.title}
-                    className={`w-full h-full object-cover border-2 border-gray-200 dark:border-neutral-700/40 shadow-xl shadow-neutral-400 dark:shadow-neutral-900 group-hover:shadow-neutral-500 dark:group-hover:shadow-neutral-900 ${project["grid-cols"] === 2 ? "translate-x-8 translate-y-10 group-hover:translate-y-6 object-left-top rounded-tl-[0.270rem]" : "scale-x-90 translate-y-9 group-hover:translate-y-5 object-top rounded-t-[0.270rem]"} transition-all duration-300`}
+                    className={`w-full h-full object-cover border-2 border-gray-200 shadow-xl shadow-neutral-400 group-hover:shadow-neutral-500 ${project["grid-cols"] === 2 ? "translate-x-8 translate-y-10 group-hover:translate-y-6 object-left-top rounded-tl-[0.270rem]" : "scale-x-90 translate-y-9 group-hover:translate-y-5 object-top rounded-t-[0.270rem]"} transition-all duration-300`}
                   />
                 </div>
               </article>

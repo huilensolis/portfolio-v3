@@ -8,10 +8,7 @@ export function Nextjs({
   return (
     <svg
       {...props}
-      className={cn(
-        "h-6 w-6 fill-neutral-900 dark:fill-neutral-200",
-        className,
-      )}
+      className={cn("h-6 w-6 fill-neutral-900", className)}
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"

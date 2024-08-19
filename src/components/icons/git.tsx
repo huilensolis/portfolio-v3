@@ -5,7 +5,7 @@ export function Git({ className, ...props }: SVGAttributes<HTMLOrSVGElement>) {
   return (
     <svg
       {...props}
-      className={cn("h-6 w-6 fill-orange-600 dark:fill-amber-600", className)}
+      className={cn("h-6 w-6 fill-orange-600", className)}
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"

@@ -63,7 +63,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        "bg-gray-50 dark:bg-cm-indigo-bg text-neutral-700 dark:text-neutral-300 tracking-tight",
+        "bg-stone-100 text-neutral-700 tracking-tight",
         GeistSans.className,
         GeistSans.variable,
         FrauncesDefault.variable,
@@ -74,11 +74,7 @@ export default function RootLayout({
         <div className="w-full h-full xl:px-0 px-5 flex justify-center">
           <div className="max-w-6xl w-full min-w-0 flex flex-col">
             <div className="flex flex-col w-full pt-48">
-              <div
-                aria-hidden
-                className="w-full h-96 pointer-events-none absolute top-0 left-0 mx-auto bg-[linear-gradient(to_bottom,_rgb(29_23_56/0.12)_0%,_transparent_100%)] dark:bg-[linear-gradient(to_bottom,_rgb(229_229_229_/0.10)_0%,_transparent_100%)]"
-              ></div>
-              <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 backdrop-blur-sm border-b dark:border-neutral-800/40 border-gray-200/20">
+              <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 backdrop-blur-sm border-b border-gray-200/20">
                 <div className="max-w-6xl w-full min-w-0 flex justify-between">
                   <NavBar />
                   <div className="flex">
