@@ -2,7 +2,7 @@ export function MainSection() {
   return (
     <>
       <main>
-        <section className="pb-32 flex flex-col gap-5 max-w-5xl">
+        <section className="pb-32 flex flex-col gap-5 max-w-5xl font-fraunces">
           <h1 className="font-medium text-6xl tracking-tight text-balance text-stone-600 dark:text-neutral-400">
             I&apos;m{" "}
             <span className="text-amber-500 font-semibold">Huilen</span>, <br />

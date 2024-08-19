@@ -1,13 +1,26 @@
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { GeistSans } from "geist/font/sans";
+import { Analytics } from "@vercel/analytics/react";
+
 import { ThemeSwitcher } from "@/components/feature/theme-switcher";
 import { NavBar } from "./_components/nav-bar.component";
 import { Footer } from "./_components/footer/footer.component";
-
-import "./global.css";
-import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { Analytics } from "@vercel/analytics/react";
 import { BASE_URL } from "@/app/sitemap";
+import "./global.css";
 import { cn } from "@/utils/cn";
+
+const FrauncesDefault = localFont({
+  src: "../../public/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf",
+  style: "normal",
+  variable: "--font-fraunces-default",
+});
+
+const FrauncesItalic = localFont({
+  src: "../../public/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf",
+  style: "italic",
+  variable: "--font-fraunces-italic",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -52,6 +65,9 @@ export default function RootLayout({
       className={cn(
         "bg-gray-50 dark:bg-cm-indigo-bg text-neutral-700 dark:text-neutral-300 tracking-tight",
         GeistSans.className,
+        GeistSans.variable,
+        FrauncesDefault.variable,
+        FrauncesItalic.variable,
       )}
     >
       <body className="antialiased min-h-screen overflow-x-hidden sticky">

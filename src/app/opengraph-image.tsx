@@ -15,22 +15,18 @@ export const size = {
 export const contentType = "image/png";
 
 // Image generation
-export default async function Image({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
+export default async function Image() {
   // Font
   const geistSemiBold = fetch(
     new URL(
-      "../../public/Geist-1.3.0/Geist-1.3.0/statics-ttf/Geist-SemiBold.ttf",
+      "../../public/fonts/geist-1.3.0/statics-ttf/Geist-SemiBold.ttf",
       import.meta.url,
     ),
   ).then((res) => res.arrayBuffer());
 
   const geistMedium = fetch(
     new URL(
-      "../../public/Geist-1.3.0/Geist-1.3.0/statics-ttf/Geist-Medium.ttf",
+      "../../public/fonts/geist-1.3.0/statics-ttf/Geist-Medium.ttf",
       import.meta.url,
     ),
   ).then((res) => res.arrayBuffer());

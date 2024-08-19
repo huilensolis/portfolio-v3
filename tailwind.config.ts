@@ -25,6 +25,10 @@ const config: Config = {
         my_second_color: "#44552:",
         other_color: "#454223",
       },
+      fontFamily: {
+        fraunces: ["var(--font-fraunces-default)"],
+        "fraunces-italic": ["var(--font-fraunces-italic)"],
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

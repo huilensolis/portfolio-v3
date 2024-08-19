@@ -23,7 +23,7 @@ export default async function Image({
   // Font
   const geistSemiBold = fetch(
     new URL(
-      "../../../../../public/Geist-1.3.0/Geist-1.3.0/statics-ttf/Geist-SemiBold.ttf",
+      "../../../../../public/fonts/geist-1.3.0/statics-ttf/Geist-SemiBold.ttf",
       import.meta.url,
     ),
   ).then((res) => res.arrayBuffer());
