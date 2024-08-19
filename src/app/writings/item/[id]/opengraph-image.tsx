@@ -6,7 +6,7 @@ export const runtime = "edge";
 export const dynamic = "force-static";
 
 // Image metadata
-export const alt = "Huilen Solis's Blog";
+export const alt = "Solis's writings";
 export const size = {
   width: 1200,
   height: 630,

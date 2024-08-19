@@ -1,7 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import matter from "gray-matter";
 
-import { POSTS_PATH } from "@/utils/consts";
+import { WRITINGS_PATH } from "@/utils/consts";
 import { readFile } from "fs/promises";
 import { cwd } from "process";
 import path from "path";
@@ -24,7 +24,7 @@ export async function generateMetadata(
   // read route params
   const id = params.id;
 
-  const postsPath = path.join(cwd(), POSTS_PATH);
+  const postsPath = path.join(cwd(), WRITINGS_PATH);
 
   const post = await readFile(
     `${postsPath}/${id.toLowerCase().trim().replaceAll("%20", "-")}.mdx`,
@@ -41,7 +41,7 @@ export async function generateMetadata(
   const previousImages = (await parent).openGraph?.images || [];
 
   const ogImage = post
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/en/blog/post/${id}/opengraph-image`
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/en/writings/item/${id}/opengraph-image`
     : `https://${process.env.VERCEL_URL}`;
 
   return {
@@ -72,7 +72,7 @@ export default async function PostPage({
 }: {
   params: { id: string };
 }) {
-  const postsPath = path.join(cwd(), POSTS_PATH);
+  const postsPath = path.join(cwd(), WRITINGS_PATH);
 
   const post = await readFile(
     `${postsPath}/${id.replaceAll("%20", "-")}.mdx`,

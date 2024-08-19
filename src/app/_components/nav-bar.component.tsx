@@ -31,9 +31,9 @@ const LINKS: TLink[] = [
     children: <>Solis</>,
   },
   {
-    href: "/blog",
-    title: "blog",
-    children: <>Blog</>,
+    href: "/writings",
+    title: "writings",
+    children: <>Writings</>,
   },
   {
     href: "#contact",

@@ -1,7 +1,7 @@
 import { Metadata, ResolvingMetadata } from "next";
 import { MainSection } from "./_components/sections/main.section.component";
 import { ProjectsSection } from "./_components/sections/projects.section.component";
-import { BlogPostsSection } from "./_components/sections/blog-posts.section.component";
+import { WritingsItemsSection } from "./_components/sections/blog-posts.section.component";
 
 type Props = {
   params: { lang: "es" | "en" };
@@ -50,7 +50,7 @@ export default function EngineeringPage() {
     <article className="w-full flex flex-col gap-4">
       <MainSection />
       <ProjectsSection />
-      <BlogPostsSection />
+      <WritingsItemsSection />
     </article>
   );
 }
