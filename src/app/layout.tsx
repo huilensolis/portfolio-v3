@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 
-import { ThemeSwitcher } from "@/components/feature/theme-switcher";
 import { NavBar } from "./_components/nav-bar.component";
 import { Footer } from "./_components/footer/footer.component";
 import { BASE_URL } from "@/app/sitemap";
@@ -74,11 +73,10 @@ export default function RootLayout({
         <div className="w-full h-full xl:px-0 px-5 flex justify-center">
           <div className="max-w-6xl w-full min-w-0 flex flex-col">
             <div className="flex flex-col w-full pt-48">
-              <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 backdrop-blur-sm border-b border-gray-200/20">
-                <div className="max-w-6xl w-full min-w-0 flex justify-between">
-                  <NavBar />
-                  <div className="flex">
-                    <ThemeSwitcher />
+              <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 bg-stone-100 p-1 border-b border-stone-300">
+                <div className="max-w-6xl w-full min-w-0 flex justify-start">
+                  <div className="flex justify-between">
+                    <NavBar />
                   </div>
                 </div>
               </header>
