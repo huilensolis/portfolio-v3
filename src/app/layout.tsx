@@ -71,10 +71,10 @@ export default function RootLayout({
     >
       <body className="antialiased min-h-screen overflow-x-hidden sticky">
         <div className="w-full h-full xl:px-0 px-5 flex justify-center">
-          <div className="max-w-6xl w-full min-w-0 flex flex-col">
+          <div className="max-w-screen-xl w-full min-w-0 flex flex-col">
             <div className="flex flex-col w-full pt-48">
               <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 bg-stone-100 p-1 border-b border-stone-300">
-                <div className="max-w-6xl w-full min-w-0 flex justify-start">
+                <div className="max-w-screen-xl w-full min-w-0 flex justify-start">
                   <div className="flex justify-between">
                     <NavBar />
                   </div>

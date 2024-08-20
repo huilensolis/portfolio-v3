@@ -1,7 +1,7 @@
 import { Metadata, ResolvingMetadata } from "next";
 import { MainSection } from "./_components/sections/main.section.component";
 import { ProjectsSection } from "./_components/sections/projects.section.component";
-import { WritingsItemsSection } from "./_components/sections/blog-posts.section.component";
+import { WritingsItemsSection } from "./_components/sections/writing-item.section.component";
 
 type Props = {
   params: { lang: "es" | "en" };
@@ -21,18 +21,18 @@ export async function generateMetadata(
 
   return {
     title: "Huilen Solis Portfolio",
-    description: "Full Stack Developer",
+    description: "Software Engineer",
     creator: "Huilen Solis",
     openGraph: {
       images: [{ url: ogImage }, ...previousImages],
       title: "Huilen Solis Portfolio",
-      description: "Full stack Developer",
+      description: "Software Engineer",
       type: "website",
       locale: "en-us",
     },
     twitter: {
       title: "Huilen Solis Portfolio",
-      description: "Full Stack Developer",
+      description: "software engineer",
       creator: "huilensolis" || undefined,
       images: [
         { url: ogImage, alt: "Huilen Solis Portfolio" },
@@ -47,7 +47,7 @@ export const dynamic = "force-static";
 
 export default function EngineeringPage() {
   return (
-    <article className="w-full flex flex-col gap-4">
+    <article className="grid grid-cols-12 grid-rows-[repeat(auto-fit,_300px)] gap-4 list-none">
       <MainSection />
       <ProjectsSection />
       <WritingsItemsSection />
