@@ -25,7 +25,7 @@ export async function ProjectsSection() {
               height={700}
               src={project.cover_img}
               alt={project.title}
-              className={`w-full h-full object-cover border-2 border-gray-200 shadow-xl shadow-neutral-400 group-hover:shadow-neutral-500 ${project["grid-cols"] === 4 ? "translate-x-8 translate-y-10 group-hover:translate-y-6 object-left-top rounded-tl-[0.270rem]" : "scale-x-90 translate-y-9 group-hover:translate-y-5 object-top rounded-t-[0.270rem]"} transition-all duration-300`}
+              className={`w-full h-full object-cover shadow-2xl shadow-stone-600 group-hover:shadow-stone-900 ${project["grid-cols"] === 4 ? "translate-x-8 translate-y-10 group-hover:translate-y-6 object-left-top" : "scale-x-90 translate-y-9 group-hover:translate-y-5 object-top"} transition-all duration-300`}
             />
           </div>
         </article>
