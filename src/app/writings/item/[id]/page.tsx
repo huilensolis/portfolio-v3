@@ -1,4 +1,3 @@
-import { MDXRemote } from "next-mdx-remote/rsc";
 import matter from "gray-matter";
 
 import { WRITINGS_PATH } from "@/utils/consts";
@@ -27,7 +26,7 @@ export async function generateMetadata(
   const postsPath = path.join(cwd(), WRITINGS_PATH);
 
   const post = await readFile(
-    `${postsPath}/${id.toLowerCase().trim().replaceAll("%20", "-")}.mdx`,
+    `${postsPath}/${id.toLowerCase()}.mdx`,
     "utf8",
   ).catch((e) => console.log(e));
 

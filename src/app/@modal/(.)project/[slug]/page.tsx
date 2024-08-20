@@ -3,7 +3,6 @@ import { Modal } from "@/app/_components/modal";
 import { PROJECTS_PATH } from "@/utils/consts";
 import { readFile } from "fs/promises";
 import matter from "gray-matter";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import path from "path";
 import { cwd } from "process";
 
@@ -19,7 +18,7 @@ export default async function Project({
 }) {
   const projectsPath = path.join(cwd(), PROJECTS_PATH);
 
-  const cleanSlug = slug.toLowerCase().trim().replaceAll("%20", "-");
+  const cleanSlug = slug.toLowerCase();
 
   const projectFile = await readFile(
     `${projectsPath}/${cleanSlug}.mdx`,

@@ -13,13 +13,13 @@ export async function ProjectsSection() {
         gridRow: `span ${project["grid-rows"]}`,
       }}
     >
-      <Link href={`/project/${project.title}`}>
+      <Link href={`/project/${project.title.trim().replaceAll(" ", "-")}`}>
         <article className="h-full w-full flex flex-col group">
           <header className="flex justify-between items-center gap-4 p-4 text-neutral-600">
             <h1 className="text-lg font-normal">{project.title} (project)</h1>
             <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
           </header>
-          <div className="w-full h-80 overflow-hidden">
+          <div className="w-full h-72 overflow-hidden">
             <Image
               width={1000}
               height={700}
