@@ -23,7 +23,7 @@ export function MainSection() {
                     .
                 </h2>
                 <p className="tracking-tight text-3xl">
-                    On my free time, I learn ancient Latin and Greek; read Classical Literature; go mountain hiking; enjoy coffee and write.
+                    On my free time, I learn ancient Latin and Greek; read Classical Literature; go mountain hiking; enjoy coffee; and write.
                 </p>
             </section>
         </main>
