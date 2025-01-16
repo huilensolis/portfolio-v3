@@ -53,6 +53,15 @@ export function Modal({ title, children }: TProps) {
     router.back();
   }
 
+    const formattedTitle = title.split("").reduce((previousValue: string, currentValue:string) => {
+
+        if(previousValue.length === 0) return currentValue.toUpperCase()
+
+        if (previousValue[previousValue.length - 1] === " " && currentValue !== " ") return previousValue + currentValue.toUpperCase()
+
+        return previousValue + currentValue
+    }, "")
+
   return createPortal(
     <div
       className="w-full h-full fixed top-0 left-0 bg-neutral-800/10 z-50 flex justify-end"
@@ -72,7 +81,7 @@ export function Modal({ title, children }: TProps) {
         }}
       >
         <header className="w-full flex items-center justify-between">
-          <h1>{title}</h1>
+          <h1>{formattedTitle}</h1>
           <button
             onClick={() => {
               CloseModal();

@@ -15,7 +15,7 @@ export async function ProjectsSection() {
       <Link href={`/project/${project.title.trim().replaceAll(" ", "-")}`}>
         <article className="h-full w-full flex flex-col group">
           <header className="flex justify-between items-center gap-4 p-4 text-neutral-600">
-            <h2 className="text-lg font-normal">project / {project.label}</h2>
+            <h2 className="text-lg font-normal">Project / {project.label}</h2>
             <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
           </header>
           <div className="w-full h-72 overflow-hidden flex items-center justify-center">
