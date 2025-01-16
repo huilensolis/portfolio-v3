@@ -7,48 +7,47 @@ import path from "path";
 import { cwd } from "process";
 
 type TMetadata = {
-  title: string;
-  slug: string;
+	title: string;
+	slug: string;
 };
 
 export default async function Project({
-  params
+	params,
 }: {
-  params: { slug: string };
+	params:Promise< { slug: string }>;
 }) {
+	const { slug } = await params;
 
-  const {slug} = await params
+	const projectsPath = path.join(cwd(), PROJECTS_PATH);
 
-  const projectsPath = path.join(cwd(), PROJECTS_PATH);
+	const cleanSlug = slug.toLowerCase();
 
-  const cleanSlug = slug.toLowerCase();
+	const projectFile = await readFile(
+		`${projectsPath}/${cleanSlug}.mdx`,
+		"utf8",
+	).catch((e) => console.log(e));
 
-  const projectFile = await readFile(
-    `${projectsPath}/${cleanSlug}.mdx`,
-    "utf8",
-  ).catch((e) => console.log(e));
+	if (!projectFile)
+		return (
+			<Modal title="not found">
+				<h1>404</h1>
+				<span>sorry, we could not find this page</span>
+			</Modal>
+		);
 
-  if (!projectFile)
-    return (
-      <Modal title="not found">
-        <h1>404</h1>
-        <span>sorry, we could not find this page</span>
-      </Modal>
-    );
+	const { data, content } = matter(projectFile);
 
-  const { data, content } = matter(projectFile);
+	if (!projectFile || !content || !data)
+		return (
+			<Modal title="not found">
+				<h1>404</h1>
+				<span>sorry, we could not find this page</span>
+			</Modal>
+		);
 
-  if (!projectFile || !content || !data)
-    return (
-      <Modal title="not found">
-        <h1>404</h1>
-        <span>sorry, we could not find this page</span>
-      </Modal>
-    );
-
-  return (
-    <Modal title={(data as TMetadata).slug}>
-      <MarkDownMdx source={content} />
-    </Modal>
-  );
+	return (
+		<Modal title={(data as TMetadata).slug}>
+			<MarkDownMdx source={content} />
+		</Modal>
+	);
 }

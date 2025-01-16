@@ -12,77 +12,80 @@ import { MarkDownMdx } from "@/app/_components/markdown/markdown.component";
 export const dynamic = "force-static";
 
 type Props = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+	params: Promise<{ id: string }>;
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata,
+	{ params }: Props,
+	parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  // read route params
-  const id = params.id;
+	// read route params
+	const id = (await params).id;
 
-  const postsPath = path.join(cwd(), WRITINGS_PATH);
+	const postsPath = path.join(cwd(), WRITINGS_PATH);
 
-  const post = await readFile(
-    `${postsPath}/${id.toLowerCase()}.mdx`,
-    "utf8",
-  ).catch((e) => console.log(e));
+	const post = await readFile(
+		`${postsPath}/${id.toLowerCase()}.mdx`,
+		"utf8",
+	).catch((e) => console.log(e));
 
-  if (!post) return { title: "Not Found", description: "404" };
+	if (!post) return { title: "Not Found", description: "404" };
 
-  const { data } = matter(post);
+	const { data } = matter(post);
 
-  const metadata = (data as TPostMetadata) || undefined;
+	const metadata = (data as TPostMetadata) || undefined;
 
-  // optionally access and extend (rather than replace) parent metadata
-  const previousImages = (await parent).openGraph?.images || [];
+	// optionally access and extend (rather than replace) parent metadata
+	const previousImages = (await parent).openGraph?.images || [];
 
-  const ogImage = post
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/en/writings/item/${id}/opengraph-image`
-    : `https://${process.env.VERCEL_URL}`;
+	const ogImage = post
+		? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/en/writings/item/${id}/opengraph-image`
+		: `https://${process.env.VERCEL_URL}`;
 
-  return {
-    title: metadata.title,
-    description: metadata.description,
-    creator: "Huilen Solis",
-    openGraph: {
-      images: [{ url: ogImage }, ...previousImages],
-      title: metadata.title,
-      description: metadata.description,
-      type: "article",
-      locale: "en",
-      publishedTime: metadata.date,
-      authors: "Huilen Solis",
-    },
-    twitter: {
-      title: metadata.title,
-      description: metadata.description,
-      creator: "huilensolis",
-      images: [{ url: ogImage, alt: metadata.title }, ...previousImages],
-      card: "summary_large_image",
-    },
-  };
+	return {
+		title: metadata.title,
+		description: metadata.description,
+		creator: "Huilen Solis",
+		openGraph: {
+			images: [{ url: ogImage }, ...previousImages],
+			title: metadata.title,
+			description: metadata.description,
+			type: "article",
+			locale: "en",
+			publishedTime: metadata.date,
+			authors: "Huilen Solis",
+		},
+		twitter: {
+			title: metadata.title,
+			description: metadata.description,
+			creator: "huilensolis",
+			images: [{ url: ogImage, alt: metadata.title }, ...previousImages],
+			card: "summary_large_image",
+		},
+	};
 }
 
 export default async function PostPage({
-  params: { id },
+	params,
 }: {
-  params: { id: string };
+	params: Promise<{ id: string }>;
 }) {
-  const postsPath = path.join(cwd(), WRITINGS_PATH);
 
-  const post = await readFile(
-    `${postsPath}/${id.replaceAll("%20", "-")}.mdx`,
-    "utf8",
-  ).catch((e) => console.log(e));
+    const id = (await params).id
 
-  if (!post) return <p>not found</p>;
+	const postsPath = path.join(cwd(), WRITINGS_PATH);
 
-  const { data: _data, content } = matter(post);
+	const post = await readFile(
+		`${postsPath}/${id.replaceAll("%20", "-")}.mdx`,
+		"utf8",
+	).catch((e) => console.log(e));
 
-  if (!post || !content) return <p>not found</p>;
+	if (!post) return <p>not found</p>;
 
-  return <MarkDownMdx source={content} />;
+	const { data: _data, content } = matter(post);
+
+	if (!post || !content) return <p>not found</p>;
+
+	return <MarkDownMdx source={content} />;
 }

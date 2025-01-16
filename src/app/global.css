@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 *:focus-visible {
-  outline: none;
+	outline: none;
 }
 
 button:focus,
 input:focus {
-  outline: 2px solid rgb(209 213 219 / 1);
+	outline: 2px solid rgb(209 213 219 / 1);
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }

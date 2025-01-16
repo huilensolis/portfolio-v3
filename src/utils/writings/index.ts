@@ -8,19 +8,19 @@ import { readFile, readdir } from "node:fs/promises";
 import { TPostMetadata } from "@/types/post";
 
 export async function getWritingItems() {
-  const writingsPath = path.join(cwd(), WRITINGS_PATH);
+	const writingsPath = path.join(cwd(), WRITINGS_PATH);
 
-  const writingsList = await readdir(writingsPath, { encoding: "utf8" });
+	const writingsList = await readdir(writingsPath, { encoding: "utf8" });
 
-  const writingItemsContent = await Promise.all(
-    writingsList.map(
-      async (post) => await readFile(writingsPath + "/" + post, "utf8"),
-    ),
-  );
+	const writingItemsContent = await Promise.all(
+		writingsList.map(
+			async (post) => await readFile(writingsPath + "/" + post, "utf8"),
+		),
+	);
 
-  const writingItemMetadataList = writingItemsContent.map(
-    (content) => matter(content).data,
-  ) as TPostMetadata[];
+	const writingItemMetadataList = writingItemsContent.map(
+		(content) => matter(content).data,
+	) as TPostMetadata[];
 
-  return writingItemMetadataList;
+	return writingItemMetadataList;
 }

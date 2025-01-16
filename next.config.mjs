@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack", "url-loader"],
-    });
+	webpack: (config) => {
+		config.module.rules.push({
+			test: /\.svg$/,
+			use: ["@svgr/webpack", "url-loader"],
+		});
 
-    return config;
-  },
-  reactStrictMode: true,
-  transpilePackages: ['next-mdx-remote']
+		return config;
+	},
+	reactStrictMode: true,
+	transpilePackages: ["next-mdx-remote"],
 };
 
 export default nextConfig;

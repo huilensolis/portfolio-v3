@@ -1,26 +1,26 @@
 [
-  {
-    "title": "Build Square",
-    "label": "Frontend", 
-    "grid-cols": 4,
-    "grid-rows": 1
-  },
-  {
-    "title": "Mini Grep",
-    "label": "Shell CLI",
-    "grid-cols": 4,
-    "grid-rows": 1
-  },
-  {
-    "title": "Pictura",
-    "label": "Full Stack", 
-    "grid-cols": 8,
-    "grid-rows": 1
-  },
-  {
-    "title": "Memoir",
-    "label": "Full Stack", 
-    "grid-cols": 8,
-    "grid-rows": 1
-  }
+	{
+		"title": "Build Square",
+		"label": "Frontend",
+		"grid-cols": 4,
+		"grid-rows": 1
+	},
+	{
+		"title": "Mini Grep",
+		"label": "Shell CLI",
+		"grid-cols": 4,
+		"grid-rows": 1
+	},
+	{
+		"title": "Pictura",
+		"label": "Full Stack",
+		"grid-cols": 8,
+		"grid-rows": 1
+	},
+	{
+		"title": "Memoir",
+		"label": "Full Stack",
+		"grid-cols": 8,
+		"grid-rows": 1
+	}
 ]

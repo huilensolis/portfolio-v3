@@ -6,37 +6,37 @@ import { cn } from "@/utils/cn";
 import { Copy, CopyCheck } from "lucide-react";
 
 export function CopyToClipboardBtn({
-  value,
-  className = "",
+	value,
+	className = "",
 }: {
-  value: string;
-  className?: HTMLElement["className"];
+	value: string;
+	className?: HTMLElement["className"];
 }) {
-  const [valueHasBeenCopied, setValueHasBeenCopied] = useState(false);
+	const [valueHasBeenCopied, setValueHasBeenCopied] = useState(false);
 
-  useEffect(() => {
-    const timeOutId = setTimeout(() => setValueHasBeenCopied(false), 1000);
+	useEffect(() => {
+		const timeOutId = setTimeout(() => setValueHasBeenCopied(false), 1000);
 
-    return () => {
-      clearTimeout(timeOutId);
-    };
-  }, [valueHasBeenCopied]);
+		return () => {
+			clearTimeout(timeOutId);
+		};
+	}, [valueHasBeenCopied]);
 
-  return (
-    <Button
-      onClick={(e) => {
-        navigator.clipboard.writeText(value);
+	return (
+		<Button
+			onClick={(e) => {
+				navigator.clipboard.writeText(value);
 
-        setValueHasBeenCopied(true);
-      }}
-      className={cn("", className)}
-      variant="ghost"
-    >
-      {valueHasBeenCopied ? (
-        <CopyCheck className="w-4 h-4 transition-all duration-150" />
-      ) : (
-        <Copy className="w-4 h-4 transition-all duration-150" />
-      )}
-    </Button>
-  );
+				setValueHasBeenCopied(true);
+			}}
+			className={cn("", className)}
+			variant="ghost"
+		>
+			{valueHasBeenCopied ? (
+				<CopyCheck className="w-4 h-4 transition-all duration-150" />
+			) : (
+				<Copy className="w-4 h-4 transition-all duration-150" />
+			)}
+		</Button>
+	);
 }
