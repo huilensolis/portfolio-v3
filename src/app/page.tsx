@@ -22,6 +22,9 @@ export async function generateMetadata(
   return {
     title: "Huilen Solis Portfolio",
     description: "Software Engineer",
+        icons: {
+        icon: '/public/favicon.ico'
+        },
     creator: "Huilen Solis",
     openGraph: {
       images: [{ url: ogImage }, ...previousImages],
@@ -33,7 +36,7 @@ export async function generateMetadata(
     twitter: {
       title: "Huilen Solis Portfolio",
       description: "software engineer",
-      creator: "huilensolis" || undefined,
+      creator: "huilensolis",
       images: [
         { url: ogImage, alt: "Huilen Solis Portfolio" },
         ...previousImages,
