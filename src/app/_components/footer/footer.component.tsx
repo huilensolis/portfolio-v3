@@ -1,4 +1,4 @@
-import { Flower, Leaf, MoveRight, Snowflake, Sun } from "lucide-react";
+import { ArrowUpRight, ArrowUpRightSquare, Flower, Leaf, MoveRight, Snowflake, Sun } from "lucide-react";
 import { Suspense } from "react";
 import { GmailBtn } from "./gmail-btn.component";
 import Link from "next/link";
@@ -14,9 +14,9 @@ const socialMediaLinks = {
 export function Footer() {
   return (
     <footer className="w-full py-10 pt-16 border-gray-300/20" id="contact">
-      <h1 className="text-[12rem] font-semibold">Contact</h1>
+      <h1 className="text-6xl sm:text-[6rem] md:text-[8rem] lg:text-[12rem] font-semibold font-fraunces">Contact</h1>
       <section>
-        <ul className="grid grid-cols-3 gap-y-5 w-full font-medium">
+        <ul className="flex flex-col sm:grid grid-cols-3 gap-y-5 w-full font-medium">
           <li className="flex items-center gap-1">
             Argentina <MoveRight className="w-4 h-4" />{" "}
             {new Date().toLocaleString("en-US", {
@@ -38,23 +38,24 @@ export function Footer() {
             <GmailBtn gmail={socialMediaLinks.gmail} />
           </li>
           <li>
-            <Link href={socialMediaLinks.upwork} target="_blank">
-              UpWork
+            <Link href={socialMediaLinks.upwork} target="_blank" className="flex items-center group">
+              UpWork <ArrowUpRight className="w-4 h-4 duration-150 transition-all group-hover:scale-125" />
             </Link>
           </li>
           <li>
-            <Link href={socialMediaLinks.twitter} target="_blank">
+            <Link href={socialMediaLinks.twitter} target="_blank" className="flex items-center group">
               Twitter
+               <ArrowUpRight className="w-4 h-4 duration-150 transition-all group-hover:scale-125" />
             </Link>
           </li>
           <li>
-            <Link href={socialMediaLinks.linkedin} target="_blank">
-              Linkedin
+            <Link href={socialMediaLinks.linkedin} target="_blank" className="flex items-center group">
+              Linkedin<ArrowUpRight className="w-4 h-4 duration-150 transition-all group-hover:scale-125" />
             </Link>
           </li>
           <li>
-            <Link href={socialMediaLinks.github} target="_blank">
-              Github
+            <Link href={socialMediaLinks.github} target="_blank" className="flex items-center group">
+              Github<ArrowUpRight className="w-4 h-4 duration-150 transition-all group-hover:scale-125" />
             </Link>
           </li>
         </ul>

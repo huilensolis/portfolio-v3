@@ -47,7 +47,7 @@ export const dynamic = "force-static";
 
 export default function EngineeringPage() {
   return (
-    <article className="grid grid-cols-12 grid-rows-[repeat(auto-fit,_300px)] gap-4 list-none">
+    <article className="flex flex-col lg:grid grid-cols-12 grid-rows-[repeat(auto-fit,_300px)] gap-4 list-none">
       <MainSection />
       <ProjectsSection />
       <WritingsItemsSection />

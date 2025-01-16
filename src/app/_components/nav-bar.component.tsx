@@ -85,7 +85,7 @@ function LinkItem({ children, href, title, target = "_self" }: TLink) {
       title={title}
       className={[
         isActive ? "bg-neutral-200/60" : "",
-        "flex items-center justify-center rounded-sm px-2 py-0.5",
+        "flex items-center justify-center rounded-sm px-5 xl:px-2 py-0.5",
       ].join(" ")}
     >
       {children}

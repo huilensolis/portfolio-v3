@@ -80,7 +80,7 @@ export function Modal({ title, children }: TProps) {
           e.stopPropagation();
         }}
       >
-        <header className="w-full flex items-center justify-between sticky top-0 right-0 border-b border-stone-300 bg-neutral-100 px-4 py-3">
+        <header className="w-full flex items-center justify-between sticky top-0 right-0 border-b border-stone-300 bg-neutral-100 px-4 py-3.5">
           <h1>{formattedTitle}</h1>
           <button
             onClick={() => {
