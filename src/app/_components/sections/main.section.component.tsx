@@ -11,8 +11,9 @@ export function MainSection() {
                 </h1>
                 <h2 className="text-3xl w-full tracking-tight text-pretty">
                     A <span className="text-stone-700">Software Engineer</span>,
-                    developing Full Stack aplications with Typescript, Next js, Tailwind
-                    CSS, Node js, DrizzleORM, PostgreSQL and Rust
+                    developing Full Stack aplications with <span className="text-stone-700"> Typescript </span>, Next js, Tailwind
+
+                    CSS, Node js, DrizzleORM, <span className="text-stone-700"> PostgreSQL </span> and <span className="text-stone-700">Rust </span>
                     <Image
                         src={cuddlyFerris}
                         width={40}

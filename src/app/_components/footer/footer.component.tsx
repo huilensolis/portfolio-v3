@@ -1,4 +1,4 @@
-import { ArrowUpRight, ArrowUpRightSquare, Flower, Leaf, MoveRight, Snowflake, Sun } from "lucide-react";
+import { ArrowUpRight, Flower, Leaf, LoaderCircle, MoveRight, Snowflake, Sun } from "lucide-react";
 import { Suspense } from "react";
 import { GmailBtn } from "./gmail-btn.component";
 import Link from "next/link";
@@ -14,7 +14,7 @@ const socialMediaLinks = {
 export function Footer() {
   return (
     <footer className="w-full py-10 pt-16 border-gray-300/20" id="contact">
-      <h1 className="text-6xl sm:text-[6rem] md:text-[8rem] lg:text-[12rem] font-semibold font-fraunces">Contact</h1>
+      <h1 className="pb-2 text-6xl sm:text-[6rem] md:text-[8rem] lg:text-[12rem] font-semibold font-fraunces">Contact</h1>
       <section>
         <ul className="flex flex-col sm:grid grid-cols-3 gap-y-5 w-full font-medium">
           <li className="flex items-center gap-1">
@@ -30,7 +30,7 @@ export function Footer() {
           </li>
           <li className="flex gap-1 items-center">
             <Season />
-            <Suspense fallback={"loading temperature..."}>
+            <Suspense fallback={<LoaderCircle className="animate-spin duration-150 transition-all w-4 h-4" />}>
               <Temperature />
             </Suspense>
           </li>
@@ -70,7 +70,7 @@ function Season() {
   if (month > 11 || month < 2)
     return (
       <span className="flex gap-1 items-center">
-        Summer <Sun className="h-4 w-4 text-orange-400" />
+        Summer <Sun className="h-4 w-4 text-orange-500" />
       </span>
     );
 
