@@ -10,6 +10,7 @@ const nextConfig = {
     return config;
   },
   reactStrictMode: true,
+  transpilePackages: ['next-mdx-remote']
 };
 
 export default nextConfig;

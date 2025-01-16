@@ -1,6 +1,5 @@
 import projectList from "@/data/dictionary/projects.json";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export async function ProjectsSection() {
@@ -16,17 +15,11 @@ export async function ProjectsSection() {
       <Link href={`/project/${project.title.trim().replaceAll(" ", "-")}`}>
         <article className="h-full w-full flex flex-col group">
           <header className="flex justify-between items-center gap-4 p-4 text-neutral-600">
-            <h1 className="text-lg font-normal">{project.title}: project</h1>
+            <h2 className="text-lg font-normal">project / {project.label}</h2>
             <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
           </header>
-          <div className="w-full h-72 overflow-hidden">
-            <Image
-              width={1000}
-              height={700}
-              src={project.cover_img}
-              alt={project.title}
-              className={`w-full h-full object-cover shadow-2xl shadow-stone-600 group-hover:shadow-stone-900 ${project["grid-cols"] === 4 ? "translate-x-8 translate-y-10 group-hover:translate-y-6 object-left-top" : "scale-x-90 translate-y-9 group-hover:translate-y-5 object-top"} transition-all duration-300`}
-            />
+          <div className="w-full h-72 overflow-hidden flex items-center justify-center">
+            <h1 className="text-4xl font-fraunces font-medium">{project.title}</h1>
           </div>
         </article>
       </Link>

@@ -12,10 +12,13 @@ type TMetadata = {
 };
 
 export default async function Project({
-  params: { slug },
+  params
 }: {
   params: { slug: string };
 }) {
+
+  const {slug} = await params
+
   const projectsPath = path.join(cwd(), PROJECTS_PATH);
 
   const cleanSlug = slug.toLowerCase();

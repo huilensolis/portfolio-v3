@@ -6,10 +6,13 @@ import path from "path";
 import { cwd } from "process";
 
 export default async function Project({
-  params: { slug },
+  params,
 }: {
   params: { slug: string };
 }) {
+
+const {slug} = await params
+
   const projectsPath = path.join(cwd(), PROJECTS_PATH);
 
   const cleanSlug = slug.toLowerCase().trim().replaceAll("%20", "-");
