@@ -1,0 +1,105 @@
+---
+slug: "building-memoir"
+title: "Building Memoir: My journey creating an encrypted web-based text document editor"
+date: "2025-01-28T02:50:15.473Z"
+description: "Motivations, project timeline, challengues, and conclutions."
+---
+
+# Building Memoir: My journey creating an encrypted web-based text document editor
+
+## The Inspiration Behind Memoir
+For as long as I can remember, I’ve been fascinated by text editors. There’s something inherently beautiful about them—their simplicity and elegance. I had always wanted to build one of them.
+
+When preparing for my next project, I decided to tackle both backend and frontend development while experimenting with [Bun](https://bun.sh), a JavaScript runtime, and [Elysia](https://github.com/elysiajs/elysia/), a REST API framework for Bun. I wanted to create something new—not just another clone of a famous website—something I would personally use.
+
+That’s how I came up with the idea for **Memoir**, an encrypted, web-based document editor. The vision was clear:
+
+- **Privacy:** Not even administrators (or myself) should be able to access user data—not hackers, not anyone.
+- **Simplicity:** Focus solely on writing, without the distractions of images, tables, or complex formatting.
+
+## The Development Journey
+
+### Laying the Foundation
+Creating the editor was my first challenge. I experimented with various options such as `<textarea>`, `<input>`, and `contenteditable`, but none of them did a good job. That’s when I discovered [TipTap](https://tiptap.dev), a library built on ProseMirror.
+
+While TipTap is now a robust tool with extensive documentation, back then, it required persistence to debug issues and learn its intricacies. It ultimately became the backbone of Memoir’s editing capabilities.
+
+### Defining the Tech Stack
+With the editor foundation in place, I defined the tech stack:
+
+**Frontend:**
+- Next.js
+- TypeScript
+- Tailwind CSS
+- TipTap
+- Components from ShadCN
+- Axios
+
+**Backend:**
+- Bun
+- Elysia.js
+- PostgreSQL
+- DrizzleORM
+- Bun Test
+- TypeBox
+- Docker
+
+**Code Organization:**
+- Monorepo layout with Turborepo for managing both frontend and backend.
+
+### Building the Basics
+I started with the essential features:
+- Dockerized the database
+- Databse basic tables to save user info
+- Login and signup pages.
+- Authentication system to restrict access to specific routes.
+- An authenticated user’s home page (the "app" page).
+- A dropdown menu displaying the current user and a logout button.
+
+### Overcoming Challenges
+One significant challenge arose while building the slash menu (a Notion-like menu triggered by typing `/`). At the time, TipTap’s package for this functionality was only available for Vue, not React. To address this, I built the feature from scratch. It was a rewarding process, and within a few days, I had it fully functional.
+
+### Making Changes Persistent
+Once the frontend was complete, I connected it to the backend to save documents in a PostgreSQL database. However, saving on every change generated multiple requests per second. To optimize this:
+
+- I implemented a **debounce**: Changes are saved only after the user stops typing for 1-2 seconds.
+- To prevent data loss, I added an **auto-save** feature: Changes are saved every 5 seconds, regardless of user activity.
+- A **confirmation dialog** prompts users to wait for the document to save before leaving the page.
+- A "saving/saved" status ui element that provides real-time feedback on the document’s state.
+
+## Feedback and Iteration
+After deploying Memoir’s API, database, and frontend, I shared the project on Discord to gather feedback. A user reported that the slash menu wasn’t working in Firefox. 
+
+After debugging, I discovered that a condition for displaying the menu always returned false in Firefox due to an undefined variable. Once fixed, I implemented Playwright tests to ensure cross-browser compatibility.
+
+### Lessons from Testing
+While Playwright worked, its maintenance and community support were less than ideal. Compatibility with Bun was another challenge. In hindsight, I might have chosen a different tool, but Playwright got the job done.
+
+I also added GitHub Actions to test and format new branches before merging them into production. Additionally, I introduced a list of recent entries in the sidebar and a modal menu for searching entries by title.
+
+### Encrypting the Data
+The project’s core value was privacy, which meant encryption was essential. I had no prior knowledge of cryptography, so this was a steep learning curve. 
+
+Using the browser’s native `crypto` API, I implemented AES encryption. This ensured that:
+- Encryption keys are generated, stored securely, and never shared with the server.
+- Documents are encrypted/decrypted on the client side.
+
+Adapting the database schema to support encryption introduced challenges, especially ensuring backward compatibility with existing data. However, the effort was worth it to uphold the project’s commitment to privacy.
+
+## Challenges and Solutions
+Some bugs, like the slash menu issue in Firefox, required long debugging sessions. Others were quicker to resolve. The key lesson: patience, adaptability, and a willingness to learn are vital.
+
+**Key takeaways:**
+- Always write tests, especially unit and end-to-end tests.
+- Evaluate libraries for documentation quality, community support, and API stability before integrating them.
+
+## Learning and Growth
+This project was a massive learning experience. Key areas of growth included:
+- Project management and task organization.
+- CI/CD pipelines using GitHub Actions.
+- Playwright end-to-end testing.
+- AES encryption and secure data storage on the browser.
+- Working with cookies, Turborepo, and more.
+
+## final conclution 
+I’ve realized that you can achieve anything with clear goals and a determination to learn. You can build whatever you want; you just need to find what you want to build, and then learn how to do it. This project is an example of it.
