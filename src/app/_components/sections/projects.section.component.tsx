@@ -1,12 +1,12 @@
 import projectList from "@/data/dictionary/projects.json";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 
 export async function ProjectsSection() {
     return projectList.map((project, i) => (
-        <>
+        <React.Fragment key={i}>
             <li
-                key={i}
                 className="lg:block hidden bg-gray-200/30 border border-gray-200 rounded-md"
                 style={{
                     gridColumn: `span ${project["grid-cols"]}`,
@@ -45,6 +45,6 @@ export async function ProjectsSection() {
                     </article>
                 </Link>
             </li>
-        </>
+        </React.Fragment>
     ));
 }
