@@ -7,7 +7,7 @@ type TProps = {
     textFontSize?: number
 }
 
-export function Spqr({
+export function SpqrFlag({
 	className,
     width = 45,
     height = 28,
