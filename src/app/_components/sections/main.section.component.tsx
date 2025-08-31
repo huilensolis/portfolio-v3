@@ -1,8 +1,7 @@
 import Image from "next/image";
-import cuddlyFerris from "../../../../public/cuddlyferris.svg";
-import typescript from "../../../../public/typescript.svg";
 import { SpqrFlag } from "@/components/icons/spqr-flag";
 import { AtticGreekFlag } from "@/components/icons/attic-greek-flag";
+import { Typescript } from "@/components/icons/typescript";
 
 export function MainSection() {
 	return (
@@ -23,18 +22,13 @@ export function MainSection() {
 				<p className="tracking-tight text-3xl">
                     Stack: 
 					<span className="text-stone-700"> Typescript</span>
-					<Image
-						src={typescript}
-						width={29}
-						alt="typescript logo"
-						className="inline mx-1"
-					/>
+                    <Typescript width={29} className="inline" />
                     , Next js,
 					Tailwind CSS, Node js, DrizzleORM,{" "}
 					<span className="text-stone-700"> PostgreSQL </span>{" "}
 					<span className="text-stone-700">Rust </span>
 					<Image
-						src={cuddlyFerris}
+						src="/cuddlyferris.svg"
 						width={40}
 						height={36}
 						alt="curstacean emoji"
