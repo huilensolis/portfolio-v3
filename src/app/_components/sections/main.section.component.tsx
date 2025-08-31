@@ -2,6 +2,7 @@ import Image from "next/image";
 import cuddlyFerris from "../../../../public/cuddlyferris.svg";
 import typescript from "../../../../public/typescript.svg";
 import { Spqr } from "@/components/icons/spqr";
+import { AtticGreekFlag } from "@/components/icons/attic-greek-flag";
 
 export function MainSection() {
 	return (
@@ -15,7 +16,7 @@ export function MainSection() {
 					A <span className="text-stone-700">Polymath</span>, interested in
                     Full Stack Development, 
                     Latin <Spqr className="inline" />,
-                    Attic Greek,
+                    Attic Greek <AtticGreekFlag className="inline" />,
                     Philosophy,
                     Medieval & Classical History and Book-binding. 
 				</h2>

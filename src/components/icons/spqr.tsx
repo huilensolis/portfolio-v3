@@ -1,15 +1,20 @@
 import { cn } from "@/utils/cn";
 import { SVGAttributes } from "react";
 
+type TProps = {
+    width?: number
+    height?: number
+    textFontSize?: number
+}
+
 export function Spqr({
 	className,
+    width = 45,
+    height = 28,
+    textFontSize=13,
 	...props
-}: SVGAttributes<HTMLOrSVGElement>) {
-    const width = 45
-    const height = 28
+}: SVGAttributes<HTMLOrSVGElement> & TProps) {
     const borderRadious = width / 14
-
-    const textFontSize = 13
 	return (
 		<svg
 			{...props}
@@ -17,7 +22,6 @@ export function Spqr({
             width={width}
             height={height}
 			role="img"
-			/* viewBox="0 0 24 24" */
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<title>Spqr</title>
