@@ -17,6 +17,7 @@
 		"@vercel/analytics": "^1.5.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
+		"csv-parser": "^3.2.0",
 		"geist": "^1.4.2",
 		"gray-matter": "^4.0.3",
 		"lucide-react": "^0.376.0",
