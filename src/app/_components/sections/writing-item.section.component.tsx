@@ -8,14 +8,14 @@ export async function WritingsItemsSection() {
     return writingItems.map((writing, i) => (
         <li key={i} className={["col-span-6", "group"].join(" ")}>
             <Link href={`/writings/item/${writing.slug}`} className="block h-full">
-                <article className="flex flex-col gap-24 justify-between h-full bg-gray-200/30 rounded-md border border-gray-200/40 p-4 hover:bg-gray-200/60 duration-150 transition-all">
+                <article className="flex flex-col gap-8 justify-between h-full bg-gray-200/30 rounded-md border border-gray-200/40 p-4 hover:bg-gray-200/60 duration-150 transition-all">
                     <header className="w-full flex justify-between">
                         <span className="font-medium">writing</span>
                         <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
                     </header>
                     <footer className="flex flex-col gap-4 font-fraunces">
                         <header className="flex flex-col">
-                            <h1 className="text-3xl font-medium">{writing.title}</h1>
+                            <h1 className="text-3xl font-normal">{writing.title}</h1>
                             <span>
                                 {new Date(writing.date).toLocaleString("en-US", {
                                     day: "2-digit",
@@ -24,8 +24,10 @@ export async function WritingsItemsSection() {
                                 })}
                             </span>
                         </header>
-                        <p className="text-pretty font-medium line-clamp-4">
-                            {writing.description}
+                        <p className="text-pretty font-normal line-clamp-4">
+                            {writing.description.length > 120 ?
+                                writing.description.slice(0, 120) + '...'
+                                : writing.description }
                         </p>
                     </footer>
                 </article>
