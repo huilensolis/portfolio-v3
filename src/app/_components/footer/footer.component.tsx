@@ -22,7 +22,7 @@ const socialMediaLinks = {
 
 export function Footer() {
     return (
-        <footer className="w-full py-10 pt-16 border-gray-300/20" id="contact">
+        <footer className="w-full py-10 pt-48 border-gray-300/20" id="contact">
             <h1 className="pb-2 text-6xl sm:text-[6rem] md:text-[8rem] lg:text-[12rem] font-semibold font-fraunces">
                 Contact
             </h1>
@@ -94,22 +94,23 @@ export function Footer() {
 
 function Season() {
     const month = new Date().getMonth();
+    const day = new Date().getDate()
 
-    if (month > 11 || month < 2)
+    if ((month === 12 && day >= 21) || (month === 1) || (month === 2) || (month === 3 && day <= 20)) 
         return (
             <span className="flex gap-1 items-center">
                 Summer <Sun className="h-4 w-4 text-orange-500" />
             </span>
         );
 
-    if (month > 2 && month < 6)
+    if ((day >= 21 && (month >= 3 || month <= 5)) || (month >= 4 && month <= 6))
         return (
             <span className="flex gap-1 items-center">
                 Autumn <Leaf className="h-4 w-4 text-amber-600" />
             </span>
         );
 
-    if (month > 5 && month < 9)
+    if ((month === 6 && day >= 21) || (month === 7) || (month === 8) || (month === 9 && day <= 20))
         return (
             <span className="flex items-center">
                 Winter
