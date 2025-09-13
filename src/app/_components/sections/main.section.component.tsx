@@ -6,13 +6,13 @@ import { Typescript } from "@/components/icons/typescript";
 export function MainSection() {
 	return (
 		<main className="col-span-8">
-			<section className="flex flex-col gap-4 font-fraunces text-stone-500">
-				<h1 className="font-medium text-5xl tracking-tight text-balance">
+			<section className="flex flex-col gap-4 font-fraunces">
+				<h1 className="font-normal text-5xl tracking-tight text-balance">
 					I&apos;m{" "}
-					<span className="text-stone-700 font-semibold">Solís Huilén</span>.
+					<span className="text-violet-500">Solís Huilén</span>.
 				</h1>
 				<h2 className="text-3xl w-full tracking-tight text-pretty">
-					A <span className="text-stone-700">Polymath</span>, interested in
+					A <strong>Polymath</strong>, interested in
                     Full Stack Development, 
                     Latin <SpqrFlag className="inline" />,
                     Attic Greek <AtticGreekFlag className="inline" />,
@@ -21,12 +21,12 @@ export function MainSection() {
 				</h2>
 				<p className="tracking-tight text-3xl">
                     Stack: 
-					<span className="text-stone-700"> Typescript</span>
+					<strong> Typescript</strong>
                     <Typescript width={29} className="inline" />
                     , Next js,
 					Tailwind CSS, Node js, DrizzleORM,{" "}
-					<span className="text-stone-700"> PostgreSQL </span>{" "}
-					<span className="text-stone-700">Rust </span>
+					<strong> PostgreSQL </strong>{" "}
+					<strong>Rust </strong>
 					<Image
 						src="/cuddlyferris.svg"
 						width={40}

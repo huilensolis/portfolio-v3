@@ -10,7 +10,7 @@ export default async function BlogPage() {
     return (
         <div className="flex flex-col">
             <main className="w-full mb-32">
-                <h1 className="text-6xl sm:text-6xl text-stone-700 font-medium w-full text-balance font-fraunces">
+                <h1 className="text-6xl sm:text-6xl font-normal w-full text-balance font-fraunces">
                     Writings
                 </h1>
             </main>

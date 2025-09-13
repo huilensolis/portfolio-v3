@@ -62,7 +62,7 @@ export default function RootLayout({
         <html
             lang="en"
             className={cn(
-                "bg-stone-100 text-neutral-700 tracking-tight",
+                "bg-stone-100 text-stone-600 prose-headings:text-stone-700 prose-strong:text-stone-700 prose-strong:font-normal tracking-tight",
                 GeistSans.className,
                 GeistSans.variable,
                 FrauncesDefault.variable,

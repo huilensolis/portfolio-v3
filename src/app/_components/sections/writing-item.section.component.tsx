@@ -24,7 +24,7 @@ export async function WritingsItemsSection() {
                                 })}
                             </span>
                         </header>
-                        <p className="text-pretty font-normal line-clamp-4">
+                        <p className="text-pretty font-normal text-lg italic line-clamp-4">
                             {writing.description.length > 120 ?
                                 writing.description.slice(0, 120) + '...'
                                 : writing.description }
