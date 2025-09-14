@@ -49,7 +49,7 @@ const LINKS: TLink[] = [
 
 function NavLinks() {
 	return (
-		<ul className="flex gap-4">
+		<ul className="flex flex-wrap gap-4">
 			{LINKS.map((linkItem, i) => (
 				<li key={i}>
 					<LinkItem href={linkItem.href} title={linkItem.title}>

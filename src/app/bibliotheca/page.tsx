@@ -8,7 +8,7 @@ export default async function BlibliothecaPage(){
     return (
         <div className="flex flex-col">
             <main className="w-full mb-32">
-                <h1 className="text-6xl sm:text-6xl text-stone-700 font-medium w-full text-balance font-fraunces">
+                <h1 className="text-6xl sm:text-6xl font-medium w-full text-balance font-fraunces">
                    Bibliotheca 
                 </h1>
             </main>
@@ -22,7 +22,7 @@ export default async function BlibliothecaPage(){
                             <main className="flex gap-4 h-full">
                                 <section>
                                     {book['ISBN13'] && (
-                                        <BookCover ISBN13={`${book['ISBN13'].replace("=", "").replaceAll('"', "")}`}/>
+                                        <BookCover ISBN13={`${book['ISBN13'].replace("=", "").replaceAll('"', "")}`} fallbackTitle={book.Title ?? 'unkown'}/>
                                     )}
                                 </section>
                                 <hr className="bg-neutral-300 h-full w-1 round-sm" />
@@ -35,7 +35,7 @@ export default async function BlibliothecaPage(){
                                     <p className="text-pretty font-medium line-clamp-4">
                                         {book['Author']}
                                     </p>
-                                    <span className="text-neutral-500">{book["Exclusive Shelf"]}</span>
+                                    <span className="italic">{book["Exclusive Shelf"]}</span>
                                 </section>
                             </main>
                             </article>
@@ -46,12 +46,16 @@ export default async function BlibliothecaPage(){
     )
 }
 
-async function BookCover({ISBN13}: {ISBN13: string}){
+async function BookCover({ISBN13, fallbackTitle}: {ISBN13: string; fallbackTitle: string}){
     const coverUrl = await fetch(`https://bookcover.longitood.com/bookcover/${ISBN13}`)
         .then(async (res) => await res.json())
 
     if(!coverUrl['url']){
-        return
+        return(
+            <div className="h-48 w-32 rounded-md shadow-stone-400/60 shadow-md bg-red-600 flex items-center justify-center p-4">
+                <span className="text-yellow-300 text-center text-sm">{fallbackTitle.length > 50 ? fallbackTitle.slice(0, 50) + '...' : fallbackTitle}</span>
+            </div>
+        )
     }
 
     return <img src={coverUrl['url']} className="min-w-32 max-w-32 w-32 rounded-md shadow-stone-400/60 shadow-md"  />
