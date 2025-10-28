@@ -53,7 +53,7 @@ async function BookCover({ISBN13, fallbackTitle}: {ISBN13: string; fallbackTitle
     if(!coverUrl['url']){
         return(
             <div className="h-48 w-32 rounded-md shadow-stone-400/60 shadow-md bg-red-600 flex items-center justify-center p-4">
-                <span className="text-yellow-300 text-center text-sm">{fallbackTitle.length > 50 ? fallbackTitle.slice(0, 50) + '...' : fallbackTitle}</span>
+                <span className="text-yellow-300 text-center text-sm font-medium">{fallbackTitle.length > 50 ? fallbackTitle.slice(0, 50) + '...' : fallbackTitle}</span>
             </div>
         )
     }

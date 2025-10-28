@@ -27,23 +27,23 @@ type TLink = {
 const LINKS: TLink[] = [
 	{
 		href: "/",
-		title: "main",
-		children: <>Solis</>,
+		title: "home",
+		children: <>Atrium</>,
 	},
 	{
-		href: "/writings",
-		title: "writings",
-		children: <>Writings</>,
+		href: "/commentaria",
+		title: "commentaries",
+		children: <>Commentaria</>,
 	},
 	{
 		href: "/bibliotheca",
-		title: "bibliotheca",
+		title: "library",
 		children: <>Bibliotheca</>,
 	},
 	{
 		href: "#contact",
 		title: "contact",
-		children: <>Contact</>,
+		children: <>Contactus</>,
 	},
 ];
 

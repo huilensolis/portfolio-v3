@@ -11,16 +11,16 @@ export default async function BlogPage() {
         <div className="flex flex-col">
             <main className="w-full mb-32">
                 <h1 className="text-6xl sm:text-6xl font-normal w-full text-balance font-fraunces">
-                    Writings
+                    Commentaria
                 </h1>
             </main>
             <ul className="w-full flex flex-col lg:grid grid-cols-2 gap-4">
                 {writingsMetadata.map((writing, i) => (
                     <li key={i} className="group">
-                        <Link href={`/writings/item/${writing.slug}`}>
+                        <Link href={`/commentaria/item/${writing.slug}`}>
                             <article className="flex flex-col gap-24 bg-gray-100 rounded-md border border-gray-200/40 p-4 hover:bg-gray-200/60 duration-150 transition-all font-fraunces">
                                 <header className="w-full flex justify-between">
-                                    <span className="font-medium">writing</span>
+                                    <span className="font-medium">Commentarium</span>
                                     <ArrowUpRight className="w-4 h-4 group-hover:scale-125 transition-all duration-150" />
                                 </header>
                                 <footer className="flex flex-col gap-4">

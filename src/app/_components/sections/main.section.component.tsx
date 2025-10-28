@@ -12,7 +12,7 @@ export function MainSection() {
 					<span className="text-violet-500">Solís Huilén</span>.
 				</h1>
 				<h2 className="text-3xl w-full tracking-tight text-pretty">
-					A <strong>Polymath</strong>, interested in
+					A <strong>Polymath</strong>, learning
                     Full Stack Development, 
                     Latin <SpqrFlag className="inline" />,
                     Attic Greek <AtticGreekFlag className="inline" />,
