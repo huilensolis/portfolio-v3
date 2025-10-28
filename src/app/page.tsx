@@ -1,7 +1,7 @@
 import { Metadata, ResolvingMetadata } from "next";
 import { MainSection } from "./_components/sections/main.section.component";
 import { ProjectsSection } from "./_components/sections/projects.section.component";
-import { WritingsItemsSection } from "./_components/sections/commentaria.section.component.tsx";
+import { WritingsItemsSection } from "./_components/sections/commentaria.section.component";
 
 export async function generateMetadata(
     _params: any,parent: ResolvingMetadata,
