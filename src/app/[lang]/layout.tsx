@@ -8,6 +8,8 @@ import { Footer } from "../_components/footer/footer.component";
 import { BASE_URL } from "@/app/sitemap";
 import "../global.css";
 import { cn } from "@/utils/cn";
+import { getDictionary, hasLocale, Locale } from "./dictionaries";
+import NotFound from "./not-found";
 
 const FrauncesDefault = localFont({
     src: "../../../public/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf",
@@ -51,13 +53,22 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
     modal,
+    params
 }: {
     children: React.ReactNode;
     modal: React.ReactNode;
+    params: Promise<{lang: Locale}>
 }) {
+
+    const {lang} = await params
+
+    if(!hasLocale) return NotFound()
+
+    const dict = await getDictionary(lang)
+
     return (
         <html
             lang="en"
@@ -75,7 +86,7 @@ export default function RootLayout({
                         <div className="flex flex-col w-full pt-48">
                             <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 bg-stone-100 px-5 p-1 border-b border-stone-300">
                                 <div className="sm:max-w-screen-lg w-full min-w-0 flex justify-start">
-                                    <NavBar />
+                                    <NavBar linksContent={dict["nav-bar"]} lang={lang}/>
                                 </div>
                             </header>
                             {children}

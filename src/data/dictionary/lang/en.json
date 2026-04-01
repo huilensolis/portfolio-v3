@@ -19,5 +19,11 @@
 		"grid-cols": 6,
 		    "grid-rows": 1
 	    }
-    ]
+    ],
+    "nav-bar": {
+       "home": "home",
+        "commentary": "commentary",
+        "library": "library",
+        "contact": "contact"
+    }
 }

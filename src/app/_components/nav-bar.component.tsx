@@ -3,16 +3,20 @@
 import Link from "next/link";
 import {
 	HTMLAttributeAnchorTarget,
-	ReactNode,
 	useEffect,
 	useState,
 } from "react";
 import { usePathname } from "next/navigation";
+import { Locale } from "../[lang]/dictionaries";
 
-export function NavBar() {
+type LinksContent = {
+home: string, commentary: string, library: string, contact: string
+}
+
+export function NavBar({linksContent, lang}: {linksContent: LinksContent, lang: Locale}) {
 	return (
 		<nav>
-			<NavLinks />
+			<NavLinks linksContent={linksContent} lang={lang}/>
 		</nav>
 	);
 }
@@ -21,39 +25,36 @@ type TLink = {
 	href: string;
 	target?: HTMLAttributeAnchorTarget;
 	title: string;
-	children: ReactNode;
 };
 
+
+function NavLinks({linksContent, lang}: {linksContent: LinksContent, lang: Locale}) {
+const {home, commentary, library, contact} = linksContent
 const LINKS: TLink[] = [
 	{
-		href: "/",
-		title: "home",
-		children: <>Atrium</>,
+		href: `/${lang}`,
+		title: home ,
 	},
 	{
-		href: "/commentaria",
-		title: "commentaries",
-		children: <>Commentaria</>,
+		href: `/${lang}/commentaria`,
+		title: commentary,
 	},
 	{
-		href: "/bibliotheca",
-		title: "library",
-		children: <>Bibliotheca</>,
+		href: `/${lang}/bibliotheca`,
+		title: library,
 	},
 	{
-		href: "#contact",
-		title: "contact",
-		children: <>Contactus</>,
+		href: `/${lang}/#contact`,
+		title: contact,
 	},
 ];
 
-function NavLinks() {
 	return (
 		<ul className="flex flex-wrap gap-4">
 			{LINKS.map((linkItem, i) => (
 				<li key={i}>
 					<LinkItem href={linkItem.href} title={linkItem.title}>
-						{linkItem.children}
+						{linkItem.title}
 					</LinkItem>
 				</li>
 			))}
@@ -61,7 +62,7 @@ function NavLinks() {
 	);
 }
 
-function LinkItem({ children, href, title, target = "_self" }: TLink) {
+function LinkItem({ href, title, target = "_self" }: TLink&{children: string}) {
 	const [isActive, setIsActive] = useState(false);
 	const pathName = usePathname();
 
@@ -91,9 +92,10 @@ function LinkItem({ children, href, title, target = "_self" }: TLink) {
 			className={[
 				isActive ? "bg-neutral-200/60" : "",
 				"flex items-center justify-center rounded-sm px-5 xl:px-2 py-0.5",
+                "font-fraunces uppercase"
 			].join(" ")}
 		>
-			{children}
+            <>{title}</>
 		</Link>
 	);
 }

@@ -36,6 +36,8 @@ export async function getLibrary(): Promise<{bookList: TBook[]}>{
 
 	const libraryFilePath = libraryPath + "/" + "goodreads_library_export.csv";
 
+    console.log({libraryPath})
+
     const bookList: TBook[] = []
     return new Promise((resolve, reject) => {
 

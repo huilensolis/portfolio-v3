@@ -48,9 +48,9 @@ export default async function BlibliothecaPage(){
 
 async function BookCover({ISBN13, fallbackTitle}: {ISBN13: string; fallbackTitle: string}){
     const coverUrl = await fetch(`https://bookcover.longitood.com/bookcover/${ISBN13}`)
-        .then(async (res) => await res.json())
+        .then(async (res) => await res.json()).catch((err) => {err})
 
-    if(!coverUrl['url']){
+    if(!coverUrl || !coverUrl['url']){
         return(
             <div className="h-48 w-32 rounded-md shadow-stone-400/60 shadow-md bg-red-600 flex items-center justify-center p-4">
                 <span className="text-yellow-300 text-center text-sm font-medium">{fallbackTitle.length > 50 ? fallbackTitle.slice(0, 50) + '...' : fallbackTitle}</span>
