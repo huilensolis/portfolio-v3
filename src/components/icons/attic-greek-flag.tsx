@@ -29,7 +29,7 @@ export function AtticGreekFlag({
 			<title>Attic Greek Flag</title>
             <rect className="w-full h-full fill-blue-400 rounded-md" rx={borderRadious}></rect>
             {/* <text className="fill-stone-100 font-semibold" x={width/2} fontSize={textFontSize} y={(height / 2) + (textFontSize * 0.35)} textAnchor="middle">Φ</text> */}
-            <image href="/greek-icon.png" width={iconSize} x={(width - iconSize) / 2} y={(height - iconSize) / 2} className="invert"></image>
+            <image href="/assets/greek-icon.png" width={iconSize} x={(width - iconSize) / 2} y={(height - iconSize) / 2} className="invert"></image>
 		</svg>
 	);
 }

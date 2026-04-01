@@ -3,20 +3,22 @@ import localFont from "next/font/local";
 import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 
-import { NavBar } from "./_components/nav-bar.component";
-import { Footer } from "./_components/footer/footer.component";
+import { NavBar } from "../_components/nav-bar.component";
+import { Footer } from "../_components/footer/footer.component";
 import { BASE_URL } from "@/app/sitemap";
-import "./global.css";
+import "../global.css";
 import { cn } from "@/utils/cn";
+import { getDictionary, hasLocale, Locale } from "./dictionaries";
+import NotFound from "./not-found";
 
 const FrauncesDefault = localFont({
-    src: "../../public/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf",
+    src: "../../../public/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf",
     style: "normal",
     variable: "--font-fraunces-default",
 });
 
 const FrauncesItalic = localFont({
-    src: "../../public/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf",
+    src: "../../../public/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf",
     style: "italic",
     variable: "--font-fraunces-italic",
 });
@@ -51,13 +53,22 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
     modal,
+    params
 }: {
     children: React.ReactNode;
     modal: React.ReactNode;
+    params: Promise<{lang: string}>
 }) {
+
+    const {lang} = await params
+
+    if(!hasLocale) return NotFound()
+
+    const dict = await getDictionary(lang as Locale)
+
     return (
         <html
             lang="en"
@@ -75,7 +86,7 @@ export default function RootLayout({
                         <div className="flex flex-col w-full pt-48">
                             <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 bg-stone-100 px-5 p-1 border-b border-stone-300">
                                 <div className="sm:max-w-screen-lg w-full min-w-0 flex justify-start">
-                                    <NavBar />
+                                    <NavBar linksContent={dict["nav-bar"]} lang={lang as Locale}/>
                                 </div>
                             </header>
                             {children}

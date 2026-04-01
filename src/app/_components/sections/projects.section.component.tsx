@@ -1,10 +1,10 @@
-import projectList from "@/data/dictionary/projects.json";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-export async function ProjectsSection() {
-    return projectList.map((project, i) => (
+export async function ProjectsSection({dictionary}: {dictionary: {"grid-cols": number, "grid-rows": number, title: string, label: string}[]}) {
+
+    return dictionary.map((project, i) => (
         <React.Fragment key={i}>
             <li
                 className="lg:block hidden bg-gray-200/30 border border-gray-200 rounded-md"

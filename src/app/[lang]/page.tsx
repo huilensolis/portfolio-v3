@@ -1,7 +1,9 @@
 import { Metadata, ResolvingMetadata } from "next";
-import { MainSection } from "./_components/sections/main.section.component";
-import { ProjectsSection } from "./_components/sections/projects.section.component";
-import { WritingsItemsSection } from "./_components/sections/writing-item.section.component";
+import { MainSection } from "../_components/sections/main.section.component";
+import { ProjectsSection } from "../_components/sections/projects.section.component";
+import { WritingsItemsSection } from "../_components/sections/commentaria.section.component";
+import { getDictionary, hasLocale, Locale } from '@/app/[lang]/dictionaries'
+import NotFound from "./not-found";
 
 export async function generateMetadata(
     _params: any,parent: ResolvingMetadata,
@@ -42,11 +44,18 @@ export async function generateMetadata(
 
 export const dynamic = "force-static";
 
-export default function EngineeringPage() {
+export default async function EngineeringPage({params}: {params: Promise<{lang: Locale}>}) {
+
+    const {lang} = await params 
+
+    if(!hasLocale) return NotFound()
+
+    const dict = await getDictionary(lang)
+
 	return (
 		<article className="flex flex-col lg:grid grid-cols-12 grid-rows-[repeat(auto-fit,_350px)] gap-4 list-none">
 			<MainSection />
-			<ProjectsSection />
+			<ProjectsSection dictionary={dict.projects} />
 			<WritingsItemsSection />
 		</article>
 	);

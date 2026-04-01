@@ -1,4 +1,6 @@
-[
+{
+    "projects": 
+        [
 	{
 		"title": "Mini Grep",
 		"label": "shell CLI",
@@ -15,6 +17,13 @@
 		"title": "Pictura",
 		"label": "Image sharing website",
 		"grid-cols": 6,
-		"grid-rows": 1
-	}
-]
+		    "grid-rows": 1
+	    }
+    ],
+    "nav-bar": {
+       "home": "home",
+        "commentary": "commentary",
+        "library": "library",
+        "contact": "contact"
+    }
+}
