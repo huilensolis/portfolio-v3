@@ -1,0 +1,23 @@
+{
+    "projects": 
+        [
+	{
+		"title": "Mini Grep",
+		"label": "shell CLI",
+		"grid-cols": 4,
+		"grid-rows": 1
+	},
+	{
+		"title": "Memoir",
+		"label": "Document editor",
+		"grid-cols": 6,
+		"grid-rows": 1
+	},
+	{
+		"title": "Pictura",
+		"label": "Image sharing website",
+		"grid-cols": 6,
+		    "grid-rows": 1
+	    }
+    ]
+}

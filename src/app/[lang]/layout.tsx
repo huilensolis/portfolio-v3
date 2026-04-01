@@ -3,20 +3,20 @@ import localFont from "next/font/local";
 import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 
-import { NavBar } from "./_components/nav-bar.component";
-import { Footer } from "./_components/footer/footer.component";
+import { NavBar } from "../_components/nav-bar.component";
+import { Footer } from "../_components/footer/footer.component";
 import { BASE_URL } from "@/app/sitemap";
-import "./global.css";
+import "../global.css";
 import { cn } from "@/utils/cn";
 
 const FrauncesDefault = localFont({
-    src: "../../public/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf",
+    src: "../../../public/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf",
     style: "normal",
     variable: "--font-fraunces-default",
 });
 
 const FrauncesItalic = localFont({
-    src: "../../public/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf",
+    src: "../../../public/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf",
     style: "italic",
     variable: "--font-fraunces-italic",
 });

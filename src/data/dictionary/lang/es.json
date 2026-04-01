@@ -1,4 +1,7 @@
-[
+
+{
+    "projects": 
+        [
 	{
 		"title": "Mini Grep",
 		"label": "shell CLI",
@@ -7,14 +10,15 @@
 	},
 	{
 		"title": "Memoir",
-		"label": "Document editor",
+		"label": "Editor de Documentos",
 		"grid-cols": 6,
 		"grid-rows": 1
 	},
 	{
 		"title": "Pictura",
-		"label": "Image sharing website",
+		"label": "Sitio para compartir imagenes",
 		"grid-cols": 6,
-		"grid-rows": 1
-	}
-]
+		    "grid-rows": 1
+	    }
+    ]
+}
