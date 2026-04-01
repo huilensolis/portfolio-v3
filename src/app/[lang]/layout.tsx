@@ -60,14 +60,14 @@ export default async function RootLayout({
 }: {
     children: React.ReactNode;
     modal: React.ReactNode;
-    params: Promise<{lang: Locale}>
+    params: Promise<{lang: string}>
 }) {
 
     const {lang} = await params
 
     if(!hasLocale) return NotFound()
 
-    const dict = await getDictionary(lang)
+    const dict = await getDictionary(lang as Locale)
 
     return (
         <html
@@ -86,7 +86,7 @@ export default async function RootLayout({
                         <div className="flex flex-col w-full pt-48">
                             <header className="flex justify-center fixed z-50 top-0 left-0 w-full py-3 bg-stone-100 px-5 p-1 border-b border-stone-300">
                                 <div className="sm:max-w-screen-lg w-full min-w-0 flex justify-start">
-                                    <NavBar linksContent={dict["nav-bar"]} lang={lang}/>
+                                    <NavBar linksContent={dict["nav-bar"]} lang={lang as Locale}/>
                                 </div>
                             </header>
                             {children}

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, {
+import {
 	HTMLAttributeAnchorTarget,
 	useEffect,
 	useState,
@@ -9,8 +9,6 @@ import React, {
 import { usePathname } from "next/navigation";
 import { Locale } from "../[lang]/dictionaries";
 import { ClassNameValue } from "tailwind-merge";
-import { SpqrFlag } from "@/components/icons/spqr-flag";
-import { BurgundyCrossFlag, SpainFlag } from "@/components/icons/spanish";
 
 type LinksContent = {
 home: string, commentary: string, library: string, contact: string
@@ -56,9 +54,7 @@ const LINKS: TLink[] = [
 		<ul className="flex flex-wrap content-center justify-between gap-4">
 			{LINKS.map((linkItem, i) => (
 				<li key={i} className="flex justify-center content-center">
-					<LinkItem href={linkItem.href} title={linkItem.title}>
-						{linkItem.title}
-					</LinkItem>
+					<LinkItem href={linkItem.href} title={linkItem.title} />
 				</li>
 			))}
             <LangSwitcher lang={lang} />
@@ -66,7 +62,7 @@ const LINKS: TLink[] = [
 	);
 }
 
-function LinkItem({ className= "", href, title, target = "_self" }: TLink&{children: string, className?: ClassNameValue }) {
+function LinkItem({ className= "", href, title, target = "_self" }: TLink&{ className?: ClassNameValue }) {
 	const [isActive, setIsActive] = useState(false);
 	const pathName = usePathname();
 	useEffect(() => {
@@ -132,19 +128,10 @@ function LangSwitcher({lang}: {lang: Locale}){
          <ul className="flex gap-4">
             {rawLinkList.map(({href, title}) =>
                         <li key={href}>
-                            <LinkItem title={title} href={href} className={`${lang === href.split("/")[1] ? "bg-stone-100 shadow-xs shadow-stone-400" : ""}`}>
-                            </LinkItem>
+                            <LinkItem title={title} href={href} className={`${lang === href.split("/")[1] ? "bg-stone-100 shadow-xs shadow-stone-400" : ""}`} />
                         </li>
                     )
             } 
         </ul>
     </div>
-}
-
-function SpanishFlag(){
-return <div></div>
-}
-
-function EnglishFlag(){
-return <div></div>
 }
