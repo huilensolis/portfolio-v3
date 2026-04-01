@@ -12,12 +12,10 @@ export function MainSection() {
 					<span className="text-violet-500">Solís Huilén</span>.
 				</h1>
 				<h2 className="text-3xl w-full tracking-tight text-pretty">
-					A <strong>Polymath</strong>, studying 
-                    Full Stack Development, 
+					<strong>Studying</strong> Full Stack Development, 
                     Latin <SpqrFlag className="inline" />,
                     Attic Greek <AtticGreekFlag className="inline" />,
-                    Philosophy,
-                    Medieval & Classical History and Book-binding. 
+                    and Ancient and Medieval Philosophy.
 				</h2>
 				<p className="tracking-tight text-3xl">
                     Stack: 
@@ -28,10 +26,10 @@ export function MainSection() {
 					<strong> PostgreSQL </strong>{" "}
 					<strong>Rust </strong>
 					<Image
-						src="/cuddlyferris.svg"
+						src="/assets/cuddlyferris.svg"
 						width={40}
 						height={36}
-						alt="curstacean emoji"
+						alt="(curstacean emoji)"
 						className="inline mx-1"
 					/>
 					.

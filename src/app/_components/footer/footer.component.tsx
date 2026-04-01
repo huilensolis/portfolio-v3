@@ -13,10 +13,7 @@ import Link from "next/link";
 import { ArgentinasTime } from "./argentinas-time";
 
 const socialMediaLinks = {
-    linkedin: "https://www.linkedin.com/in/huilensolis/",
-    twitter: "https://www.x.com/solishuilen",
-    gmail: "huilendev@gmail.com",
-    upwork: "https://www.upwork.com/freelancers/~01dfd70e2536e235ea",
+    gmail: "solishuilencontact@gmail.com",
     github: "https://www.github.com/huilensolis",
 };
 
@@ -45,36 +42,6 @@ export function Footer() {
                     </li>
                     <li>
                         <GmailBtn gmail={socialMediaLinks.gmail} />
-                    </li>
-                    <li>
-                        <Link
-                            href={socialMediaLinks.upwork}
-                            target="_blank"
-                            className="flex items-center group"
-                        >
-                            UpWork{" "}
-                            <ArrowUpRight className="w-4 h-4 duration-150 transition-all group-hover:scale-125" />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href={socialMediaLinks.twitter}
-                            target="_blank"
-                            className="flex items-center group"
-                        >
-                            Twitter
-                            <ArrowUpRight className="w-4 h-4 duration-150 transition-all group-hover:scale-125" />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href={socialMediaLinks.linkedin}
-                            target="_blank"
-                            className="flex items-center group"
-                        >
-                            Linkedin
-                            <ArrowUpRight className="w-4 h-4 duration-150 transition-all group-hover:scale-125" />
-                        </Link>
                     </li>
                     <li>
                         <Link
