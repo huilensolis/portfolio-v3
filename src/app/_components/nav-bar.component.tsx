@@ -1,13 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import {
+import React, {
 	HTMLAttributeAnchorTarget,
 	useEffect,
 	useState,
 } from "react";
 import { usePathname } from "next/navigation";
 import { Locale } from "../[lang]/dictionaries";
+import { ClassNameValue } from "tailwind-merge";
+import { SpqrFlag } from "@/components/icons/spqr-flag";
+import { BurgundyCrossFlag, SpainFlag } from "@/components/icons/spanish";
 
 type LinksContent = {
 home: string, commentary: string, library: string, contact: string
@@ -50,25 +53,26 @@ const LINKS: TLink[] = [
 ];
 
 	return (
-		<ul className="flex flex-wrap gap-4">
+		<ul className="flex flex-wrap content-center justify-between gap-4">
 			{LINKS.map((linkItem, i) => (
-				<li key={i}>
+				<li key={i} className="flex justify-center content-center">
 					<LinkItem href={linkItem.href} title={linkItem.title}>
 						{linkItem.title}
 					</LinkItem>
 				</li>
 			))}
+            <LangSwitcher lang={lang} />
 		</ul>
 	);
 }
 
-function LinkItem({ href, title, target = "_self" }: TLink&{children: string}) {
+function LinkItem({ className= "", href, title, target = "_self" }: TLink&{children: string, className?: ClassNameValue }) {
 	const [isActive, setIsActive] = useState(false);
 	const pathName = usePathname();
-
 	useEffect(() => {
 		if (href === "/") {
 			if (pathName === href) {
+                console.log("se to true because pathname=" + pathName+" y href="+href)
 				setIsActive(true);
 				return;
 			}
@@ -76,7 +80,8 @@ function LinkItem({ href, title, target = "_self" }: TLink&{children: string}) {
 			return;
 		}
 
-		if (pathName.startsWith(href)) {
+		if (pathName.startsWith(href) && (href !== "/la-VA" && href !== "/en-UK" && href !== "/es-ES")) {
+            console.log({href})
 			setIsActive(true);
 			return;
 		}
@@ -92,10 +97,54 @@ function LinkItem({ href, title, target = "_self" }: TLink&{children: string}) {
 			className={[
 				isActive ? "bg-neutral-200/60" : "",
 				"flex items-center justify-center rounded-sm px-5 xl:px-2 py-0.5",
-                "font-fraunces uppercase"
+                "font-fraunces uppercase",
+                className
 			].join(" ")}
 		>
             <>{title}</>
 		</Link>
 	);
+}
+
+function LangSwitcher({lang}: {lang: Locale}){
+    const pathName = usePathname()
+    const pathNameWithoutLocale = pathName.replace("en-UK", "").replace("es-ES", "").replace("la-VA", "").split("") 
+    // removing starting "/"
+    pathNameWithoutLocale.shift()
+
+    const cleanPathName = pathNameWithoutLocale.join("") 
+
+        const rawLinkList:  (TLink)[] = [
+        {
+            title: "EN",
+            href: `/en-UK${cleanPathName}`,
+        },
+        {
+            title: "ES",
+            href: `/es-ES${cleanPathName}`,
+        },
+        {
+            title: "LA",
+            href: `/la-VA${cleanPathName}`,
+        }
+    ]
+    return <div className="flex bg-stone-200 p-1">
+         <ul className="flex gap-4">
+            {rawLinkList.map(({href, title}) =>
+                        <li key={href}>
+                            <LinkItem title={title} href={href} className={`${lang === href.split("/")[1] ? "bg-stone-100 shadow-xs shadow-stone-400" : ""}`}>
+                            </LinkItem>
+                        </li>
+                    )
+            } 
+        </ul>
+    </div>
+}
+
+function SpanishFlag(){
+return <div></div>
+}
+
+function EnglishFlag(){
+return <div></div>
 }
