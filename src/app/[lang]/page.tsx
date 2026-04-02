@@ -4,6 +4,7 @@ import { ProjectsSection } from "../_components/sections/projects.section.compon
 import { WritingsItemsSection } from "../_components/sections/commentaria.section.component";
 import { getDictionary, hasLocale, Locale } from '@/app/[lang]/dictionaries'
 import NotFound from "./not-found";
+import Image from "next/image";
 
 export async function generateMetadata(
     _params: any,parent: ResolvingMetadata,
@@ -56,6 +57,7 @@ export default async function EngineeringPage({params}: {params: Promise<{lang: 
 		<article className="flex flex-col lg:grid grid-cols-12 grid-rows-[repeat(auto-fit,_350px)] gap-4 list-none">
 			<MainSection />
 			<ProjectsSection dictionary={dict.projects} />
+            <Image className="col-span-3 object-cover rounded-md h-full" height={350} width={500} alt="Plato as Leonardo da Vinci (left) and Aristotle, detail of The School of Athens by Raphael" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Sanzio_01_Plato_Aristotle.jpg/500px-Sanzio_01_Plato_Aristotle.jpg" />
 			<WritingsItemsSection />
 		</article>
 	);
